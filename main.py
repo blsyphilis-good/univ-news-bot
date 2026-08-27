@@ -12,14 +12,28 @@ load_dotenv()
 CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
 
-# 1. 키워드 정의 (축약어/정식명칭 OR 검색 및 노이즈 제외어 적용)
-TARGET_CONFIG = [
-    {"univ": "고려대학교", "query": '("고려대" | "고려대학교") -고려아연'},
-    {"univ": "연세대학교", "query": '("연세대" | "연세대학교")'},
-    {"univ": "서울대학교", "query": '("서울대" | "서울대학교")'}
+# 대학별 검색 키워드 및 제외할 단어 목록 정의
+SEARCH_TARGETS = [
+    {
+        "univ": "고려대학교",
+        "api_query": "고려대학교",
+        "must_include": ["고려대", "고대", "고려대학교"],
+        "must_exclude": ["고려아연", "고려신용정보", "고려제약", "고려투어"]
+    },
+    {
+        "univ": "연세대학교",
+        "api_query": "연세대학교",
+        "must_include": ["연세대", "연대", "연세대학교"],
+        "must_exclude": ["연세우유", "연세유업", "연세병원", "연세안과", "연세치과", "연세의원"]
+    },
+    {
+        "univ": "서울대학교",
+        "api_query": "서울대학교",
+        "must_include": ["서울대", "서울대학교"],
+        "must_exclude": ["서울대병원", "서울대입구역", "서울대학병원"]  # 필요 시 병원/지하철 제외
+    }
 ]
 
-# 수집 기준 시간 범위 (현재 시점 기준 과거 24시간 이내)
 HOURS_LOOKBACK = 24
 
 def clean_html(text: str) -> str:
@@ -30,55 +44,71 @@ def clean_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", "", text)
     return text.strip()
 
-def fetch_naver_news_last_24h(univ_name: str, search_query: str) -> list:
-    """NAVER API HUB에서 최근 24시간 이내의 기사만 정밀 수집"""
+def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
+    """기사 품질 필터링: 제외어 차단 및 제목/본문 내 대학명 필수 포함 여부 검증"""
+    combined_text = f"{title} {desc}"
+    
+    # 1. 제외 키워드가 하나라도 있으면 탈락 (예: 고려아연)
+    for exc in must_exclude:
+        if exc in combined_text:
+            return False
+            
+    # 2. 기사 제목에 해당 대학명이 반드시 들어가 있어야 통과 (가장 확실한 노이즈 제거)
+    if not any(inc in title for inc in must_include):
+        return False
+        
+    return True
+
+def fetch_naver_news_last_24h(target: dict) -> list:
     url = "https://naverapihub.apigw.ntruss.com/search/v1/news"
     headers = {
         "X-NCP-APIGW-API-KEY-ID": CLIENT_ID,
         "X-NCP-APIGW-API-KEY": CLIENT_SECRET
     }
     params = {
-        "query": search_query,
-        "display": 100,      # 최대 100개까지 최신순으로 조회
+        "query": target["api_query"],
+        "display": 100,
         "start": 1,
-        "sort": "date"       # 최신순 정렬 필수
+        "sort": "date"
     }
     
     response = requests.get(url, headers=headers, params=params)
     if response.status_code != 200:
-        print(f"[Error] {univ_name} 검색 실패: HTTP {response.status_code} - {response.text}")
+        print(f"[Error] {target['univ']} 검색 실패: HTTP {response.status_code} - {response.text}")
         return []
     
     items = response.json().get("items", [])
     news_list = []
     
-    # KST 기준 현재 시간 및 필터링 기준 시간(24시간 전) 설정
     kst = timezone(timedelta(hours=9))
     now_kst = datetime.now(kst)
     cutoff_time = now_kst - timedelta(hours=HOURS_LOOKBACK)
     
     for item in items:
-        # 네이버 API 날짜(RFC 822) 파싱
         raw_pub_date = item.get("pubDate", "")
         if not raw_pub_date:
             continue
             
         try:
-            pub_datetime = parsedate_to_datetime(raw_pub_date)
-            # KST 시간대로 정규화
-            pub_datetime_kst = pub_datetime.astimezone(kst)
+            pub_datetime = parsedate_to_datetime(raw_pub_date).astimezone(kst)
         except Exception:
             continue
             
-        # 24시간 이내 발행된 기사만 통과
-        if pub_datetime_kst >= cutoff_time:
+        if pub_datetime >= cutoff_time:
+            title = clean_html(item.get("title", ""))
+            desc = clean_html(item.get("description", ""))
+            
+            # 파이썬 레벨에서 정밀 필터링 수행
+            if not is_valid_article(title, desc, target["must_include"], target["must_exclude"]):
+                continue
+                
             news_list.append({
-                "대학": univ_name,
-                "기사 제목": clean_html(item.get("title", "")),
+                "대학": target["univ"],
+                "기사 제목": title,
                 "언론사 링크": item.get("originallink") or item.get("link"),
                 "네이버 링크": item.get("link"),
-                "요약": clean_html(item.get("description", "")),
-                "발행시각": pub_datetime_kst.strftime("%Y-%m-%d %H:%M")
+                "요약": desc,
+                "발행시각": pub_datetime.strftime("%Y-%m-%d %H:%M")
             })
             
     return news_list
@@ -88,33 +118,36 @@ def main():
         raise ValueError("NAVER_CLIENT_ID 또는 NAVER_CLIENT_SECRET 환경 변수가 설정되지 않았습니다.")
 
     all_news = []
-    for target in TARGET_CONFIG:
-        news = fetch_naver_news_last_24h(target["univ"], target["query"])
+    for target in SEARCH_TARGETS:
+        news = fetch_naver_news_last_24h(target)
         all_news.extend(news)
 
     if not all_news:
-        print(f"최근 {HOURS_LOOKBACK}시간 이내에 등록된 뉴스가 없습니다.")
+        print(f"최근 {HOURS_LOOKBACK}시간 이내에 필터를 통과한 주요 뉴스가 없습니다.")
         return
 
     df = pd.DataFrame(all_news)
-    
-    # 1. 동일 기사 제목 중복 제거 (여러 언론사 송고 건 정리)
     df.drop_duplicates(subset=["대학", "기사 제목"], inplace=True)
 
-    # 2. 콘솔 출력
-    print(f"\n[수집 완료: 최근 {HOURS_LOOKBACK}시간 기준 총 {len(df)}건]")
+    print(f"\n[수집 완료: 최근 {HOURS_LOOKBACK}시간 기준 주요 기사 {len(df)}건]")
     print(df[["대학", "기사 제목", "발행시각"]].to_markdown(index=False))
 
-    # 3. 파일 저장
     os.makedirs("output", exist_ok=True)
     today_str = datetime.now().strftime("%Y%m%d")
     
     csv_path = f"output/news_{today_str}.csv"
     md_path = f"output/news_{today_str}.md"
     
-    df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+    # 엑셀 열림으로 인한 쓰기 오류 방지 처리
+    try:
+        df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+    except PermissionError:
+        backup_csv = f"output/news_{today_str}_{datetime.now().strftime('%H%M%S')}.csv"
+        df.to_csv(backup_csv, index=False, encoding="utf-8-sig")
+        print(f"[경고] {csv_path} 파일이 열려 있어 백업 파일명({backup_csv})으로 저장되었습니다.")
+
     with open(md_path, "w", encoding="utf-8") as f:
-        f.write(f"# 🎓 대학 뉴스 모니터링 (최근 24시간 기준)\n\n")
+        f.write(f"# 🎓 대학 주요 뉴스 모니터링 (최근 24시간)\n\n")
         f.write(f"- 수집 일시: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"- 수집 건수: 총 {len(df)}건\n\n")
         f.write(df[["대학", "기사 제목", "언론사 링크", "발행시각"]].to_markdown(index=False))
