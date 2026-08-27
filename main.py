@@ -12,7 +12,6 @@ load_dotenv()
 CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
 
-# 대학별 검색 키워드 및 제외할 단어 목록 정의
 SEARCH_TARGETS = [
     {
         "univ": "고려대학교",
@@ -30,7 +29,7 @@ SEARCH_TARGETS = [
         "univ": "서울대학교",
         "api_query": "서울대학교",
         "must_include": ["서울대", "서울대학교"],
-        "must_exclude": ["서울대병원", "서울대입구역", "서울대학병원"]  # 필요 시 병원/지하철 제외
+        "must_exclude": ["서울대병원", "서울대입구역", "서울대학병원"]
     }
 ]
 
@@ -45,15 +44,13 @@ def clean_html(text: str) -> str:
     return text.strip()
 
 def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
-    """기사 품질 필터링: 제외어 차단 및 제목/본문 내 대학명 필수 포함 여부 검증"""
+    """기사 품질 필터링"""
     combined_text = f"{title} {desc}"
     
-    # 1. 제외 키워드가 하나라도 있으면 탈락 (예: 고려아연)
     for exc in must_exclude:
         if exc in combined_text:
             return False
             
-    # 2. 기사 제목에 해당 대학명이 반드시 들어가 있어야 통과 (가장 확실한 노이즈 제거)
     if not any(inc in title for inc in must_include):
         return False
         
@@ -98,7 +95,6 @@ def fetch_naver_news_last_24h(target: dict) -> list:
             title = clean_html(item.get("title", ""))
             desc = clean_html(item.get("description", ""))
             
-            # 파이썬 레벨에서 정밀 필터링 수행
             if not is_valid_article(title, desc, target["must_include"], target["must_exclude"]):
                 continue
                 
@@ -132,13 +128,13 @@ def main():
     print(f"\n[수집 완료: 최근 {HOURS_LOOKBACK}시간 기준 주요 기사 {len(df)}건]")
     print(df[["대학", "기사 제목", "발행시각"]].to_markdown(index=False))
 
+    # 1. output 폴더용 파일 저장 (CSV, 날짜별 MD)
     os.makedirs("output", exist_ok=True)
     today_str = datetime.now().strftime("%Y%m%d")
     
     csv_path = f"output/news_{today_str}.csv"
     md_path = f"output/news_{today_str}.md"
     
-    # 엑셀 열림으로 인한 쓰기 오류 방지 처리
     try:
         df.to_csv(csv_path, index=False, encoding="utf-8-sig")
     except PermissionError:
@@ -151,8 +147,18 @@ def main():
         f.write(f"- 수집 일시: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"- 수집 건수: 총 {len(df)}건\n\n")
         f.write(df[["대학", "기사 제목", "언론사 링크", "발행시각"]].to_markdown(index=False))
+
+    # 2. GitHub Pages 및 메인 화면용 루트 README.md 생성 (여기에 위치)
+    readme_content = f"""# 🎓 대학 주요 뉴스 모니터링
+> **최근 업데이트:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} (매일 오전 8시 자동 갱신)  
+> **수집 대상:** 고려대학교, 연세대학교, 서울대학교 (최근 24시간 발행 기사)
+
+{df[["대학", "기사 제목", "언론사 링크", "발행시각"]].to_markdown(index=False)}
+"""
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(readme_content)
     
-    print(f"\n결과 저장 완료: {csv_path}, {md_path}")
+    print(f"\n결과 저장 완료: {csv_path}, {md_path}, README.md")
 
 if __name__ == "__main__":
     main()
