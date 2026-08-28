@@ -172,6 +172,9 @@ MEDIA_DOMAIN_MAP = {
     "cnbizm.com": "CNB저널",
     "popcornnews.net": "팝콘뉴스",
     "ksg.co.kr": "코리아쉬핑가제트",
+    "whitepaper.co.kr": "화이트페이퍼",
+    "bizwnews.com": "비즈월드",
+    "tokenpost.kr": "토큰포스트",
 
     # [대학 / 교육 / 의료 / 전문지]
     "news.unn.net": "한국대학신문",
@@ -312,6 +315,50 @@ def clean_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", "", text)
     return text.strip()
 
+def clean_title_for_dedup(title: str) -> str:
+    """중복 제거를 위한 제목 정규화 (따옴표 및 공백 정제)"""
+    if not title:
+        return ""
+    t = str(title).strip().strip("'").strip('"').strip("`").strip("‘").strip("’").strip("“").strip("”")
+    return re.sub(r'\s+', ' ', t)
+
+def robust_parse_date(val):
+    """다양한 형식(시리얼, 한국어 AM/PM, ISO 등)의 날짜를 pd.Timestamp로 안전 변환"""
+    if not val or pd.isna(val):
+        return pd.NaT
+    if isinstance(val, (datetime, pd.Timestamp)):
+        return pd.to_datetime(val)
+    val_str = str(val).strip()
+
+    # 엑셀 시리얼 넘버 변환
+    try:
+        f = float(val_str)
+        base = datetime(1899, 12, 30)
+        dt = base + timedelta(days=f)
+        return pd.to_datetime(dt)
+    except ValueError:
+        pass
+
+    ampm = None
+    if "오후" in val_str or "PM" in val_str:
+        ampm = "PM"
+    elif "오전" in val_str or "AM" in val_str:
+        ampm = "AM"
+
+    digits = re.findall(r'\d+', val_str)
+    if len(digits) >= 5:
+        year, month, day, hour, minute = [int(x) for x in digits[:5]]
+        if ampm == "PM" and hour < 12:
+            hour += 12
+        elif ampm == "AM" and hour == 12:
+            hour = 0
+        return pd.to_datetime(f"{year:04d}-{month:02d}-{day:02d} {hour:02d}:{minute:02d}")
+    elif len(digits) == 3:
+        year, month, day = [int(x) for x in digits[:3]]
+        return pd.to_datetime(f"{year:04d}-{month:02d}-{day:02d} 00:00")
+
+    return pd.to_datetime(val_str, errors='coerce')
+
 def extract_press_from_naver_url(url: str) -> str:
     """네이버 기사 URL에서 3자리 언론사 코드를 추출하여 언론사명 매핑"""
     if not url:
@@ -333,13 +380,11 @@ def extract_media_name(original_url: str, naver_url: str) -> str:
     if ":" in domain:
         domain = domain.split(":")[0]
 
-    # 네이버 자체 도메인일 경우 언론사 코드로 매핑
     if "naver.com" in domain:
         press = extract_press_from_naver_url(url_to_check)
         if press:
             return press
 
-    # 긴 서브도메인부터 매칭
     sorted_keys = sorted(MEDIA_DOMAIN_MAP.keys(), key=len, reverse=True)
     for key in sorted_keys:
         if domain == key or domain.endswith("." + key):
@@ -492,7 +537,7 @@ def read_existing_sheet_df(worksheet) -> pd.DataFrame:
         return pd.DataFrame()
 
 def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
-    """월별(발행시각순) 및 일별(대학순 -> 발행시각순) 정렬 적용 후 데이터 입력 및 서식 지정"""
+    """안전 정규화 및 날짜 파싱 후 월별/일별 정렬 적용하여 시트 갱신"""
     try:
         try:
             worksheet = doc.worksheet(tab_name)
@@ -501,33 +546,39 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
             worksheet = doc.add_worksheet(title=tab_name, rows=max(len(new_df) + 50, 100), cols=7)
             existing_df = pd.DataFrame()
 
-        # 기존 데이터와 신규 데이터 병합
+        # 기존 데이터와 신규 수집 데이터 병합
         if not existing_df.empty:
             combined_df = pd.concat([new_df, existing_df], ignore_index=True)
         else:
             combined_df = new_df.copy()
 
-        # 최신 언론사 매핑 재적용 및 중복 제거
+        # 언론사명 최신 매핑
         combined_df["언론사"] = combined_df.apply(
             lambda r: extract_media_name(r.get("언론사 링크", ""), r.get("네이버 링크", "")), axis=1
         )
-        combined_df.drop_duplicates(subset=["대학", "기사 제목"], inplace=True)
 
-        # datetime 객체 변환을 통한 엄격한 정렬 보장
-        combined_df["발행시각_dt"] = pd.to_datetime(combined_df["발행시각"], errors="coerce")
+        # 1. 안전 날짜 파싱 (NaT 발생 완전 차단)
+        combined_df["dt_parsed"] = combined_df["발행시각"].apply(robust_parse_date)
+        
+        # 2. 따옴표 탈락으로 인한 중복 방지 정규화
+        combined_df["title_dedup"] = combined_df["기사 제목"].apply(clean_title_for_dedup)
+        combined_df.drop_duplicates(subset=["대학", "title_dedup"], inplace=True)
 
-        # [핵심 정렬 로직 분기]
+        # 3. 2자리 시간 문자열(%Y-%m-%d %H:%M)로 표준화
+        combined_df["발행시각"] = combined_df["dt_parsed"].dt.strftime("%Y-%m-%d %H:%M").fillna(combined_df["발행시각"])
+
+        # 4. 정렬 로직
         if "월" in tab_name:
-            # 1. 월별 시트: 발행시각 내림차순 (최신순)
-            combined_df.sort_values(by="발행시각_dt", ascending=False, inplace=True)
+            # 월별 시트: 발행시각 내림차순 (최신순)
+            combined_df.sort_values(by="dt_parsed", ascending=False, inplace=True)
         else:
-            # 2. 날짜별 시트: 1) 대학명(고려대 -> 연세대 -> 서울대), 2) 발행시각 내림차순(최신순)
+            # 날짜별 시트: 1) 대학명(고려대 -> 연세대 -> 서울대), 2) 발행시각 내림차순(최신순)
             univ_order = ["고려대학교", "연세대학교", "서울대학교"]
             combined_df["대학_순서"] = pd.Categorical(combined_df["대학"], categories=univ_order, ordered=True)
-            combined_df.sort_values(by=["대학_순서", "발행시각_dt"], ascending=[True, False], inplace=True)
+            combined_df.sort_values(by=["대학_순서", "dt_parsed"], ascending=[True, False], inplace=True)
             combined_df.drop(columns=["대학_순서"], inplace=True)
 
-        combined_df.drop(columns=["발행시각_dt"], inplace=True)
+        combined_df.drop(columns=["dt_parsed", "title_dedup"], inplace=True)
 
         # 시트 데이터 행 생성
         headers = ["대학", "언론사명", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
@@ -693,12 +744,12 @@ def main():
             client = gspread.service_account_from_dict(key_dict)
             doc = client.open_by_key(SPREADSHEET_ID)
 
-            # [A] 월간 누적 탭 동기화 (발행시각 내림차순 정렬 적용)
+            # [A] 월간 누적 탭 동기화 (발행시각 내림차순 정렬)
             month_grouped = df.groupby("month_tab")
             for month_tab_name, group_df in month_grouped:
                 write_sheet_data_with_format(doc, month_tab_name, group_df)
 
-            # [B] 일별 탭 동기화 (대학순 -> 발행시각 내림차순 정렬 적용)
+            # [B] 일별 탭 동기화 (대학순 -> 발행시각 내림차순 정렬)
             day_grouped = df.groupby("day_tab")
             for day_tab_name, group_df in day_grouped:
                 write_sheet_data_with_format(doc, day_tab_name, group_df)
