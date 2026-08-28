@@ -19,9 +19,9 @@ CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
 SPREADSHEET_ID = os.environ.get("SPREADSHEET_ID")
 GCP_SA_KEY = os.environ.get("GCP_SA_KEY")
 
-# 2. 세분화된 언론사 도메인 매핑 테이블
+# 2. 170+ 주요 언론사 매핑 테이블 (서브도메인 특화 매체 최우선 매칭)
 MEDIA_DOMAIN_MAP = {
-    # 서브도메인 특화 매체 (긴 도메인 우선 매칭)
+    # [서브도메인 특화 매체]
     "sports.khan.co.kr": "스포츠경향",
     "weekly.khan.co.kr": "주간경향",
     "khan.co.kr": "경향신문",
@@ -54,29 +54,33 @@ MEDIA_DOMAIN_MAP = {
     "star.ytn.co.kr": "YTN star",
     "ytn.co.kr": "YTN",
 
-    # 방송 / 통신
+    "sbsbiz.co.kr": "SBS Biz",
+    "biz.sbs.co.kr": "SBS Biz",
+    "sbs.co.kr": "SBS",
+
+    "mbn.co.kr": "MBN",
+    "tvchosun.com": "TV조선",
+    "ichannela.com": "채널A",
+    "jtbc.co.kr": "JTBC",
+    "kbs.co.kr": "KBS",
+    "imbc.com": "MBC",
+    "ebs.co.kr": "EBS",
+    "obs.co.kr": "OBS",
+
+    # [통신사 / 방송사]
     "yna.co.kr": "연합뉴스",
     "yonhapnewstv.co.kr": "연합뉴스TV",
     "newsis.com": "뉴시스",
     "news1.kr": "뉴스1",
-    "kbs.co.kr": "KBS",
-    "imbc.com": "MBC",
-    "sbs.co.kr": "SBS",
-    "sbsbiz.co.kr": "SBS Biz",
-    "jtbc.co.kr": "JTBC",
-    "ichannela.com": "채널A",
-    "tvchosun.com": "TV조선",
-    "mbn.co.kr": "MBN",
-    "ebs.co.kr": "EBS",
+    "newspim.com": "뉴스핌",
     "nocutnews.co.kr": "노컷뉴스",
     "news.bbsi.co.kr": "BBS NEWS",
     "bbsi.co.kr": "BBS NEWS",
+    "cpbc.co.kr": "가톨릭평화방송",
     "wowtv.co.kr": "한국경제TV",
     "mtn.co.kr": "MTN 머니투데이방송",
-    "cpbc.co.kr": "가톨릭평화방송",
-    "obs.co.kr": "OBS",
 
-    # 종합 일간지
+    # [종합 일간지]
     "hani.co.kr": "한겨레",
     "hankookilbo.com": "한국일보",
     "seoul.co.kr": "서울신문",
@@ -86,7 +90,7 @@ MEDIA_DOMAIN_MAP = {
     "munhwa.com": "문화일보",
     "naeil.com": "내일신문",
 
-    # 경제지 / 비즈니스 전문지
+    # [경제지 및 전문지]
     "mk.co.kr": "매일경제",
     "hankyung.com": "한국경제",
     "sedaily.com": "서울경제",
@@ -119,14 +123,17 @@ MEDIA_DOMAIN_MAP = {
     "m-i.kr": "매일일보",
     "cstimes.com": "컨슈머타임스",
     "newsfreezone.co.kr": "뉴스프리존",
-    "newspim.com": "뉴스핌",
     "metroseoul.co.kr": "메트로신문",
     "thepublic.kr": "더퍼블릭",
     "pinpointnews.co.kr": "핀포인트뉴스",
     "pointdaily.co.kr": "포인트데일리",
     "greenpostkorea.co.kr": "그린포스트코리아",
+    "newsprime.co.kr": "프라임경제",
+    "inews24.com": "아이뉴스24",
+    "smartfn.co.kr": "스마트에프엔",
+    "wsobi.com": "여성소비자신문",
 
-    # 대학 / 교육 / 의료 / 전문지
+    # [대학 / 교육 / 의료 / 전문지]
     "unn.net": "한국대학신문",
     "veritas-a.com": "베리타스알파",
     "kyosu.net": "교수신문",
@@ -146,8 +153,11 @@ MEDIA_DOMAIN_MAP = {
     "lawtimes.co.kr": "법률신문",
     "womennews.co.kr": "여성신문",
     "hellodd.com": "헬로디디",
+    "mdtoday.co.kr": "메디컬투데이",
+    "rapportian.com": "라포르시안",
+    "medipana.com": "메디파나뉴스",
 
-    # 스포츠 / 연예 / 시사
+    # [스포츠 / 연예 / 정론]
     "sportsseoul.com": "스포츠서울",
     "sportsworldi.com": "스포츠월드",
     "xportsnews.com": "엑스포츠뉴스",
@@ -169,7 +179,7 @@ MEDIA_DOMAIN_MAP = {
     "sisain.co.kr": "시사인",
     "straightnews.co.kr": "스트레이트뉴스",
 
-    # 지역 일간지
+    # [지역 일간지]
     "busan.com": "부산일보",
     "kookje.co.kr": "국제신문",
     "imaeil.com": "매일신문",
@@ -192,7 +202,7 @@ MEDIA_DOMAIN_MAP = {
     "jbnews.com": "중부매일"
 }
 
-# 3. 대학별 검색 설정
+# 3. 검색 대상 정의
 SEARCH_TARGETS = [
     {
         "univ": "고려대학교",
@@ -249,15 +259,21 @@ def extract_media_name(original_url: str, naver_url: str) -> str:
     return clean_domain
 
 def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
-    """품질 필터링"""
+    """기사 품질 필터링"""
     combined_text = f"{title} {desc}"
     for exc in must_exclude:
         if exc in combined_text:
             return False
     return any(inc in title for inc in must_include)
 
+def get_report_date_str(pub_dt: datetime) -> str:
+    """전날 08:00 ~ 당일 08:00 기준 일별 탭 이름(YYYY-MM-DD) 계산"""
+    shifted = pub_dt - timedelta(hours=8)
+    report_date = shifted.date() + timedelta(days=1)
+    return report_date.strftime("%Y-%m-%d")
+
 def get_search_cutoff(now_dt: datetime, kst: timezone) -> datetime:
-    """수집 기준 시각 계산: 매월 1~2일은 전월 1일 00:00부터, 평소는 당월 1일 00:00부터 수집"""
+    """수집 시작점: 매월 1~2일은 전월 1일 00:00부터, 평소는 당월 1일 00:00부터 수집"""
     if now_dt.day in [1, 2]:
         first_of_this_month = datetime(now_dt.year, now_dt.month, 1, 0, 0, 0, tzinfo=kst)
         last_day_prev_month = first_of_this_month - timedelta(days=1)
@@ -319,38 +335,44 @@ def fetch_naver_news_paging(target: dict, cutoff_time: datetime, kst: timezone) 
             orig_link = item.get("originallink") or item.get("link", "")
             naver_link = item.get("link", "")
             media_name = extract_media_name(orig_link, naver_link)
-            month_tab = f"{pub_datetime.year}년 {pub_datetime.month}월"
             
+            # 1. 월별 탭 이름 (예: 2026년 8월)
+            month_tab = f"{pub_datetime.year}년 {pub_datetime.month}월"
+            # 2. 일별 탭 이름 (전날 08:00 ~ 당일 08:00 기준, 예: 2026-08-28)
+            day_tab = get_report_date_str(pub_datetime)
+            
+            # 발행시각: 무조건 2자리 포맷 (%H, %M) -> 예: 2026-08-28 01:05
+            pub_time_str = pub_datetime.strftime("%Y-%m-%d %H:%M")
+
             news_list.append({
                 "대학": target["univ"],
                 "언론사": media_name,
                 "기사 제목": title,
                 "기사 요약": desc,
-                "발행시각": pub_datetime.strftime("%Y-%m-%d %H:%M"),
+                "발행시각": pub_time_str,
                 "언론사 링크": orig_link,
                 "네이버 링크": naver_link,
-                "month_tab": month_tab
+                "month_tab": month_tab,
+                "day_tab": day_tab
             })
 
     return news_list
 
-def sync_month_to_google_sheet(doc, tab_name: str, new_df: pd.DataFrame):
-    """지정된 월 탭(YYYY년 M월)에 데이터를 병합하고 최신순 정렬 및 서식 적용"""
+def write_sheet_data_with_format(doc, tab_name: str, target_df: pd.DataFrame):
+    """지정된 탭에 7개 열 데이터 입력, 최신순 정렬 및 서식/너비 일괄 적용"""
     try:
         try:
             worksheet = doc.worksheet(tab_name)
         except gspread.WorksheetNotFound:
-            worksheet = doc.add_worksheet(title=tab_name, rows=max(len(new_df) + 50, 100), cols=7)
+            worksheet = doc.add_worksheet(title=tab_name, rows=max(len(target_df) + 50, 100), cols=7)
 
-        # 1. 중복 제거 및 최신순 정렬
-        combined_df = new_df.drop_duplicates(subset=["대학", "기사 제목"])
-        combined_df = combined_df.sort_values(by="발행시각", ascending=False)
+        # 중복 제거 및 최신순 정렬
+        sorted_df = target_df.drop_duplicates(subset=["대학", "기사 제목"]).sort_values(by="발행시각", ascending=False)
 
-        # 2. 하이퍼링크 수식 적용 행 생성
         headers = ["대학", "언론사명", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
         rows = [headers]
 
-        for _, r in combined_df.iterrows():
+        for _, r in sorted_df.iterrows():
             orig_url = r["언론사 링크"]
             nav_url = r["네이버 링크"]
             
@@ -367,12 +389,11 @@ def sync_month_to_google_sheet(doc, tab_name: str, new_df: pd.DataFrame):
                 nav_formula
             ])
 
-        # 3. 시트 초기화 및 일괄 쓰기
         worksheet.clear()
         worksheet.update(values=rows, range_name="A1", value_input_option="USER_ENTERED")
         worksheet.freeze(rows=1)
 
-        # 4. 헤더 서식 (네이비 배경 + 화이트 볼드)
+        # 헤더 디자인 (다크 네이비 테마)
         header_format = {
             "backgroundColor": {"red": 0.12, "green": 0.22, "blue": 0.38},
             "textFormat": {"bold": True, "foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}},
@@ -381,13 +402,13 @@ def sync_month_to_google_sheet(doc, tab_name: str, new_df: pd.DataFrame):
         }
         worksheet.format("A1:G1", header_format)
 
-        # 5. 본문 정렬 및 자동 줄바꿈(WRAP)
+        # 본문 자동 줄바꿈 및 정렬
         worksheet.format("A2:B", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
         worksheet.format("C2:C", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "MIDDLE"})
         worksheet.format("D2:D", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "TOP"})
         worksheet.format("E2:G", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
 
-        # 6. 열 너비 픽셀 적용
+        # 열 너비 픽셀 설정 (대학:85, 언론사:110, 제목:320, 요약:420, 발행시각:125, 링크:120, 링크:120)
         col_widths = [85, 110, 320, 420, 125, 120, 120]
         requests_body = []
         for i, width in enumerate(col_widths):
@@ -404,7 +425,7 @@ def sync_month_to_google_sheet(doc, tab_name: str, new_df: pd.DataFrame):
                 }
             })
         doc.batch_update({"requests": requests_body})
-        print(f"[Google Sheets] 동기화 성공: 탭 '{tab_name}' (총 {len(combined_df)}건 정렬 완료)")
+        print(f"[Google Sheets] 동기화 완료: 탭 '{tab_name}' (총 {len(sorted_df)}건)")
 
     except Exception as e:
         print(f"[Google Sheets Error] 탭 '{tab_name}' 동기화 실패: {e}")
@@ -418,7 +439,7 @@ def main():
     cutoff_time = get_search_cutoff(now_kst, kst)
     
     print(f"[모니터링 실행] 현재시각(KST): {now_kst.strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"[수집 기준시각]: {cutoff_time.strftime('%Y-%m-%d %H:%M:%S')} 이후 기사 탐색")
+    print(f"[수집 시작시각]: {cutoff_time.strftime('%Y-%m-%d %H:%M:%S')} 이후 기사 전량 탐색")
 
     all_news = []
     for target in SEARCH_TARGETS:
@@ -426,7 +447,7 @@ def main():
         all_news.extend(news)
 
     if not all_news:
-        print("기준 시각 이후 수집된 기사가 없습니다.")
+        print("수집된 기사가 없습니다.")
         return
 
     df = pd.DataFrame(all_news)
@@ -435,41 +456,46 @@ def main():
 
     print(f"\n[전체 수집 완료: 총 {len(df)}건]")
 
-    # 1. 로컬 저장 (월별 CSV 및 당일 CSV)
+    # 1. 로컬 CSV / MD 백업 저장
     os.makedirs("output", exist_ok=True)
     today_str = now_kst.strftime("%Y%m%d")
     month_str = now_kst.strftime("%Y_%m")
-    
     export_cols = ["대학", "언론사", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
+    
     df[export_cols].to_csv(f"output/news_{today_str}.csv", index=False, encoding="utf-8-sig")
     df[export_cols].to_csv(f"output/news_{month_str}.csv", index=False, encoding="utf-8-sig")
 
-    # 2. README.md 업데이트 (최근 30건 요약)
+    # 2. GitHub README.md 갱신
     readme_content = f"""# 🎓 대학 주요 뉴스 모니터링
 > **최근 업데이트:** {now_kst.strftime('%Y-%m-%d %H:%M:%S')} (매일 오전 08:03 자동 갱신)  
-> **수집 대상:** 고려대학교, 연세대학교, 서울대학교 (월간 누적 데이터)
+> **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
 {df[export_cols].head(30)[["대학", "언론사", "기사 제목", "발행시각", "언론사 링크"]].to_markdown(index=False)}
 """
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
 
-    # 3. Google 스프레드시트 월별 탭 자동 라우팅 동기화
+    # 3. Google 스프레드시트 동기화 (월간 누적 탭 + 일별 탭 전체 자동 생성)
     if SPREADSHEET_ID and GCP_SA_KEY:
         try:
             key_dict = json.loads(GCP_SA_KEY)
             client = gspread.service_account_from_dict(key_dict)
             doc = client.open_by_key(SPREADSHEET_ID)
 
-            # 수집된 기사들을 월별 탭 이름으로 그룹화하여 각각 동기화
-            grouped = df.groupby("month_tab")
-            for tab_name, group_df in grouped:
-                sync_month_to_google_sheet(doc, tab_name, group_df)
+            # [A] 월간 누적 탭 동기화 (예: '2026년 8월')
+            month_grouped = df.groupby("month_tab")
+            for month_tab_name, group_df in month_grouped:
+                write_sheet_data_with_format(doc, month_tab_name, group_df)
+
+            # [B] 일별 탭 동기화 (전날 08:00 ~ 당일 08:00 기준, 예: '2026-08-28', '2026-08-27' 등)
+            day_grouped = df.groupby("day_tab")
+            for day_tab_name, group_df in day_grouped:
+                write_sheet_data_with_format(doc, day_tab_name, group_df)
 
         except Exception as e:
-            print(f"[Google Sheets Error] 인증 또는 문서 열기 실패: {e}")
+            print(f"[Google Sheets Error] 스프레드시트 동기화 중 오류 발생: {e}")
     else:
-        print("[Google Sheets] SPREADSHEET_ID 또는 GCP_SA_KEY 환경 변수가 설정되지 않았습니다.")
+        print("[Google Sheets] SPREADSHEET_ID 또는 GCP_SA_KEY 환경 변수가 없습니다.")
 
 if __name__ == "__main__":
     main()
