@@ -266,7 +266,7 @@ MEDIA_DOMAIN_MAP = {
     "jbnews.com": "중부매일"
 }
 
-# 네이버 링크 전용 언론사 코드 폴백 테이블
+# 네이버 링크 전용 언론사 코드 매핑 테이블
 NAVER_PRESS_CODE_MAP = {
     "001": "연합뉴스", "003": "뉴시스", "421": "뉴스1", "020": "동아일보", "023": "조선일보",
     "025": "중앙일보", "028": "한겨레", "032": "경향신문", "056": "KBS", "214": "MBC",
@@ -474,7 +474,7 @@ def read_existing_sheet_df(worksheet) -> pd.DataFrame:
         
         parsed_rows = []
         for r in data[1:]:
-            if len(r) >= 5 and r[0] and r[2]:  # 대학과 기사제목이 있는 행
+            if len(r) >= 5 and r[0] and r[2]:
                 orig_url = extract_url_from_cell(r[5]) if len(r) > 5 else ""
                 nav_url = extract_url_from_cell(r[6]) if len(r) > 6 else ""
                 parsed_rows.append({
@@ -492,7 +492,7 @@ def read_existing_sheet_df(worksheet) -> pd.DataFrame:
         return pd.DataFrame()
 
 def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
-    """기존 시트 데이터와 병합(Merge)하여 누적 보존하고 서식/너비 및 2자리 시간 서식 일괄 적용"""
+    """월별(발행시각순) 및 일별(대학순 -> 발행시각순) 정렬 적용 후 데이터 입력 및 서식 지정"""
     try:
         try:
             worksheet = doc.worksheet(tab_name)
@@ -501,19 +501,35 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
             worksheet = doc.add_worksheet(title=tab_name, rows=max(len(new_df) + 50, 100), cols=7)
             existing_df = pd.DataFrame()
 
-        # 기존 데이터와 신규 수집 데이터 병합 및 중복 제거
+        # 기존 데이터와 신규 데이터 병합
         if not existing_df.empty:
             combined_df = pd.concat([new_df, existing_df], ignore_index=True)
         else:
             combined_df = new_df.copy()
 
-        # 최신 언론사 매핑 재적용 및 정렬
+        # 최신 언론사 매핑 재적용 및 중복 제거
         combined_df["언론사"] = combined_df.apply(
             lambda r: extract_media_name(r.get("언론사 링크", ""), r.get("네이버 링크", "")), axis=1
         )
         combined_df.drop_duplicates(subset=["대학", "기사 제목"], inplace=True)
-        combined_df.sort_values(by="발행시각", ascending=False, inplace=True)
 
+        # datetime 객체 변환을 통한 엄격한 정렬 보장
+        combined_df["발행시각_dt"] = pd.to_datetime(combined_df["발행시각"], errors="coerce")
+
+        # [핵심 정렬 로직 분기]
+        if "월" in tab_name:
+            # 1. 월별 시트: 발행시각 내림차순 (최신순)
+            combined_df.sort_values(by="발행시각_dt", ascending=False, inplace=True)
+        else:
+            # 2. 날짜별 시트: 1) 대학명(고려대 -> 연세대 -> 서울대), 2) 발행시각 내림차순(최신순)
+            univ_order = ["고려대학교", "연세대학교", "서울대학교"]
+            combined_df["대학_순서"] = pd.Categorical(combined_df["대학"], categories=univ_order, ordered=True)
+            combined_df.sort_values(by=["대학_순서", "발행시각_dt"], ascending=[True, False], inplace=True)
+            combined_df.drop(columns=["대학_순서"], inplace=True)
+
+        combined_df.drop(columns=["발행시각_dt"], inplace=True)
+
+        # 시트 데이터 행 생성
         headers = ["대학", "언론사명", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
         rows = [headers]
 
@@ -547,12 +563,12 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
         }
         worksheet.format("A1:G1", header_format)
 
-        # 본문 자동 줄바꿈 및 정렬
+        # 본문 줄바꿈 및 정렬
         worksheet.format("A2:B", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
         worksheet.format("C2:C", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "MIDDLE"})
         worksheet.format("D2:D", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "TOP"})
         
-        # [핵심] E열(발행시각)에 2자리 시간(hh:mm) 명시적 서식 강제 적용
+        # E열(발행시각) 2자리 시간 포맷 (yyyy-mm-dd hh:mm)
         worksheet.format("E2:E", {
             "numberFormat": {
                 "type": "DATE_TIME",
@@ -580,7 +596,7 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
                 }
             })
         doc.batch_update({"requests": requests_body})
-        print(f"[Google Sheets] 동기화 완료: 탭 '{tab_name}' (누적 총 {len(combined_df)}건)")
+        print(f"[Google Sheets] 동기화 완료: 탭 '{tab_name}' (총 {len(combined_df)}건 정렬 완료)")
 
     except Exception as e:
         print(f"[Google Sheets Error] 탭 '{tab_name}' 동기화 실패: {e}")
@@ -592,12 +608,12 @@ def reorder_all_sheets(doc):
 
         def sheet_sort_key(ws):
             name = ws.title.strip()
-            # 1. 월별 시트 ("YYYY년 M월") -> 최신 연월이 우선
+            # 1. 월별 시트 ("YYYY년 M월") -> 최신 연월 우선
             m_match = re.match(r'^(\d{4})년\s*(\d{1,2})월$', name)
             if m_match:
                 y, m = int(m_match.group(1)), int(m_match.group(2))
                 return (0, -y, -m, "")
-            # 2. 일별 시트 ("YYYY-MM-DD") -> 최신 일자가 우선
+            # 2. 일별 시트 ("YYYY-MM-DD") -> 최신 일자 우선
             d_match = re.match(r'^(\d{4})-(\d{2})-(\d{2})$', name)
             if d_match:
                 y, m, d = int(d_match.group(1)), int(d_match.group(2)), int(d_match.group(3))
@@ -677,17 +693,17 @@ def main():
             client = gspread.service_account_from_dict(key_dict)
             doc = client.open_by_key(SPREADSHEET_ID)
 
-            # [A] 월간 누적 탭 동기화 (예: '2026년 8월')
+            # [A] 월간 누적 탭 동기화 (발행시각 내림차순 정렬 적용)
             month_grouped = df.groupby("month_tab")
             for month_tab_name, group_df in month_grouped:
                 write_sheet_data_with_format(doc, month_tab_name, group_df)
 
-            # [B] 일별 탭 동기화 (전날 08:00 ~ 당일 08:00 기준, 예: '2026-08-29', '2026-08-28' 등)
+            # [B] 일별 탭 동기화 (대학순 -> 발행시각 내림차순 정렬 적용)
             day_grouped = df.groupby("day_tab")
             for day_tab_name, group_df in day_grouped:
                 write_sheet_data_with_format(doc, day_tab_name, group_df)
 
-            # [C] 탭 순서 재정렬 실행
+            # [C] 탭 순서 재정렬 (월별 탭 우선 -> 최신 일별 탭 내림차순)
             reorder_all_sheets(doc)
 
         except Exception as e:
