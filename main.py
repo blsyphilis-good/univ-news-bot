@@ -19,9 +19,42 @@ CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
 SPREADSHEET_ID = os.environ.get("SPREADSHEET_ID")
 GCP_SA_KEY = os.environ.get("GCP_SA_KEY")
 
-# 2. 주요 언론사 도메인 매핑 테이블 (60+ 주요 매체)
+# 2. 세분화된 언론사 매핑 테이블 (서브도메인 및 특화 매체 포함)
 MEDIA_DOMAIN_MAP = {
-    # 통신사 및 방송사
+    # [서브도메인 특화 매체: 긴 도메인 우선 매칭]
+    "sports.khan.co.kr": "스포츠경향",
+    "weekly.khan.co.kr": "주간경향",
+    "khan.co.kr": "경향신문",
+    
+    "sports.donga.com": "스포츠동아",
+    "weekly.donga.com": "주간동아",
+    "shindonga.donga.com": "신동아",
+    "dongascience.com": "동아사이언스",
+    "donga.com": "동아일보",
+    
+    "sports.chosun.com": "스포츠조선",
+    "biz.chosun.com": "조선비즈",
+    "weekly.chosun.com": "주간조선",
+    "chosun.com": "조선일보",
+    
+    "moneys.mt.co.kr": "머니S",
+    "moneys.co.kr": "머니S",
+    "mt.co.kr": "머니투데이",
+    
+    "pop.heraldcorp.com": "헤럴드POP",
+    "biz.heraldcorp.com": "헤럴드경제",
+    "heraldcorp.com": "헤럴드경제",
+    
+    "isplus.com": "일간스포츠",
+    "isplus.joins.com": "일간스포츠",
+    "economist.co.kr": "이코노미스트",
+    "joongang.co.kr": "중앙일보",
+    "joins.com": "중앙일보",
+
+    "star.ytn.co.kr": "YTN star",
+    "ytn.co.kr": "YTN",
+
+    # [통신사 및 방송사]
     "yna.co.kr": "연합뉴스",
     "yonhapnewstv.co.kr": "연합뉴스TV",
     "newsis.com": "뉴시스",
@@ -29,50 +62,71 @@ MEDIA_DOMAIN_MAP = {
     "kbs.co.kr": "KBS",
     "imbc.com": "MBC",
     "sbs.co.kr": "SBS",
-    "ytn.co.kr": "YTN",
+    "sbsbiz.co.kr": "SBS Biz",
     "jtbc.co.kr": "JTBC",
     "ichannela.com": "채널A",
     "tvchosun.com": "TV조선",
     "mbn.co.kr": "MBN",
     "ebs.co.kr": "EBS",
     "nocutnews.co.kr": "노컷뉴스",
-    
-    # 종합 일간지
-    "chosun.com": "조선일보",
-    "donga.com": "동아일보",
-    "joongang.co.kr": "중앙일보",
-    "joins.com": "중앙일보",
+    "news.bbsi.co.kr": "BBS NEWS",
+    "bbsi.co.kr": "BBS NEWS",
+    "wowtv.co.kr": "한국경제TV",
+    "mtn.co.kr": "MTN 머니투데이방송",
+    "cpbc.co.kr": "가톨릭평화방송",
+    "obs.co.kr": "OBS",
+
+    # [종합 일간지]
     "hani.co.kr": "한겨레",
-    "khan.co.kr": "경향신문",
     "hankookilbo.com": "한국일보",
     "seoul.co.kr": "서울신문",
     "segye.com": "세계일보",
+    "segyebiz.com": "세계비즈",
     "kmib.co.kr": "국민일보",
     "munhwa.com": "문화일보",
     "naeil.com": "내일신문",
-    
-    # 경제지
+
+    # [경제지 및 비즈니스 전문지]
     "mk.co.kr": "매일경제",
     "hankyung.com": "한국경제",
     "sedaily.com": "서울경제",
-    "heraldcorp.com": "헤럴드경제",
-    "mt.co.kr": "머니투데이",
     "asiae.co.kr": "아시아경제",
     "fnnews.com": "파이낸셜뉴스",
     "edaily.co.kr": "이데일리",
     "asiatoday.co.kr": "아시아투데이",
     "ajunews.com": "아주경제",
     "etoday.co.kr": "이투데이",
+    "viva100.com": "브릿지경제",
     "dt.co.kr": "디지털타임스",
     "etnews.com": "전자신문",
+    "ddaily.co.kr": "디지털데일리",
+    "zdnet.co.kr": "지디넷코리아",
+    "digitaltoday.co.kr": "디지털투데이",
     "bizwatch.co.kr": "비즈워치",
     "dailian.co.kr": "데일리안",
     "newsway.co.kr": "뉴스웨이",
     "bloter.net": "블로터",
     "thebell.co.kr": "더벨",
     "investchosun.com": "인베스트조선",
+    "inthenews.co.kr": "인더뉴스",
+    "joongangenews.com": "중앙이코노미뉴스",
+    "megaeconomy.co.kr": "메가경제",
+    "getnews.co.kr": "글로벌경제신문",
+    "thefairnews.co.kr": "더페어",
+    "globalepic.co.kr": "글로벌에픽",
+    "newsdream.kr": "뉴스드림",
+    "worktoday.co.kr": "워크투데이",
+    "m-i.kr": "매일일보",
+    "cstimes.com": "컨슈머타임스",
+    "newsfreezone.co.kr": "뉴스프리존",
+    "newspim.com": "뉴스핌",
+    "metroseoul.co.kr": "메트로신문",
+    "thepublic.kr": "더퍼블릭",
+    "pinpointnews.co.kr": "핀포인트뉴스",
+    "pointdaily.co.kr": "포인트데일리",
+    "greenpostkorea.co.kr": "그린포스트코리아",
 
-    # 대학 및 교육 / 전문지
+    # [대학 / 교육 / 의료 / 전문지]
     "unn.net": "한국대학신문",
     "veritas-a.com": "베리타스알파",
     "kyosu.net": "교수신문",
@@ -80,12 +134,32 @@ MEDIA_DOMAIN_MAP = {
     "dhnews.co.kr": "대학저널",
     "enewstoday.co.kr": "이뉴스투데이",
     "docdocdoc.co.kr": "청년의사",
+    "dailymedi.com": "데일리메디",
+    "whosaeng.com": "후생신보",
     "medicaltimes.com": "메디칼타임즈",
     "bosa.co.kr": "의학신문",
+    "kormedi.com": "코메디닷컴",
+    "medigatenews.com": "메디게이트뉴스",
+    "yakup.com": "약업신문",
+    "kpanews.co.kr": "약사공론",
+    "pharmnews.com": "팜뉴스",
     "lawtimes.co.kr": "법률신문",
     "womennews.co.kr": "여성신문",
+    "hellodd.com": "헬로디디",
 
-    # 인터넷 언론 및 주간지
+    # [스포츠 / 연예 / 정론]
+    "sportsseoul.com": "스포츠서울",
+    "sportsworldi.com": "스포츠월드",
+    "xportsnews.com": "엑스포츠뉴스",
+    "osen.co.kr": "OSEN",
+    "starnewskorea.com": "스타뉴스",
+    "spotvnews.co.kr": "스포티비뉴스",
+    "tvreport.co.kr": "TV리포트",
+    "topstarnews.net": "톱스타뉴스",
+    "newsinside.kr": "뉴스인사이드",
+    "joynews24.com": "조이뉴스24",
+    "mydaily.co.kr": "마이데일리",
+    "newsen.com": "뉴스엔",
     "ohmynews.com": "오마이뉴스",
     "pressian.com": "프레시안",
     "mediatoday.co.kr": "미디어오늘",
@@ -93,12 +167,9 @@ MEDIA_DOMAIN_MAP = {
     "tf.co.kr": "더팩트",
     "sisajournal.com": "시사저널",
     "sisain.co.kr": "시사인",
-    "shindonga.donga.com": "신동아",
-    "weekly.donga.com": "주간동아",
-    "weekly.chosun.com": "주간조선",
-    "weekly.khan.co.kr": "주간경향",
+    "straightnews.co.kr": "스트레이트뉴스",
 
-    # 주요 지역 일간지
+    # [지역 일간지]
     "busan.com": "부산일보",
     "kookje.co.kr": "국제신문",
     "imaeil.com": "매일신문",
@@ -112,7 +183,13 @@ MEDIA_DOMAIN_MAP = {
     "cctoday.co.kr": "충청투데이",
     "jnilbo.com": "전남일보",
     "kwangju.co.kr": "광주일보",
-    "jejunews.com": "제주일보"
+    "jejunews.com": "제주일보",
+    "ihalla.com": "한라일보",
+    "idomin.com": "경남도민일보",
+    "knnews.co.kr": "경남신문",
+    "jjan.kr": "전북일보",
+    "sjbnews.com": "전북도민일보",
+    "jbnews.com": "중부매일"
 }
 
 # 3. 검색 대상 및 필터 정의
@@ -148,23 +225,33 @@ def clean_html(text: str) -> str:
     return text.strip()
 
 def extract_media_name(original_url: str, naver_url: str) -> str:
-    """URL에서 언론사 도메인을 분석하여 한글 언론사명 추출"""
+    """서브도메인 우선순위 기반 정밀 언론사명 추출"""
     url_to_check = original_url if original_url else naver_url
     if not url_to_check:
         return "기타"
         
-    domain = urlparse(url_to_check).netloc.lower()
-    domain = re.sub(r"^(www\.|m\.|news\.)", "", domain)
+    parsed = urlparse(url_to_check)
+    domain = parsed.netloc.lower()
+    if ":" in domain:
+        domain = domain.split(":")[0]
 
-    for key, name in MEDIA_DOMAIN_MAP.items():
-        if key in domain:
-            return name
+    # 긴 키(구체적인 서브도메인)를 우선 검사
+    sorted_keys = sorted(MEDIA_DOMAIN_MAP.keys(), key=len, reverse=True)
+    
+    for key in sorted_keys:
+        if domain == key or domain.endswith("." + key):
+            return MEDIA_DOMAIN_MAP[key]
             
-    # 매핑 테이블에 없는 경우 도메인 주소의 대표 명칭 표기
-    domain_parts = domain.split(".")
-    if len(domain_parts) >= 2:
-        return domain_parts[0].upper()
-    return domain
+    # www., m., news. 서브도메인 제거 후 2차 검사
+    clean_domain = re.sub(r"^(www\.|m\.|news\.)", "", domain)
+    for key in sorted_keys:
+        if clean_domain == key or clean_domain.endswith("." + key):
+            return MEDIA_DOMAIN_MAP[key]
+            
+    parts = clean_domain.split(".")
+    if len(parts) >= 2:
+        return parts[0].upper()
+    return clean_domain
 
 def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
     """기사 품질 필터링"""
@@ -180,7 +267,7 @@ def is_valid_article(title: str, desc: str, must_include: list, must_exclude: li
     return True
 
 def fetch_naver_news_last_24h(target: dict) -> list:
-    """네이버 API HUB에서 최근 24시간 이내 기사 수집"""
+    """네이버 API HUB에서 최근 24시간 기사 수집"""
     url = "https://naverapihub.apigw.ntruss.com/search/v1/news"
     headers = {
         "X-NCP-APIGW-API-KEY-ID": CLIENT_ID,
@@ -239,9 +326,9 @@ def fetch_naver_news_last_24h(target: dict) -> list:
     return news_list
 
 def sync_to_google_sheet(df: pd.DataFrame, spreadsheet_id: str, sa_key_json_str: str):
-    """구글 스프레드시트에 지정된 순서로 데이터 입력 및 서식/열 너비 자동 적용"""
+    """구글 스프레드시트에 서식 자동 적용 및 데이터 동기화"""
     if not spreadsheet_id or not sa_key_json_str:
-        print("[Google Sheets] SPREADSHEET_ID 또는 GCP_SA_KEY 환경 변수가 없어 동기화를 건너뜁니다.")
+        print("[Google Sheets] 환경 변수가 없어 동기화를 건너뜁니다.")
         return
 
     try:
@@ -252,15 +339,13 @@ def sync_to_google_sheet(df: pd.DataFrame, spreadsheet_id: str, sa_key_json_str:
         kst = timezone(timedelta(hours=9))
         today_tab = datetime.now(kst).strftime("%Y-%m-%d")
 
-        # 1. 탭 확인 또는 신규 생성
         try:
             worksheet = doc.worksheet(today_tab)
             worksheet.clear()
         except gspread.WorksheetNotFound:
             worksheet = doc.add_worksheet(title=today_tab, rows=max(len(df) + 20, 100), cols=7)
 
-        # 2. 열 순서 구성 및 하이퍼링크 수식 적용
-        # 순서: 대학 / 언론사명 / 기사 제목 / 기사 요약 / 발행시각 / 언론사링크 / 네이버링크
+        # 7개 열 구성
         headers = ["대학", "언론사명", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
         rows = [headers]
 
@@ -268,7 +353,6 @@ def sync_to_google_sheet(df: pd.DataFrame, spreadsheet_id: str, sa_key_json_str:
             orig_url = r["언론사 링크"]
             nav_url = r["네이버 링크"]
             
-            # 하이퍼링크 수식 구성
             orig_formula = f'=HYPERLINK("{orig_url}", "기사링크(언론사)")' if orig_url else ""
             nav_formula = f'=HYPERLINK("{nav_url}", "기사링크(네이버)")' if nav_url else ""
             
@@ -282,13 +366,10 @@ def sync_to_google_sheet(df: pd.DataFrame, spreadsheet_id: str, sa_key_json_str:
                 nav_formula
             ])
 
-        # 3. 데이터 일괄 쓰기 (수식 인식을 위해 USER_ENTERED 사용)
         worksheet.update(values=rows, range_name="A1", value_input_option="USER_ENTERED")
-
-        # 4. 헤더 틀 고정 (1행)
         worksheet.freeze(rows=1)
 
-        # 5. 헤더 스타일링 (다크 네이비 배경, 흰색 굵은 글씨, 가운데 정렬)
+        # 헤더 디자인 (네이비 배경 + 화이트 볼드 텍스트)
         header_format = {
             "backgroundColor": {"red": 0.12, "green": 0.22, "blue": 0.38},
             "textFormat": {"bold": True, "foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}},
@@ -297,15 +378,14 @@ def sync_to_google_sheet(df: pd.DataFrame, spreadsheet_id: str, sa_key_json_str:
         }
         worksheet.format("A1:G1", header_format)
 
-        # 6. 본문 정렬 및 자동 줄바꿈(WRAP) 서식 적용
+        # 본문 줄바꿈 및 정렬
         worksheet.format("A2:B", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
-        worksheet.format("C2:C", {"wrapStrategy": "WRAP", "verticalAlignment": "MIDDLE"})
-        worksheet.format("D2:D", {"wrapStrategy": "WRAP", "verticalAlignment": "TOP"})
+        worksheet.format("C2:C", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "MIDDLE"})
+        worksheet.format("D2:D", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "TOP"})
         worksheet.format("E2:G", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
 
-        # 7. 가로 열 너비(픽셀) 최적화 배치 (A: 90px ~ G: 120px)
-        # A(대학): 85, B(언론사명): 105, C(기사 제목): 320, D(기사 요약): 420, E(발행시각): 125, F(언론사링크): 120, G(네이버링크): 120
-        col_widths = [85, 105, 320, 420, 125, 120, 120]
+        # 컬럼 픽셀 너비 (대학:85, 언론사:110, 제목:320, 요약:420, 발행시각:125, 링크:120, 링크:120)
+        col_widths = [85, 110, 320, 420, 125, 120, 120]
         requests_body = []
         for i, width in enumerate(col_widths):
             requests_body.append({
@@ -353,7 +433,6 @@ def main():
     csv_path = f"output/news_{today_str}.csv"
     md_path = f"output/news_{today_str}.md"
     
-    # 저장용 열 순서 정렬
     export_df = df[["대학", "언론사", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]]
     
     try:
@@ -368,7 +447,7 @@ def main():
         f.write(f"- 수집 건수: 총 {len(df)}건\n\n")
         f.write(export_df[["대학", "언론사", "기사 제목", "발행시각", "언론사 링크"]].to_markdown(index=False))
 
-    # 2. GitHub 메인 / Pages용 README.md 생성
+    # 2. GitHub README.md 자동 갱신
     readme_content = f"""# 🎓 대학 주요 뉴스 모니터링
 > **최근 업데이트:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} (매일 오전 8시 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교 (최근 24시간 발행 기사)
@@ -378,7 +457,7 @@ def main():
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
 
-    # 3. Google 스프레드시트 동기화 실행
+    # 3. Google 스프레드시트 동기화
     sync_to_google_sheet(df, SPREADSHEET_ID, GCP_SA_KEY)
 
 if __name__ == "__main__":
