@@ -2,3 +2,5 @@ requests
 pandas
 tabulate
 python-dotenv
+gspread
+google-auth

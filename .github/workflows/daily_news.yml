@@ -2,7 +2,7 @@ name: Daily University News Scraper
 
 on:
     schedule:
-        # 한국 시간(KST) 매일 오전 07:47 (UTC 22:47) 실행으로 변경 (정각 트래픽 회피)
+        # 한국 시간(KST) 매일 오전 07:47 (UTC 22:47) 실행 (정각 트래픽 분산)
         - cron: "47 22 * * *"
     workflow_dispatch:
 
@@ -27,10 +27,12 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
 
-            - name: 뉴스 수집 스크립트 실행
+            - name: 뉴스 수집 및 구글 시트 동기화 실행
               env:
                   NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
                   NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+                  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+                  SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
               run: |
                   python main.py
 

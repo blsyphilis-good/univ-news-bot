@@ -1,17 +1,121 @@
 import os
 import re
 import html
-import requests
-import pandas as pd
+import json
+from urllib.parse import urlparse
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+
+import requests
+import pandas as pd
+import gspread
 from dotenv import load_dotenv
 
 load_dotenv()
 
+# 1. 환경 변수 로드
 CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
+SPREADSHEET_ID = os.environ.get("SPREADSHEET_ID")
+GCP_SA_KEY = os.environ.get("GCP_SA_KEY")
 
+# 2. 주요 언론사 도메인 매핑 테이블 (60+ 주요 매체)
+MEDIA_DOMAIN_MAP = {
+    # 통신사 및 방송사
+    "yna.co.kr": "연합뉴스",
+    "yonhapnewstv.co.kr": "연합뉴스TV",
+    "newsis.com": "뉴시스",
+    "news1.kr": "뉴스1",
+    "kbs.co.kr": "KBS",
+    "imbc.com": "MBC",
+    "sbs.co.kr": "SBS",
+    "ytn.co.kr": "YTN",
+    "jtbc.co.kr": "JTBC",
+    "ichannela.com": "채널A",
+    "tvchosun.com": "TV조선",
+    "mbn.co.kr": "MBN",
+    "ebs.co.kr": "EBS",
+    "nocutnews.co.kr": "노컷뉴스",
+    
+    # 종합 일간지
+    "chosun.com": "조선일보",
+    "donga.com": "동아일보",
+    "joongang.co.kr": "중앙일보",
+    "joins.com": "중앙일보",
+    "hani.co.kr": "한겨레",
+    "khan.co.kr": "경향신문",
+    "hankookilbo.com": "한국일보",
+    "seoul.co.kr": "서울신문",
+    "segye.com": "세계일보",
+    "kmib.co.kr": "국민일보",
+    "munhwa.com": "문화일보",
+    "naeil.com": "내일신문",
+    
+    # 경제지
+    "mk.co.kr": "매일경제",
+    "hankyung.com": "한국경제",
+    "sedaily.com": "서울경제",
+    "heraldcorp.com": "헤럴드경제",
+    "mt.co.kr": "머니투데이",
+    "asiae.co.kr": "아시아경제",
+    "fnnews.com": "파이낸셜뉴스",
+    "edaily.co.kr": "이데일리",
+    "asiatoday.co.kr": "아시아투데이",
+    "ajunews.com": "아주경제",
+    "etoday.co.kr": "이투데이",
+    "dt.co.kr": "디지털타임스",
+    "etnews.com": "전자신문",
+    "bizwatch.co.kr": "비즈워치",
+    "dailian.co.kr": "데일리안",
+    "newsway.co.kr": "뉴스웨이",
+    "bloter.net": "블로터",
+    "thebell.co.kr": "더벨",
+    "investchosun.com": "인베스트조선",
+
+    # 대학 및 교육 / 전문지
+    "unn.net": "한국대학신문",
+    "veritas-a.com": "베리타스알파",
+    "kyosu.net": "교수신문",
+    "edudonga.com": "에듀동아",
+    "dhnews.co.kr": "대학저널",
+    "enewstoday.co.kr": "이뉴스투데이",
+    "docdocdoc.co.kr": "청년의사",
+    "medicaltimes.com": "메디칼타임즈",
+    "bosa.co.kr": "의학신문",
+    "lawtimes.co.kr": "법률신문",
+    "womennews.co.kr": "여성신문",
+
+    # 인터넷 언론 및 주간지
+    "ohmynews.com": "오마이뉴스",
+    "pressian.com": "프레시안",
+    "mediatoday.co.kr": "미디어오늘",
+    "kukinews.com": "쿠키뉴스",
+    "tf.co.kr": "더팩트",
+    "sisajournal.com": "시사저널",
+    "sisain.co.kr": "시사인",
+    "shindonga.donga.com": "신동아",
+    "weekly.donga.com": "주간동아",
+    "weekly.chosun.com": "주간조선",
+    "weekly.khan.co.kr": "주간경향",
+
+    # 주요 지역 일간지
+    "busan.com": "부산일보",
+    "kookje.co.kr": "국제신문",
+    "imaeil.com": "매일신문",
+    "yeongnam.com": "영남일보",
+    "kyeongin.com": "경인일보",
+    "kyeonggi.com": "경기일보",
+    "joongboo.com": "중부일보",
+    "kwnews.co.kr": "강원일보",
+    "kado.net": "강원도민일보",
+    "daejonilbo.com": "대전일보",
+    "cctoday.co.kr": "충청투데이",
+    "jnilbo.com": "전남일보",
+    "kwangju.co.kr": "광주일보",
+    "jejunews.com": "제주일보"
+}
+
+# 3. 검색 대상 및 필터 정의
 SEARCH_TARGETS = [
     {
         "univ": "고려대학교",
@@ -43,6 +147,25 @@ def clean_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", "", text)
     return text.strip()
 
+def extract_media_name(original_url: str, naver_url: str) -> str:
+    """URL에서 언론사 도메인을 분석하여 한글 언론사명 추출"""
+    url_to_check = original_url if original_url else naver_url
+    if not url_to_check:
+        return "기타"
+        
+    domain = urlparse(url_to_check).netloc.lower()
+    domain = re.sub(r"^(www\.|m\.|news\.)", "", domain)
+
+    for key, name in MEDIA_DOMAIN_MAP.items():
+        if key in domain:
+            return name
+            
+    # 매핑 테이블에 없는 경우 도메인 주소의 대표 명칭 표기
+    domain_parts = domain.split(".")
+    if len(domain_parts) >= 2:
+        return domain_parts[0].upper()
+    return domain
+
 def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
     """기사 품질 필터링"""
     combined_text = f"{title} {desc}"
@@ -57,6 +180,7 @@ def is_valid_article(title: str, desc: str, must_include: list, must_exclude: li
     return True
 
 def fetch_naver_news_last_24h(target: dict) -> list:
+    """네이버 API HUB에서 최근 24시간 이내 기사 수집"""
     url = "https://naverapihub.apigw.ntruss.com/search/v1/news"
     headers = {
         "X-NCP-APIGW-API-KEY-ID": CLIENT_ID,
@@ -98,16 +222,110 @@ def fetch_naver_news_last_24h(target: dict) -> list:
             if not is_valid_article(title, desc, target["must_include"], target["must_exclude"]):
                 continue
                 
+            orig_link = item.get("originallink") or item.get("link", "")
+            naver_link = item.get("link", "")
+            media_name = extract_media_name(orig_link, naver_link)
+            
             news_list.append({
                 "대학": target["univ"],
+                "언론사": media_name,
                 "기사 제목": title,
-                "언론사 링크": item.get("originallink") or item.get("link"),
-                "네이버 링크": item.get("link"),
-                "요약": desc,
-                "발행시각": pub_datetime.strftime("%Y-%m-%d %H:%M")
+                "기사 요약": desc,
+                "발행시각": pub_datetime.strftime("%Y-%m-%d %H:%M"),
+                "언론사 링크": orig_link,
+                "네이버 링크": naver_link
             })
             
     return news_list
+
+def sync_to_google_sheet(df: pd.DataFrame, spreadsheet_id: str, sa_key_json_str: str):
+    """구글 스프레드시트에 지정된 순서로 데이터 입력 및 서식/열 너비 자동 적용"""
+    if not spreadsheet_id or not sa_key_json_str:
+        print("[Google Sheets] SPREADSHEET_ID 또는 GCP_SA_KEY 환경 변수가 없어 동기화를 건너뜁니다.")
+        return
+
+    try:
+        key_dict = json.loads(sa_key_json_str)
+        client = gspread.service_account_from_dict(key_dict)
+        doc = client.open_by_key(spreadsheet_id)
+
+        kst = timezone(timedelta(hours=9))
+        today_tab = datetime.now(kst).strftime("%Y-%m-%d")
+
+        # 1. 탭 확인 또는 신규 생성
+        try:
+            worksheet = doc.worksheet(today_tab)
+            worksheet.clear()
+        except gspread.WorksheetNotFound:
+            worksheet = doc.add_worksheet(title=today_tab, rows=max(len(df) + 20, 100), cols=7)
+
+        # 2. 열 순서 구성 및 하이퍼링크 수식 적용
+        # 순서: 대학 / 언론사명 / 기사 제목 / 기사 요약 / 발행시각 / 언론사링크 / 네이버링크
+        headers = ["대학", "언론사명", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
+        rows = [headers]
+
+        for _, r in df.iterrows():
+            orig_url = r["언론사 링크"]
+            nav_url = r["네이버 링크"]
+            
+            # 하이퍼링크 수식 구성
+            orig_formula = f'=HYPERLINK("{orig_url}", "기사링크(언론사)")' if orig_url else ""
+            nav_formula = f'=HYPERLINK("{nav_url}", "기사링크(네이버)")' if nav_url else ""
+            
+            rows.append([
+                r["대학"],
+                r["언론사"],
+                r["기사 제목"],
+                r["기사 요약"],
+                r["발행시각"],
+                orig_formula,
+                nav_formula
+            ])
+
+        # 3. 데이터 일괄 쓰기 (수식 인식을 위해 USER_ENTERED 사용)
+        worksheet.update(values=rows, range_name="A1", value_input_option="USER_ENTERED")
+
+        # 4. 헤더 틀 고정 (1행)
+        worksheet.freeze(rows=1)
+
+        # 5. 헤더 스타일링 (다크 네이비 배경, 흰색 굵은 글씨, 가운데 정렬)
+        header_format = {
+            "backgroundColor": {"red": 0.12, "green": 0.22, "blue": 0.38},
+            "textFormat": {"bold": True, "foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}},
+            "horizontalAlignment": "CENTER",
+            "verticalAlignment": "MIDDLE"
+        }
+        worksheet.format("A1:G1", header_format)
+
+        # 6. 본문 정렬 및 자동 줄바꿈(WRAP) 서식 적용
+        worksheet.format("A2:B", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
+        worksheet.format("C2:C", {"wrapStrategy": "WRAP", "verticalAlignment": "MIDDLE"})
+        worksheet.format("D2:D", {"wrapStrategy": "WRAP", "verticalAlignment": "TOP"})
+        worksheet.format("E2:G", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
+
+        # 7. 가로 열 너비(픽셀) 최적화 배치 (A: 90px ~ G: 120px)
+        # A(대학): 85, B(언론사명): 105, C(기사 제목): 320, D(기사 요약): 420, E(발행시각): 125, F(언론사링크): 120, G(네이버링크): 120
+        col_widths = [85, 105, 320, 420, 125, 120, 120]
+        requests_body = []
+        for i, width in enumerate(col_widths):
+            requests_body.append({
+                "updateDimensionProperties": {
+                    "range": {
+                        "sheetId": worksheet.id,
+                        "dimension": "COLUMNS",
+                        "startIndex": i,
+                        "endIndex": i + 1
+                    },
+                    "properties": {"pixelSize": width},
+                    "fields": "pixelSize"
+                }
+            })
+        doc.batch_update({"requests": requests_body})
+
+        print(f"[Google Sheets] 동기화 완료: '{doc.title}' ➡️ 탭 '{today_tab}' (총 {len(df)}건)")
+
+    except Exception as e:
+        print(f"[Google Sheets Error] 동기화 실패: {e}")
 
 def main():
     if not CLIENT_ID or not CLIENT_SECRET:
@@ -126,39 +344,42 @@ def main():
     df.drop_duplicates(subset=["대학", "기사 제목"], inplace=True)
 
     print(f"\n[수집 완료: 최근 {HOURS_LOOKBACK}시간 기준 주요 기사 {len(df)}건]")
-    print(df[["대학", "기사 제목", "발행시각"]].to_markdown(index=False))
+    print(df[["대학", "언론사", "기사 제목", "발행시각"]].to_markdown(index=False))
 
-    # 1. output 폴더용 파일 저장 (CSV, 날짜별 MD)
+    # 1. output 폴더 CSV / MD 저장
     os.makedirs("output", exist_ok=True)
     today_str = datetime.now().strftime("%Y%m%d")
     
     csv_path = f"output/news_{today_str}.csv"
     md_path = f"output/news_{today_str}.md"
     
+    # 저장용 열 순서 정렬
+    export_df = df[["대학", "언론사", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]]
+    
     try:
-        df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+        export_df.to_csv(csv_path, index=False, encoding="utf-8-sig")
     except PermissionError:
         backup_csv = f"output/news_{today_str}_{datetime.now().strftime('%H%M%S')}.csv"
-        df.to_csv(backup_csv, index=False, encoding="utf-8-sig")
-        print(f"[경고] {csv_path} 파일이 열려 있어 백업 파일명({backup_csv})으로 저장되었습니다.")
+        export_df.to_csv(backup_csv, index=False, encoding="utf-8-sig")
 
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(f"# 🎓 대학 주요 뉴스 모니터링 (최근 24시간)\n\n")
         f.write(f"- 수집 일시: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"- 수집 건수: 총 {len(df)}건\n\n")
-        f.write(df[["대학", "기사 제목", "언론사 링크", "발행시각"]].to_markdown(index=False))
+        f.write(export_df[["대학", "언론사", "기사 제목", "발행시각", "언론사 링크"]].to_markdown(index=False))
 
-    # 2. GitHub Pages 및 메인 화면용 루트 README.md 생성 (여기에 위치)
+    # 2. GitHub 메인 / Pages용 README.md 생성
     readme_content = f"""# 🎓 대학 주요 뉴스 모니터링
 > **최근 업데이트:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} (매일 오전 8시 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교 (최근 24시간 발행 기사)
 
-{df[["대학", "기사 제목", "언론사 링크", "발행시각"]].to_markdown(index=False)}
+{export_df[["대학", "언론사", "기사 제목", "발행시각", "언론사 링크"]].to_markdown(index=False)}
 """
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
-    
-    print(f"\n결과 저장 완료: {csv_path}, {md_path}, README.md")
+
+    # 3. Google 스프레드시트 동기화 실행
+    sync_to_google_sheet(df, SPREADSHEET_ID, GCP_SA_KEY)
 
 if __name__ == "__main__":
     main()
