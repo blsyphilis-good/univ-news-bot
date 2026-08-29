@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-08-29 08:04:29 (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** 2026-08-30 08:04:38 (매일 오전 08:03 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사          | 기사 제목                                                | 발행시각             | 언론사 링크                                                                         |
-|:------|:-------------|:-----------------------------------------------------|:-----------------|:-------------------------------------------------------------------------------|
-| 고려대학교 | 뉴스프리존        | 한양대·고려대, 신개념 나노 광소자 구현...노이즈 캔슬링처럼 빛을 지...           | 2026-08-29 06:00 | https://www.newsfreezone.co.kr/news/articleView.html?idxno=706248              |
-| 서울대학교 | 스포츠조선        | 여에스더 "서울대 CC 전남친과 약혼→결혼 6개월 전 파혼, 그 후 홍혜걸...         | 2026-08-29 05:55 | https://www.sportschosun.com/entertainment/2026-08-29/202608290100172320011108 |
-| 연세대학교 | 톱스타뉴스        | 설민석, 논문 표절 논란→학위 취소 후 재입학 3년 만 연세대 졸업…"많...          | 2026-08-29 00:14 | https://www.topstarnews.net/news/articleView.html?idxno=16176565               |
-| 연세대학교 | 스포티비뉴스       | '논문 표절·학위취소' 설민석, 연대 대학원 재입학→졸업 인증 "많은 걸...          | 2026-08-28 19:31 | https://www.spotvnews.co.kr/news/articleView.html?idxno=1004558                |
-| 고려대학교 | NGONEWS      | "AI 인재가 기업 현장으로"…경기혁신센터·고려대, 산학협력 새판 짠다              | 2026-08-28 19:12 | https://www.ngonews.kr/news/articleView.html?idxno=236660                      |
-| 서울대학교 | NONGMIN      | “교정 떠나면 지옥이다”…서울대 후기 졸업식 축사                          | 2026-08-28 19:00 | https://www.nongmin.com/article/20260828500261                                 |
-| 연세대학교 | 아시아투데이       | [대학동문골프최강전] 막판 2홀 뒤집은 한양대, 연장 끝에 연세대 꺾고...           | 2026-08-28 18:46 | https://www.asiatoday.co.kr/kn/view.php?key=20260828010009978                  |
-| 서울대학교 | 아시아투데이       | [대학동문골프최강전] 뒷심 발휘한 중앙대, 서울대 꺾고 4강…2연패 도전...          | 2026-08-28 18:42 | https://www.asiatoday.co.kr/kn/view.php?key=20260828010009976                  |
-| 연세대학교 | 아시아투데이       | [포토]대학동문골프최강전 8강전 연세대-한양대, 갑자기 비가 내려요!               | 2026-08-28 18:04 | https://www.asiatoday.co.kr/kn/view.php?key=20260828010009970                  |
-| 연세대학교 | 아시아투데이       | [포토]대학동문골프최강전 8강전, 거리 재고 있는 연세대 선수들                  | 2026-08-28 18:04 | https://www.asiatoday.co.kr/kn/view.php?key=20260828010009971                  |
-| 서울대학교 | SISACAST     | 키움증권, 서울대기술지주와 창업부터 IPO까지 자금 공급                      | 2026-08-28 18:02 | http://www.sisacast.kr/news/articleView.html?idxno=99345                       |
-| 연세대학교 | 점프볼          | ‘연세대와 연습경기서 숙제 확인’ LG, 자유투 정확도 높여라                   | 2026-08-28 17:50 | https://m.sports.naver.com/basketball/article/065/0000301083                   |
-| 서울대학교 | 한국경제         | 서울대 10개·학비 공짜 통했나…'인서울' 접는 지방 학생들                    | 2026-08-28 17:34 | https://www.hankyung.com/article/2026082800331                                 |
-| 서울대학교 | FETV         | 키움증권, 생산적 금융·모험자본 위해 서울대기술지주와 MOU                    | 2026-08-28 17:28 | https://www.fetv.co.kr/news/articleView.html?idxno=309280                      |
-| 연세대학교 | 에듀동아         | 연세대학교 2026년 8월 학위수여식 개최                              | 2026-08-28 17:24 | https://edu.donga.com/news/articleView.html?idxno=111374                       |
-| 연세대학교 | 중앙일보         | 연세대, ‘8월 학위수여식’ 개최…석·박사 등 3823명 졸업                   | 2026-08-28 17:20 | https://www.joongang.co.kr/article/25457120                                    |
-| 연세대학교 | HIDOC        | 스마트폰으로 뇌에 약물·빛 전달… KAIST·연세대, '뇌 임플란트' 개발            | 2026-08-28 17:02 | https://news.hidoc.co.kr/news/articleView.html?idxno=66747                     |
-| 서울대학교 | 한국대학신문       | "질문하고 도전하라" 서울대 개교 80주년 졸업식 3135명 '새 출발'[찰칵...       | 2026-08-28 16:58 | https://news.unn.net/news/articleView.html?idxno=596611                        |
-| 서울대학교 | 스트레이트뉴스      | 키움증권 x 서울대기술지주, '생산적 금융' A to Z 맞손                   | 2026-08-28 16:56 | https://www.straightnews.co.kr/news/articleView.html?idxno=309979              |
-| 연세대학교 | 베리타스알파       | [2027수시특집] 연세대(미래) 1187명(79%) '확대'.. '신설' 강원인재 지역... | 2026-08-28 16:50 | https://www.veritas-a.com/news/articleView.html?idxno=621677                   |
-| 연세대학교 | 중앙일보         | JW성형외과 원장 부부, 연세대 아프리카연구원에 1억 기부                     | 2026-08-28 16:50 | https://www.joongang.co.kr/article/25457112                                    |
-| 서울대학교 | 팍스경제TV       | 키움증권, 서울대기술지주와 손잡고 혁신기업 '성장자금' 지원                    | 2026-08-28 16:36 | http://www.paxetv.com/news/articleView.html?idxno=280503                       |
-| 연세대학교 | 법률신문         | 이화여대 로스쿨팀, '노란봉투법 모의법정 경연대회' 국회의장상                   | 2026-08-28 16:34 | https://www.lawtimes.co.kr/news/articleView.html?idxno=225540                  |
-| 서울대학교 | GOSIWEEK     | 서울대 박민혁 교수 공동연구팀, 메모리 성능 좌우하는 '산소 빈자리' 역...          | 2026-08-28 16:14 | https://www.gosiweek.com/article/1065597101544254                              |
-| 서울대학교 | APNEWS       | 키움증권, 서울대기술지주와 맞손…6000억 모험자본 공급 속도                   | 2026-08-28 15:52 | https://www.apnews.kr/news/articleView.html?idxno=3050774                      |
-| 서울대학교 | POLINEWS     | 키움증권-서울대기술지주, 생산적 금융·모험자본 확대 맞손                      | 2026-08-28 15:50 | https://www.polinews.co.kr/news/articleView.html?idxno=741557                  |
-| 고려대학교 | TODAYENERGY  | 경기혁신센터, 고려대와 스타트업 AI 난제 해결 나선다                       | 2026-08-28 15:46 | https://www.todayenergy.kr/news/articleView.html?idxno=302139                  |
-| 고려대학교 | 뉴스1          | 고려대, 인문사회 학술지원 신규 과제 6개 선정…189억원 규모                  | 2026-08-28 15:35 | https://www.news1.kr/society/education/6272794                                 |
-| 서울대학교 | SISACAST     | NH농협은행-서울대 학생들, 경기도 과천 농가에서 '국민과 같이 농촌봉...           | 2026-08-28 15:30 | http://www.sisacast.kr/news/articleView.html?idxno=99319                       |
-| 고려대학교 | DOCTORSTIMES | "서울로 가던 환자 발길 돌렸다"···고대 안산병원 로봇수술 5000례 경...         | 2026-08-28 15:30 | http://www.doctorstimes.com/news/articleView.html?idxno=239722                 |
+| 대학    | 언론사    | 기사 제목                                          | 발행시각             | 언론사 링크                                                           |
+|:------|:-------|:-----------------------------------------------|:-----------------|:-----------------------------------------------------------------|
+| 고려대학교 | 한국강사신문 | 고려대학교 양경식·유혁 교수팀, AI 학습 '헛된 선점' 현상 규명…GPU 낭... | 2026-08-30 06:56 | https://www.lecturernews.com/news/articleView.html?idxno=209623  |
+| 서울대학교 | 스포츠서울  | “옆에 가기도 싫어” 서울대 출신 황석정, 40년 절연 ‘마녀 엄마’ 고...    | 2026-08-30 06:50 | https://www.sportsseoul.com/news/read/1631668?ref=naver          |
+| 서울대학교 | EBN    | [증권 & Now] 키움증권, 서울대기술지주와 맞손…모험자본 투자 확대 협...   | 2026-08-30 06:48 | https://www.ebn.co.kr/news/articleView.html?idxno=1722115        |
+| 서울대학교 | 뉴스엔    | 서울대 황석정, 외모 편견에 힘들었던 과거 “나같이 생긴 여자 매체 나...     | 2026-08-30 06:08 | https://www.newsen.com/news_view.php?uid=202608300228126110      |
+| 고려대학교 | 중앙일보   | 라이벌 너머 우정이었네…고려대 총장, 파란 학위복 입은 이유              | 2026-08-30 06:00 | https://www.joongang.co.kr/article/25457310                      |
+| 연세대학교 | 엑스포츠뉴스 | "여배우인가?"…'올림픽 金' 쇼트트랙 아이돌, 연세대 졸업했다→학사모...     | 2026-08-30 00:35 | https://www.xportsnews.com/article/2189702                       |
+| 서울대학교 | 매일경제   | “40년간 대화 NO”… ‘서울대’ 황석정, 교육열 뛰어났던 母 갈등 토로...   | 2026-08-30 00:07 | https://www.mk.co.kr/article/12139580                            |
+| 서울대학교 | 뉴스엔    | 알파드라이브원 준서, 친동생 서울대 비법 “예쁜 교생 선생님 감사”(...      | 2026-08-29 23:15 | https://www.newsen.com/news_view.php?uid=202608292209302110      |
+| 서울대학교 | 헤럴드경제  | 여에스더, 서울대 CC와 결혼 6개월 전 파혼 깜짝 고백…홍혜걸 “다행”       | 2026-08-29 23:10 | https://biz.heraldcorp.com/article/10856219?ref=naver            |
+| 서울대학교 | 텐아시아   | 여에스더, 서울대 CC 남친과 결혼 6개월 전 파혼했더니…”동생이 내 머...    | 2026-08-29 22:30 | https://www.tenasia.co.kr/article/2026082909414                  |
+| 연세대학교 | 점프볼    | 체력 보강 후 수비와 움직임 좋아진 연세대, 남은 숙제는 슛 성공률          | 2026-08-29 21:21 | https://m.sports.naver.com/basketball/article/065/0000301118     |
+| 연세대학교 | 한국강사신문 | 연세대학교 이영욱 교수팀, '우주 가속 팽창' 옹호 반박 논문서 핵심 오...    | 2026-08-29 20:46 | https://www.lecturernews.com/news/articleView.html?idxno=209585  |
+| 고려대학교 | 한국강사신문 | 고려대학교 이승우 교수, 태양전지 효율 저하 원인 진단하는 새로운 분...      | 2026-08-29 20:24 | https://www.lecturernews.com/news/articleView.html?idxno=209622  |
+| 연세대학교 | 한국강사신문 | 연세대학교, 2026년 8월 학위수여식 개최…3,823명 졸업             | 2026-08-29 20:20 | https://www.lecturernews.com/news/articleView.html?idxno=209588  |
+| 연세대학교 | 한국강사신문 | 연세대학교 국제하계대학 인턴십 성료…세계 대학생 80명, 한국 산업 현...     | 2026-08-29 18:26 | https://www.lecturernews.com/news/articleView.html?idxno=209582  |
+| 연세대학교 | 동아사이언스 | "우주 가속팽창 맞다" 노벨상 수상자 재반박…연세대 연구팀 재·재반박         | 2026-08-29 18:01 | https://www.dongascience.com/news/view/79626                     |
+| 서울대학교 | 뉴스엔    | 여에스더 “서울대 CC 남친과 결혼 6개월 전 파혼, 아침에 국 끓이라고...    | 2026-08-29 16:20 | https://www.newsen.com/news_view.php?uid=202608291400072510      |
+| 연세대학교 | OSEN   | '목동맘' 최희, "사실 저 나쁜 엄마예요"…연대 출신 극성맘 고백          | 2026-08-29 15:30 | http://www.osen.co.kr/article/G1112865759                        |
+| 서울대학교 | 톱스타뉴스  | "미식축구 희망기금 1억1천만원"…서울대 원로 동문, 후배 지원 나섰다        | 2026-08-29 15:22 | https://www.topstarnews.net/news/articleView.html?idxno=16176887 |
+| 서울대학교 | OSEN   | 여에스더, '서울대 의대' 남친과 결혼 6개월 전 '파혼'.."확신 없었다"     | 2026-08-29 15:17 | http://www.osen.co.kr/article/G1112865722                        |
+| 서울대학교 | 연합뉴스   | 서울대 미식축구부 원로 동문, 후배 발전기금 1억1천만원 쾌척             | 2026-08-29 15:09 | https://www.yna.co.kr/view/AKR20260829035300007?input=1195m      |
+| 서울대학교 | TV리포트  | 여에스더 "서울대 CC→결혼 6개월 전 파혼, 확신 없었다...이후 홍혜걸 ...  | 2026-08-29 14:53 | https://www.tvreport.co.kr/breaking/article/1071923/             |
+| 서울대학교 | 엑스포츠뉴스 | 이승현 아나, 서울대 학사 이어 석사까지 "정신 잃곤 했지만" [★해시태...    | 2026-08-29 14:46 | https://www.xportsnews.com/article/2189475                       |
+| 연세대학교 | 미디어파인  | 연대 의대 박사 과정 황지혜, 미스 인터콘티넨탈 본상 3위               | 2026-08-29 14:10 | https://www.mediafine.co.kr/news/articleView.html?idxno=88320    |
+| 연세대학교 | 점프볼    | ‘2학기 5경기 전승 목표’ 최영상 “달라진 연세대 기대해달라”            | 2026-08-29 13:50 | https://m.sports.naver.com/basketball/article/065/0000301098     |
+| 연세대학교 | 뉴스엔    | 연세대 의대 박사과정 황지혜, 미스 인터콘티넨탈 본상 3위 등극            | 2026-08-29 13:27 | https://www.newsen.com/news_view.php?uid=202608291322086310      |
+| 연세대학교 | 한국강사신문 | 연세대학교, 오픈AI 글로벌 정책 연구 지원 사업 선정…국내 대학 유일        | 2026-08-29 13:00 | https://www.lecturernews.com/news/articleView.html?idxno=209584  |
+| 연세대학교 | CBCI   | 연세대 의대 박사과정 황지혜, '2026 미스인터콘티넨탈' 2관왕…'지성과...   | 2026-08-29 12:46 | https://www.cbci.co.kr/news/articleView.html?idxno=602130        |
+| 고려대학교 | 전자신문   | 고려대, 교육부 '인문사회 학술지원 집단연구' 6개 과제 선정             | 2026-08-29 11:01 | https://www.etnews.com/20260829000012                            |
+| 연세대학교 | 점프볼    | ‘트랜지션이 장점’ 연세대 1학년 김상현 “팀 활력소 되고 싶다”           | 2026-08-29 10:28 | https://m.sports.naver.com/basketball/article/065/0000301095     |
