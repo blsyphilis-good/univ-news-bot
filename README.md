@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-09-03 08:07:23 (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** 2026-09-04 08:07:28 (매일 오전 08:03 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사          | 기사 제목                                          | 발행시각             | 언론사 링크                                                                                                                                     |
-|:------|:-------------|:-----------------------------------------------|:-----------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| 서울대학교 | 핀포인트뉴스       | SKT 정재헌 CEO, 서울대서 AI 특강…"AX, 불편함의 골짜기 견뎌야"     | 2026-09-03 07:58 | https://www.pinpointnews.co.kr/news/articleView.html?idxno=483134                                                                          |
-| 서울대학교 | VOP          | [사설] 첫발 뗀 ‘서울대 10개 만들기’, 지역균형발전으로 가려면          | 2026-09-03 07:50 | https://vop.co.kr/A00001696505.html                                                                                                        |
-| 서울대학교 | 세계일보         | “전북대 배제한 ‘서울대 10개 만들기’ 규탄”…동문회 등 평가 과정...      | 2026-09-03 06:04 | https://www.segye.com/newsView/20260902520862?OutUrl=naver                                                                                 |
-| 서울대학교 | 충청투데이        | [사설] '서울대 10개 만들기' 선정된 충남대 앞에 놓인 과제            | 2026-09-03 06:02 | https://www.cctoday.co.kr/news/articleView.html?idxno=2236044                                                                              |
-| 서울대학교 | 영남일보         | [사설] 경북대 탈락 서울대 10개 만들기, 후속 로드맵 제시해야           | 2026-09-03 06:00 | https://www.yeongnam.com/web/view.php?key=20260902027216111                                                                                |
-| 서울대학교 | 경향신문         | 문재인 청와대보다 서울대 비율 10% 낮고, 민간 출신 10% 높아[이재명 시... | 2026-09-03 06:00 | https://www.khan.co.kr/article/202609030600091                                                                                             |
-| 서울대학교 | 헤럴드경제        | 경북대 총동창회 “서울대 10개 만들기 탈락…평가 기준·선정 과정 투명...     | 2026-09-03 05:56 | https://biz.heraldcorp.com/article/10860880?ref=naver                                                                                      |
-| 연세대학교 | 메디게이트뉴스      | 아주대·연세대, 스마트 콘택트렌즈·AI 기반 비침습 요산 모니터링 기...      | 2026-09-03 05:40 | https://www.medigatenews.com/news/1794504004                                                                                               |
-| 서울대학교 | 부산일보         | [사설] '서울대 10개 만들기' 거점대학 된 부산대 어깨 무겁다           | 2026-09-03 05:10 | https://www.busan.com/view/busan/view.php?code=2026090218003814184                                                                         |
-| 서울대학교 | JBSORI       | 전북대 총동창회 등 동문 단체들 "전북대 배제한 '서울대 10개 만들기' ...   | 2026-09-03 05:10 | http://www.jbsori.com/news/articleView.html?idxno=17826                                                                                    |
-| 고려대학교 | 세계일보         | 사이버국방전형 수능 최저기준 미적용 [수시특집-고려대]                 | 2026-09-03 03:03 | https://www.segye.com/newsView/20260902516425?OutUrl=naver                                                                                 |
-| 서울대학교 | VOAKOREA     | [한국은 지금] 서울대 10개 만들기 사업 대상…부산∙전남∙충남대학교...      | 2026-09-03 01:23 | https://www.voakorea.com/a/korea-now-090226/8193358.html                                                                                   |
-| 연세대학교 | 조선일보         | AI-RAN 네트워크 전환 기술… LG유플러스, 연세대와 검증             | 2026-09-03 00:36 | https://www.chosun.com/economy/tech_it/2026/09/03/FMYZ7V4NBFGUFC6JUJK3PDSDMU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news |
-| 서울대학교 | THEDAILYPOST | 서울대 강단 선 SKT 정재헌 대표 "AI 시대 핵심은 인재의 통찰과 공감"     | 2026-09-03 00:20 | https://www.thedailypost.kr/news/articleView.html?idxno=115352                                                                             |
-| 서울대학교 | 강원도민일보       | 강원대 '서울대 10개' 탈락…"국립대 서열 형성 고착화 가능성"           | 2026-09-03 00:09 | https://www.kado.net/news/articleView.html?idxno=2070308                                                                                   |
-| 서울대학교 | GJDREAM      | '서울대 급' 전남대, 지역 대학 동반 성장 이끌까                   | 2026-09-03 00:06 | http://www.gjdream.com/news/articleView.html?idxno=672347                                                                                  |
-| 연세대학교 | OSEN         | ‘연대 출신’ 오상진, '수학 최우수상' 받은 딸 옆 밀착 케어 “장하다...    | 2026-09-02 22:37 | http://www.osen.co.kr/article/G1112868567                                                                                                  |
-| 연세대학교 | 뉴스엔          | 제이슨 “브라운대 출신 엠마 왓슨 1년 선배, 연대 교환학생으로 가” ...     | 2026-09-02 22:32 | https://www.newsen.com/news_view.php?uid=202609022230051710                                                                                |
-| 서울대학교 | 뉴시스          | 경북대 총동창회 "서울대 10개 만들기 선정 기준 공개하라"              | 2026-09-02 21:56 | https://www.newsis.com/view/NISX20260902_0003773953                                                                                        |
-| 서울대학교 | 경남도민일보       | 경남 '서울대 10개' 첫 지원 3곳서 제외                       | 2026-09-02 21:42 | https://www.idomin.com/news/articleView.html?idxno=2013950                                                                                 |
-| 고려대학교 | 메디컬월드뉴스      | [9월 2일 병원계 이모저모②]고려대안산, 대전을지대, 아주대, 이대서울...    | 2026-09-02 21:40 | https://medicalworldnews.co.kr/news/view.php?idx=1510977004                                                                                |
-| 서울대학교 | 톱스타뉴스        | [종합] "직접 쓰려고 만들었다"… '유 퀴즈' 서울대생 유민준, 9만 명이...  | 2026-09-02 21:32 | https://www.topstarnews.net/news/articleView.html?idxno=16181100                                                                           |
-| 서울대학교 | IDAEGU       | [사설] '서울대 10개' 탈락, 대학 혁신 역량 재점검 계기로            | 2026-09-02 21:24 | https://www.idaegu.co.kr/news/articleView.html?idxno=558476                                                                                |
-| 서울대학교 | IDAEGU       | '서울대 10개' 경북대 탈락에…이인선 "유감 넘어 분노"               | 2026-09-02 21:24 | https://www.idaegu.co.kr/news/articleView.html?idxno=558470                                                                                |
-| 서울대학교 | TBC          | 이인선 "서울대 10개 만들기 선정 결과, 전면 검증할 것"              | 2026-09-02 21:20 | https://www.tbc.co.kr/news/view?pno=20260902105743AE04965&id=210617                                                                        |
-| 서울대학교 | 톱스타뉴스        | "그늘 찾아 걸어요"… '유 퀴즈' 서울대생 유민준, 폭염 속 그늘 알려주...   | 2026-09-02 21:04 | https://www.topstarnews.net/news/articleView.html?idxno=16181072                                                                           |
-| 서울대학교 | ANDONGMBC    | '서울대 10개 만들기' 경북대 탈락 충격                        | 2026-09-02 21:02 | http://andongmbc.co.kr/adboard/NewsView84543                                                                                               |
-| 고려대학교 | 이뉴스투데이       | [고려대 소식] 고려대 문과대학 설립 80주년 기념 주간 개최 외           | 2026-09-02 21:02 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2465815                                                                            |
-| 서울대학교 | 뉴스엔          | 그늘 앱 개발한 서울대생, 9만명 썼는데 “수익? 내가 쓰려고 만들어 고...    | 2026-09-02 21:00 | https://www.newsen.com/news_view.php?uid=202609021917376110                                                                                |
-| 서울대학교 | 중앙일보         | [단독] ‘서울대 10개’ 3곳만 먼저 뽑았다… 탈락 6개 국립대 총장 긴급...  | 2026-09-02 20:23 | https://www.joongang.co.kr/article/25458578                                                                                                |
+| 대학    | 언론사        | 기사 제목                                              | 발행시각             | 언론사 링크                                                              |
+|:------|:-----------|:---------------------------------------------------|:-----------------|:--------------------------------------------------------------------|
+| 고려대학교 | 톱스타뉴스      | 프로미스나인, 고려대 화정체육관서 아시아 투어 포문 연다                    | 2026-09-04 07:46 | https://www.topstarnews.net/news/articleView.html?idxno=16182749    |
+| 서울대학교 | 문화일보       | 관악구, 서울대벤처타운역 인근 ‘서림다복길’ 골목형 상점가 신규 지...           | 2026-09-04 07:04 | https://www.munhwa.com/article/11614438?ref=naver                   |
+| 서울대학교 | 인사이트       | 사회적가치연구원·서울대, 기후테크 '선금융' 해법 찾는다                    | 2026-09-04 07:04 | https://www.insight.co.kr/news/571835                               |
+| 연세대학교 | 파이낸셜포스트    | 산통부 에이스 김종철, '연세대에 배알 없이 끌려다니는' 인천경제청 확...         | 2026-09-04 06:54 | https://www.financialpost.co.kr/news/articleView.html?idxno=273805  |
+| 고려대학교 | 한국강사신문     | EBS 취미는 과학, '초고속 분광학'으로 빛의 세계 조명…이광진 고려대...        | 2026-09-04 05:55 | https://www.lecturernews.com/news/articleView.html?idxno=209986     |
+| 서울대학교 | 중앙일보       | 영어·수학 늦게 시작해도 1등급…서울대생 ‘고등 역전’ 비결                  | 2026-09-04 05:00 | https://www.joongang.co.kr/article/25459026                         |
+| 고려대학교 | 메디컬월드뉴스    | 고려대구로병원 오민정 교수, 대한모체태아의학회 회장 취임                    | 2026-09-04 02:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977039         |
+| 서울대학교 | 서울경제       | 삼성중공업, 서울대와 맞손... 조선해양 인재양성 나선다                    | 2026-09-03 23:41 | https://www.sedaily.com/article/20087048?ref=naver                  |
+| 서울대학교 | KBS        | ‘서울대 10개 만들기’…전북대 “발표 평가도 없이 선정”                   | 2026-09-03 22:02 | https://news.kbs.co.kr/news/pc/view/view.do?ncd=8654355&ref=A       |
+| 서울대학교 | TBC        | "서울대 만들기도 TK 패싱" 반발 확산, 가스公·석유公 통합 추진              | 2026-09-03 21:18 | https://www.tbc.co.kr/news/view?pno=20260903152611AE05020&id=210645 |
+| 고려대학교 | 이뉴스투데이     | 고려대, 공인회계사(CPA) 최종 합격자 '11년 연속 전국 1위' 대기록          | 2026-09-03 21:12 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2466311     |
+| 서울대학교 | WEBECONOMY | 삼성중공업·서울대, 미래선박기술 글로벌협력 연구센터 설립                    | 2026-09-03 20:36 | https://www.webeconomy.co.kr/news/articleView.html?idxno=2289308    |
+| 서울대학교 | 연합뉴스TV     | [초대석] '서울대 10개 만들기' 시동…"지역에서도 충분히 좋은 교육"           | 2026-09-03 20:13 | http://www.yonhapnewstv.co.kr/news/MYH202609032012499b5             |
+| 서울대학교 | KBS        | 강원대, ‘서울대 10개 만들기’ 탈락…전략 보강                        | 2026-09-03 19:59 | https://news.kbs.co.kr/news/pc/view/view.do?ncd=8654179&ref=A       |
+| 서울대학교 | WEBECONOMY | 사회적가치연구원·서울대, 기후테크 가치평가·선금융 방안 논의                  | 2026-09-03 19:46 | https://www.webeconomy.co.kr/news/articleView.html?idxno=2288739    |
+| 서울대학교 | 서울경제       | ‘서울대 10개’ 탈락 총장들 “2~3년 뒤 재선정 기회 줘야”                | 2026-09-03 19:45 | https://www.sedaily.com/article/20087006?ref=naver                  |
+| 서울대학교 | JEONMIN    | 전북대, '서울대 10개 만들기' 추가 선정 총력                        | 2026-09-03 18:58 | http://www.jeonmin.co.kr/news/articleView.html?idxno=446331         |
+| 서울대학교 | 경남일보       | 삼성중공업-서울대, '미래선박기술 글로벌협력센터' 연다                     | 2026-09-03 18:52 | https://www.gnnews.co.kr/news/articleView.html?idxno=644744         |
+| 서울대학교 | 매일일보       | 사회적가치연구원, 서울대와 기후테크 '선금융' 논의                       | 2026-09-03 18:42 | https://www.m-i.kr/news/articleView.html?idxno=1409908              |
+| 서울대학교 | GNDOMIN    | 삼성중공업-서울대, 미래선박기술 연구센터 설립 맞손                       | 2026-09-03 18:33 | http://www.gndomin.com/news/articleView.html?idxno=487960           |
+| 서울대학교 | DOMIN      | 1000억 vs 400억 '쩐의 격차'…'서울대 10개' 첫 단추부터 서열화 논란, ... | 2026-09-03 18:32 | http://www.domin.co.kr/news/articleView.html?idxno=1567576          |
+| 고려대학교 | 파이낸셜뉴스     | 고려대, CPA 합격자 197명…"11년 연속 대학 최다"                   | 2026-09-03 18:31 | https://www.fnnews.com/news/202609031826109697                      |
+| 서울대학교 | 대전일보       | '서울대 10개' 충남대 선정…공주대 통합 새 국면 맞나                    | 2026-09-03 18:30 | https://www.daejonilbo.com/news/articleView.html?idxno=2298711      |
+| 서울대학교 | 더퍼블릭       | 서울대 10개 만든다더니 제외된 경북대?...지역 차별 규탄한 국힘 대구...        | 2026-09-03 18:28 | https://www.thepublic.kr/news/articleView.html?idxno=317430         |
+| 서울대학교 | 서울경제       | [기자의 눈] ‘서울대 10개 만들기’…지역에 인재 남겨야 성공                | 2026-09-03 18:18 | https://www.sedaily.com/article/20086964?ref=naver                  |
+| 서울대학교 | JEOLLAILBO | '서울대 10개 만들기' 탈락 전북대 공식 사과···"추가 선정 총력"            | 2026-09-03 18:18 | http://www.jeollailbo.com/news/articleView.html?idxno=810035        |
+| 서울대학교 | INCHEONIN  | 제3대 인천광역시 총괄건축가에 백진 서울대 건축학과 교수                    | 2026-09-03 18:04 | http://www.incheonin.com/news/articleView.html?idxno=120549         |
+| 고려대학교 | 이코노미스트     | 고대 안산병원, 로봇수술 5000례 달성…암 수술 비중 44%                 | 2026-09-03 18:04 | https://economist.co.kr/article/view/ecn202609030049                |
+| 서울대학교 | 머니투데이      | "대출 거절 고객도 다시 본다"…어피닛·서울대, AI 신용평가 기술 개발           | 2026-09-03 18:00 | https://www.mt.co.kr/future/2026/09/03/2026090310101952181          |
+| 서울대학교 | DOMIN      | 전북대 '서울대 10개 만들기' 패키지 제외 후폭풍                       | 2026-09-03 18:00 | http://www.domin.co.kr/news/articleView.html?idxno=1567592          |
