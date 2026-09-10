@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-09-10 08:07:39 (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** 2026-09-11 08:07:05 (매일 오전 08:03 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사     | 기사 제목                                       | 발행시각             | 언론사 링크                                                                                                                                               |
-|:------|:--------|:--------------------------------------------|:-----------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 연세대학교 | 에듀동아    | 서울대·연세대 수시 경쟁률 낮아져…"안정 지원 경향"               | 2026-09-10 07:52 | https://edu.donga.com/news/articleView.html?idxno=111772                                                                                             |
-| 서울대학교 | 에듀동아    | 서울대·연세대 수시 경쟁률 낮아져…"안정 지원 경향"               | 2026-09-10 07:52 | https://edu.donga.com/news/articleView.html?idxno=111772                                                                                             |
-| 연세대학교 | 에듀동아    | 서울대·연세대 수시 경쟁률 떨어져… 의대 경쟁률 3개 대학 모두 하락      | 2026-09-10 07:42 | https://edu.donga.com/news/articleView.html?idxno=111771                                                                                             |
-| 서울대학교 | 에듀동아    | 서울대·연세대 수시 경쟁률 떨어져… 의대 경쟁률 3개 대학 모두 하락      | 2026-09-10 07:42 | https://edu.donga.com/news/articleView.html?idxno=111771                                                                                             |
-| 고려대학교 | 메디게이트뉴스 | 고려대 안산병원 장영우 교수, GOSTA 술기 교육 9월 16명 대상 실시   | 2026-09-10 06:44 | https://www.medigatenews.com/news/2355294450                                                                                                         |
-| 서울대학교 | 영남일보    | [영남시론] 대구·경북에만 없는 ‘서울대’                     | 2026-09-10 06:00 | https://www.yeongnam.com/web/view.php?key=20260909029437666                                                                                          |
-| 서울대학교 | 조선일보    | [단독] 서울대 총장 예비 후보 4명 추려… 연임 도전한 유홍림 탈락      | 2026-09-10 05:01 | https://www.chosun.com/national/national_general/2026/09/10/E6XE4HJ3SJBANBXN2X3TA3BX3Y/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news |
-| 서울대학교 | 동아일보    | 서울대, 석좌교수 3명 신규-연장 임명                       | 2026-09-10 04:35 | https://www.donga.com/news/People/article/all/20260910/134638891/2                                                                                   |
-| 고려대학교 | 동아일보    | 김동원 고려대 총장, 연세대서 名博                         | 2026-09-10 04:34 | https://www.donga.com/news/People/article/all/20260910/134638897/2                                                                                   |
-| 연세대학교 | 동아일보    | 김동원 고려대 총장, 연세대서 名博                         | 2026-09-10 04:34 | https://www.donga.com/news/People/article/all/20260910/134638897/2                                                                                   |
-| 고려대학교 | 더퍼스트미디어 | 고려대 안산병원 감염내과 교수 연구팀, BDNF 활용 패혈증 치료 가능성... | 2026-09-10 01:38 | http://www.thefirstmedia.net/news/articleView.html?idxno=208212                                                                                      |
-| 고려대학교 | 더퍼스트미디어 | 고려대 보건대학원 최고위과정 원우 70여명 한자리에…교류·협력 다져       | 2026-09-10 00:18 | http://www.thefirstmedia.net/news/articleView.html?idxno=208194                                                                                      |
-| 고려대학교 | 더퍼스트미디어 | 고려대 의대, 필립 람방 교수 초청 강연…의료 AI·디지털 트윈 비전 제... | 2026-09-10 00:18 | http://www.thefirstmedia.net/news/articleView.html?idxno=208193                                                                                      |
-| 고려대학교 | 더퍼스트미디어 | "대만 의료진도 찾았다"…고려대 안산병원 장영우 교수, 갑상선암 로봇...   | 2026-09-10 00:18 | http://www.thefirstmedia.net/news/articleView.html?idxno=208196                                                                                      |
-| 고려대학교 | 더퍼스트미디어 | 고려대학교 안암병원은 안과 김동현 교수 연구팀, 전자담배 피울수록 황...   | 2026-09-10 00:18 | http://www.thefirstmedia.net/news/articleView.html?idxno=208200                                                                                      |
-| 고려대학교 | 메디컬월드뉴스 | [9월 9일 병원계 이모저모④]고려대, 경상국립대, 서울성모, 한양대구리... | 2026-09-10 00:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977163                                                                                          |
-| 연세대학교 | 강원일보    | 연세대 미래기술지주회사, 중소벤처기업부 창업기획자 등록              | 2026-09-10 00:08 | https://www.kwnews.co.kr/article/20260909500194                                                                                                      |
-| 서울대학교 | 한국대학신문  | 서울대 차기 총장 예비 후보자 4인 확정… 유홍림 연임 도전 실패        | 2026-09-09 22:58 | https://news.unn.net/news/articleView.html?idxno=597186                                                                                              |
-| 서울대학교 | 한국경제    | 서울대 총장 후보, 4명 압축…'연임 도전' 유홍림 탈락             | 2026-09-09 22:44 | https://www.hankyung.com/article/2026090950261                                                                                                       |
-| 서울대학교 | 더팩트     | 서울대 차기 총장 후보 4명…강준호·김현철·이재영·최해천             | 2026-09-09 22:41 | https://news.tf.co.kr/read/life/2364102.htm                                                                                                          |
-| 서울대학교 | 경향신문    | 서울대 총장 예비후보 4명으로 압축                         | 2026-09-09 22:26 | https://www.khan.co.kr/article/202609092226005                                                                                                       |
-| 연세대학교 | 매일경제    | “고대 수시 경쟁률은 올랐는데”…서울대·연대 이어 의대도 하락, 이...    | 2026-09-09 22:25 | https://www.mk.co.kr/article/12148814                                                                                                                |
-| 서울대학교 | 매일경제    | “고대 수시 경쟁률은 올랐는데”…서울대·연대 이어 의대도 하락, 이...    | 2026-09-09 22:25 | https://www.mk.co.kr/article/12148814                                                                                                                |
-| 고려대학교 | 매일경제    | “고대 수시 경쟁률은 올랐는데”…서울대·연대 이어 의대도 하락, 이...    | 2026-09-09 22:25 | https://www.mk.co.kr/article/12148814                                                                                                                |
-| 고려대학교 | 노컷뉴스    | 서울대·연세대, 수시 경쟁률 하락…고려대, 소폭 상승               | 2026-09-09 22:20 | https://www.nocutnews.co.kr/news/6575855?utm_source=naver&utm_medium=article&utm_campaign=20260909101959                                             |
-| 연세대학교 | 노컷뉴스    | 서울대·연세대, 수시 경쟁률 하락…고려대, 소폭 상승               | 2026-09-09 22:20 | https://www.nocutnews.co.kr/news/6575855?utm_source=naver&utm_medium=article&utm_campaign=20260909101959                                             |
-| 서울대학교 | 노컷뉴스    | 서울대·연세대, 수시 경쟁률 하락…고려대, 소폭 상승               | 2026-09-09 22:20 | https://www.nocutnews.co.kr/news/6575855?utm_source=naver&utm_medium=article&utm_campaign=20260909101959                                             |
-| 서울대학교 | 노컷뉴스    | 서울대 차기 총장 예비후보 4명 확정…現 총장 연임은 불발            | 2026-09-09 22:16 | https://www.nocutnews.co.kr/news/6575854?utm_source=naver&utm_medium=article&utm_campaign=20260909101559                                             |
-| 서울대학교 | WOLYO   | 서울대 총장 예비후보 4인으로 압축…유홍림 현 총장 연임 불발          | 2026-09-09 22:12 | https://www.wolyo.co.kr/news/articleView.html?idxno=317577                                                                                           |
-| 서울대학교 | 조선비즈    | 서울대 차기 총장 예비후보 4명 확정…유홍림 현 총장 낙마            | 2026-09-09 22:08 | https://biz.chosun.com/topics/topics_social/2026/09/09/Q6ANLN4NWJH6FLSVOJQVFLXHRQ/?utm_source=naver&utm_medium=original&utm_campaign=biz             |
+| 대학    | 언론사           | 기사 제목                                            | 발행시각             | 언론사 링크                                                                                         |
+|:------|:--------------|:-------------------------------------------------|:-----------------|:-----------------------------------------------------------------------------------------------|
+| 서울대학교 | 서울경제          | 크릿벤처스, 서울대 공대와 창업인재 발굴 맞손                        | 2026-09-11 06:01 | https://www.sedaily.com/article/20089575?ref=naver                                             |
+| 서울대학교 | 뉴스1           | '서울대 10개' 띄웠지만 교육계 갈등 남겼다…최교진 취임 1년              | 2026-09-11 05:00 | https://www.news1.kr/society/education/6286803                                                 |
+| 고려대학교 | 동아일보          | 고려대안암병원, 상급병원 첫 정신건강 학교 열어                       | 2026-09-11 04:32 | https://www.donga.com/news/Health/article/all/20260911/134646980/2                             |
+| 고려대학교 | VENTURESQUARE | 창업 아이디어 1만 명 선발…중기부, 고려대서 ‘모두의 창업’ 알렸다           | 2026-09-11 01:15 | https://www.venturesquare.net/1112490/                                                         |
+| 고려대학교 | 메디컬월드뉴스       | [9월 10일 병원계 이모저모④]고려대구로, 서울대, 이대서울, 일산백병...      | 2026-09-10 23:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977186                                    |
+| 고려대학교 | 메디파나뉴스        | 고대안산병원, 자살예방 공로 보건복지부장관 표창                       | 2026-09-10 22:40 | https://www.medipana.com/news/articleView.html?idxno=417436                                    |
+| 서울대학교 | AFTERTHERAIN  | 만성피로, 쉬면 낫는 피로와 병원에 가야 하는 피로 / 서울대 보라매병...       | 2026-09-10 22:18 | http://aftertherain.kr/sub/contents/view.php?seq=97906                                         |
+| 서울대학교 | KBS           | 대구 민주당, 경북대 ‘서울대 10개 만들기’ 선정 촉구                  | 2026-09-10 22:16 | https://news.kbs.co.kr/news/pc/view/view.do?ncd=8660609&ref=A                                  |
+| 고려대학교 | 메디컬월드뉴스       | [9월 10일 병원계 이모저모③]고려대 안산, 명지, 자생한방병원 등 소식        | 2026-09-10 22:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977185                                    |
+| 연세대학교 | 이뉴스투데이        | [고려대 소식] 고려대 김동원 총장, 연세대 명예철학박사 학위 수여 외          | 2026-09-10 21:57 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2468829                                |
+| 고려대학교 | 이뉴스투데이        | [고려대 소식] 고려대 김동원 총장, 연세대 명예철학박사 학위 수여 외          | 2026-09-10 21:57 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2468829                                |
+| 연세대학교 | 프레시안          | “원주 현안, 고등학생이 푼다” 원주고·연세대 미래캠, 로컬 리서치랩...        | 2026-09-10 21:45 | https://www.pressian.com/pages/articles/2026091017090506242?utm_source=naver&utm_medium=search |
+| 서울대학교 | NEWSJEJU      | '서울대 10개', 새 서열화 우려…"지역국립대 경쟁력 강화로 가야"           | 2026-09-10 21:26 | https://www.newsjeju.net/news/articleView.html?idxno=425676                                    |
+| 고려대학교 | 이뉴스투데이        | 고려대 연구진, '지방간이 간암으로 악화하는 이유' 밝혀내                 | 2026-09-10 21:21 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2469368                                |
+| 고려대학교 | 메디컬월드뉴스       | [9월 10일 병원계 이모저모②]고려대안산, 의정부을지대, 한강성심, 한양...     | 2026-09-10 21:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977184                                    |
+| 고려대학교 | 더퍼스트미디어       | 고려대 안암병원, 정신건강 입원학생 위한 병원학교 '다숨교실' 운영…...        | 2026-09-10 20:20 | http://www.thefirstmedia.net/news/articleView.html?idxno=208358                                |
+| 고려대학교 | 메디컬월드뉴스       | [9월 10일 병원계 이모저모①]강원대, 고려대, 한양대구리병원, 이화의...      | 2026-09-10 20:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977183                                    |
+| 고려대학교 | 더퍼스트미디어       | 고려대 안산병원, 자살예방 공로 보건복지부장관 표창 장관 표창..."12년...     | 2026-09-10 19:38 | http://www.thefirstmedia.net/news/articleView.html?idxno=208342                                |
+| 서울대학교 | 로이슈           | 멕시카나치킨, 서울대 헌혈 현장서 치킨원정대 사회공헌 활동                 | 2026-09-10 19:24 | http://www.lawissue.co.kr/view.php?ud=202609101923209948204ead0791_12                          |
+| 고려대학교 | 로이슈           | 고려대 구로병원·의료기기안전정보원, 의료기기 세미나 개최                  | 2026-09-10 19:00 | http://www.lawissue.co.kr/view.php?ud=202609101857428935f4ab64559d_12                          |
+| 고려대학교 | 한스경제          | 중기부, 고려대서 '모두의 창업' 캠퍼스 투어 개최                     | 2026-09-10 18:48 | http://www.hansbiz.co.kr/news/articleView.html?idxno=864222                                    |
+| 서울대학교 | NEWSBRITE     | 멕시카나 '치킨원정대' 서울대서 생명나눔 헌혈 봉사활동                   | 2026-09-10 18:46 | http://www.newsbrite.net/news/articleView.html?idxno=200311                                    |
+| 서울대학교 | 한국대학신문        | 서울대, 개교 80년 역사에 새긴 만원의 나눔 '10년'…1만 7천여 건 348억... | 2026-09-10 18:42 | https://news.unn.net/news/articleView.html?idxno=597257                                        |
+| 서울대학교 | 헬로디디          | "韓 제조·반도체 강점, AI 풀스택으로 연결해야" 이재욱 서울대 AI연구...     | 2026-09-10 18:32 | http://www.hellodd.com/news/articleView.html?idxno=113136                                      |
+| 고려대학교 | K-HEALTH      | 고려대안산병원, 자살예방 공로 복지부장관 표창…지역사회 잇는 안전망...         | 2026-09-10 18:24 | https://www.k-health.com/news/articleView.html?idxno=101113                                    |
+| 연세대학교 | 로이슈           | '윤동섭호' 연세대, 적립금 1000억 늘리고 사용비율 29%…등록금은 2년 ...   | 2026-09-10 18:16 | http://www.lawissue.co.kr/view.php?ud=202609101716477634f4ab64559d_12                          |
+| 고려대학교 | 더퍼스트미디어       | 종합병원 건립 앞둔 우즈베키스탄 타슈켄트주 대표단, 고려대 안산병원...         | 2026-09-10 18:16 | http://www.thefirstmedia.net/news/articleView.html?idxno=208333                                |
+| 서울대학교 | 강원일보          | (사)한서남궁억선생나라사랑선양회 초대 회장에 성낙인 전 서울대 총장            | 2026-09-10 18:14 | https://www.kwnews.co.kr/article/20260910501550                                                |
+| 고려대학교 | 보건뉴스          | 고려대의대, 전주기 의사과학자 양성 체계 강화                        | 2026-09-10 18:00 | http://www.bokuennews.com/news/article.html?no=284019                                          |
+| 고려대학교 | 보건뉴스          | 고려대안산병원, 자살예방 공로 보건복지부장관 표창                      | 2026-09-10 17:48 | http://www.bokuennews.com/news/article.html?no=284015                                          |
