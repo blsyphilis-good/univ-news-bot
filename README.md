@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-09-20 08:07:14 (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** 2026-09-21 08:07:46 (매일 오전 08:03 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사          | 기사 제목                                          | 발행시각             | 언론사 링크                                                                      |
-|:------|:-------------|:-----------------------------------------------|:-----------------|:----------------------------------------------------------------------------|
-| 서울대학교 | 한국강사신문       | 엄정식 교수, 서울대학교 미래전연구센터 특별 세미나 발표                | 2026-09-20 07:20 | https://www.lecturernews.com/news/articleView.html?idxno=210888             |
-| 서울대학교 | 스타뉴스         | "이분과 같이 다녀도 되나"..'김연아♥' 고우림, 퀸의 남편인데 '서울대...   | 2026-09-20 06:39 | https://www.starnewskorea.com/broadcast-show/2026/09/20/2026091922391834042 |
-| 서울대학교 | 뉴스엔          | 포레스텔라 조민규 “서울대 손태진 선배, 얻어먹은 밥이 집값 수준” ...      | 2026-09-20 06:24 | https://www.newsen.com/news_view.php?uid=202609200450352110                 |
-| 서울대학교 | 연합뉴스         | 중정서 사흘만에 변사체…최종길 서울대교수 사건 다시 진실화해위로            | 2026-09-20 05:55 | https://www.yna.co.kr/view/AKR20260919056000004?input=1195m                 |
-| 서울대학교 | 연합뉴스         | 서울대 출신 스타트업 대표, 전문연구요원 병역비리 가담 혐의 송치           | 2026-09-20 05:55 | https://www.yna.co.kr/view/AKR20260919056100004?input=1195m                 |
-| 서울대학교 | THEDAILYPOST | 코웨이, 서울대 '미생물 분해 기술' 품었다…음식물처리기 적용             | 2026-09-19 23:48 | https://www.thedailypost.kr/news/articleView.html?idxno=115736              |
-| 서울대학교 | TV리포트        | 조민규, 손태진 미담 공개 "서울대 시절 얻어먹은 밥만 해도 집 사" ('불...  | 2026-09-19 19:58 | https://www.tvreport.co.kr/broadcast/article/1076881/                       |
-| 서울대학교 | 엑스포츠뉴스       | 조민규, '서울대 선배' 손태진 미담…"얻어먹은 밥·커피만 집 한 채 값...    | 2026-09-19 19:50 | https://www.xportsnews.com/article/2197546                                  |
-| 서울대학교 | SLIST        | 포레스텔라 고우림·조민규, 손태진 서울대 후배..."아낌없이 밥 사줘"        | 2026-09-19 19:40 | https://www.slist.kr/news/articleView.html?idxno=767428                     |
-| 서울대학교 | MBC          | 포레스텔라 조민규-고우림, ‘서울대 선배’ 손태진 칭찬 “학교의 자랑...      | 2026-09-19 18:06 | http://enews.imbc.com/News/RetrieveNewsInfo/518726                          |
-| 서울대학교 | 뉴스엔          | 포레스텔라 고우림X조민규 “손태진=서울대 성악과 자랑, 사준 밥+커피...      | 2026-09-19 17:00 | https://www.newsen.com/news_view.php?uid=202609191544422510                 |
-| 서울대학교 | SLIST        | '불후' 손태진&포레스텔라 조민규·고우림, 서울대 성악과 선후배 케미         | 2026-09-19 14:18 | https://www.slist.kr/news/articleView.html?idxno=767413                     |
-| 서울대학교 | BNTNEWS      | ‘불후의명곡’ 손태진x조민규x고우림, 서울대 성악과 케미                | 2026-09-19 13:12 | https://www.bntnews.co.kr/article/view/bnt202609190107                      |
-| 연세대학교 | 뉴스엔          | 라이머,브랜뉴뮤직에 연세대 졸업 부친→대기업 출신 여동생 채용(신랑...       | 2026-09-19 12:41 | https://www.newsen.com/news_view.php?uid=202609191123556310                 |
-| 고려대학교 | 메디게이트뉴스      | 고려대구로병원 김다솜 전공의, ‘EMS코리아 2026’ 우수포스터상 수상       | 2026-09-19 10:46 | https://www.medigatenews.com/news/3173334617                                |
-| 고려대학교 | 더퍼블릭         | 건국대·고려대 연구팀, 물리적 자극으로 노화 줄기세포 기능 회복            | 2026-09-19 10:14 | https://www.thepublic.kr/news/articleView.html?idxno=319369                 |
-| 고려대학교 | 한국강사신문       | 건국대학교 조쌍구 교수팀, 고려대와 약물 없이 물리적 자극으로 노화 ...      | 2026-09-19 10:10 | https://www.lecturernews.com/news/articleView.html?idxno=210861             |
-| 서울대학교 | 한국강사신문       | 이슈 픽 쌤과 함께, 서울대 김상배 교수와 '차이나 쇼크 2.0, 격화하는 A... | 2026-09-19 10:00 | https://www.lecturernews.com/news/articleView.html?idxno=210768             |
-| 서울대학교 | 위키트리         | 울먹인 김혜경 여사... 서울대학교 치과병원에서 벌어진 일               | 2026-09-19 07:54 | https://www.wikitree.co.kr/articles/1160613                                 |
-| 고려대학교 | 메디컬월드뉴스      | [9월 18일 병원계 이모저모⑦] 강남성심, 고려대안암, 여의도성모병원 ...    | 2026-09-18 23:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977330                 |
-| 서울대학교 | 헤럴드경제        | ‘서울대 출신 여배우’ 얼굴 너무 늙어 등교 제지당하더니, 투병 고백...      | 2026-09-18 21:01 | https://biz.heraldcorp.com/article/10878557?ref=naver                       |
-| 고려대학교 | K-HEALTH     | 고려대의료원·고려대의대교우회, 스리랑카 이주노동자 위한 의료지원 ...        | 2026-09-18 20:34 | https://www.k-health.com/news/articleView.html?idxno=101284                 |
-| 고려대학교 | 스포티비뉴스       | '환연3' 조휘현, CJ 채용 영상에 떴다…고대생→쇼호스트 변신 '눈길'       | 2026-09-18 20:21 | https://www.spotvnews.co.kr/news/articleView.html?idxno=1008189             |
-| 고려대학교 | 메디컬월드뉴스      | [9월 18일 병원계 이모저모③]고려대의료원, 국립중앙의료원, 강남세브...     | 2026-09-18 20:10 | https://medicalworldnews.co.kr/news/view.php?idx=1510977326                 |
-| 고려대학교 | 더퍼스트미디어      | 고려대 안암병원, 이동진료 버스에 스마트 원격진료 인프라 구축…'메디...      | 2026-09-18 19:00 | http://www.thefirstmedia.net/news/articleView.html?idxno=209113             |
-| 고려대학교 | 아주경제         | 고려대학교 통일융합연구원, 반기문재단과 29일 한반도 평화 심포지엄 ...      | 2026-09-18 18:56 | https://www.ajunews.com/view/20260918183549411                              |
-| 고려대학교 | TV조선         | 한투 김남구 회장, 금융인재 찾으러 고려대 캠퍼스 '출격'               | 2026-09-18 18:20 | https://news.tvchosun.com/site/data/html_dir/2026/09/18/2026091890223.html  |
-| 서울대학교 | 경기일보         | 서울대 치과병원 찾은 김혜경 여사 "제때 치료받는 환경 만들 것"           | 2026-09-18 18:07 | https://www.kyeonggi.com/article/20260918580298                             |
-| 연세대학교 | 주간한국         | 연세대 박물관, '2026 박물관·미술관 박람회'서 한글 특별체험터 운영       | 2026-09-18 17:44 | https://weekly.hankooki.com/news/articleView.html?idxno=7185088             |
-| 서울대학교 | JOSEILBO     | "서울대 10개 만들기 문제 있다"…국회 토론회서 질타 이어져             | 2026-09-18 17:34 | http://www.joseilbo.com/news/news_read.php?uid=576018&class=32&grp=         |
+| 대학    | 언론사     | 기사 제목                                          | 발행시각             | 언론사 링크                                                                                        |
+|:------|:--------|:-----------------------------------------------|:-----------------|:----------------------------------------------------------------------------------------------|
+| 서울대학교 | 서울신문    | [단독] 서울대 묵혀둔 기부금 4년째 3000억…학생 장학금 등 소극적인 재...  | 2026-09-21 05:02 | https://www.seoul.co.kr/news/society/education-news/2026/09/21/20260921010008?wlog_tag3=naver |
+| 서울대학교 | 파이낸셜포스트 | 배달 쓰레기는 이제 그만… 배민-잇그린-서울대, '다회용기 순환' 맞손        | 2026-09-21 00:56 | https://www.financialpost.co.kr/news/articleView.html?idxno=276628                            |
+| 고려대학교 | 아시아투데이  | 고대월례강좌 성료…선장에서 해상법 권위자로, 김인현 교수의 ‘인생 ...       | 2026-09-20 23:00 | https://www.asiatoday.co.kr/kn/view.php?key=20260920002249304                                 |
+| 서울대학교 | 파이낸셜뉴스  | 배민 '일회용품 없는 서울대 기숙사 조성' 3자 협약                  | 2026-09-20 18:45 | https://www.fnnews.com/news/202609201843253143                                                |
+| 서울대학교 | 스포츠서울   | 서울대 기숙사서 다회용기 배달…배민, 친환경 캠퍼스 만든다               | 2026-09-20 18:39 | https://www.sportsseoul.com/news/read/1636538?ref=naver                                       |
+| 고려대학교 | 아시아투데이  | "알츠하이머, 불치병서 관리 가능한 질환으로"…변화 준비하는 고대구로...      | 2026-09-20 18:06 | https://www.asiatoday.co.kr/kn/view.php?key=20260920010007315                                 |
+| 서울대학교 | CCTIMES | [충청논단] '서울대 10개 만들기 사업' 후유증                    | 2026-09-20 18:02 | http://www.cctimes.kr/news/articleView.html?idxno=928576                                      |
+| 고려대학교 | 한국강사신문  | 고려대학교 구승회·지성욱 교수팀, 지방간이 간암으로 악화하는 핵심 ...       | 2026-09-20 17:48 | https://www.lecturernews.com/news/articleView.html?idxno=210917                               |
+| 서울대학교 | 서울신문    | [단독] 서울대 기부금 3000억 4년째 이월…1000억은 5년 넘게 묵혔다     | 2026-09-20 17:40 | https://www.seoul.co.kr/news/society/education-news/2026/09/20/20260920500086?wlog_tag3=naver |
+| 고려대학교 | 한국경제    | '민족 고대'서 '세계 고대'로                              | 2026-09-20 17:31 | https://www.hankyung.com/article/2026092062801                                                |
+| 서울대학교 | NEWSGN  | [기고] '서울대 10개 만들기'(S10), 경상국립대학교가 반드시 패키지 지... | 2026-09-20 17:24 | https://www.newsgn.com/news/articleView.html?idxno=575014                                     |
+| 서울대학교 | 전자신문    | [창간기획]조규진 서울대 로보틱스 국가연구소장, “사람 닮은 로봇보다...      | 2026-09-20 17:01 | https://www.etnews.com/20260914000313                                                         |
+| 고려대학교 | 더퍼스트미디어 | 고려대의료원·의대교우회, 스리랑카 이주노동자 300여명 의료봉사 진행         | 2026-09-20 16:22 | http://www.thefirstmedia.net/news/articleView.html?idxno=209134                               |
+| 서울대학교 | KGNEWS  | 배달의 민족, 서울대 기숙사에 '제로 웨이스트 캠퍼스' 만든다             | 2026-09-20 15:34 | https://www.kgnews.co.kr/news/article.html?no=912341                                          |
+| 서울대학교 | 뉴스핌     | 배달의민족, 서울대에 다회용기 인프라 구축                        | 2026-09-20 15:32 | https://www.newspim.com/news/view/20260920000133                                              |
+| 서울대학교 | SBS Biz | '서울대 의대 안 간다?'…지원자 10년 새 최저, 무슨 일?             | 2026-09-20 14:50 | https://biz.sbs.co.kr/article_hub/20000335734?division=NAVER                                  |
+| 고려대학교 | 메디컬월드뉴스 | 정은경 장관, 간호·간병통합서비스 현장 목소리 청취…고려대 구로병원...       | 2026-09-20 14:40 | https://medicalworldnews.co.kr/news/view.php?idx=1510977352                                   |
+| 서울대학교 | LCNEWS  | 배민, 서울대 기숙사와 손잡고 대학가 다회용기 인프라 첫 도입             | 2026-09-20 14:10 | https://www.lcnews.co.kr/news/articleView.html?idxno=208588                                   |
+| 고려대학교 | 뉴스티앤티   | 고려대, ECCV 2026서 체화형 에이전트·대화형 AI 국제 워크숍 개최      | 2026-09-20 14:06 | https://www.newstnt.com/news/articleView.html?idxno=719297                                    |
+| 서울대학교 | NC      | '불후' 손태진·포레스텔라, 무대 찢은 '서울대 선후배'…울산 홀린 고...     | 2026-09-20 13:52 | https://www.nc.press/news/articleView.html?idxno=626899                                       |
+| 서울대학교 | 더페어     | 배민·서울대, 기숙사 다회용기 회수 체계 구축…대학가 자원순환 실험          | 2026-09-20 13:42 | https://www.thefairnews.co.kr/news/articleView.html?idxno=88607                               |
+| 서울대학교 | NGONEWS | "배달용기부터 바꾼다"…서울대 기숙사, '제로웨이스트 캠퍼스' 시동          | 2026-09-20 13:08 | https://www.ngonews.kr/news/articleView.html?idxno=238784                                     |
+| 고려대학교 | 보건뉴스    | 고대구로병원 윤영훈 교수, 'EMS KOREA 2026'서 소방청장 표창 수상    | 2026-09-20 12:40 | http://www.bokuennews.com/news/article.html?no=284458                                         |
+| 서울대학교 | SRTIMES | 배민, 서울대 기숙사에 '제로웨이스트 인프라' 구축…친환경 배달 문화...      | 2026-09-20 11:40 | http://www.srtimes.kr/news/articleView.html?idxno=212908                                      |
+| 서울대학교 | 스마트경제   | 배민, 서울대에 다회용기 배달 인프라 구축…친환경 캠퍼스 확산             | 2026-09-20 11:26 | http://www.dailysmart.co.kr/news/articleView.html?idxno=130034                                |
+| 서울대학교 | 지디넷코리아  | 배민, 서울대 기숙사에 다회용기 수거 공간 만든다                    | 2026-09-20 10:50 | https://zdnet.co.kr/view/?no=20260920104923                                                   |
+| 서울대학교 | 디지털데일리  | “배달용기 반납도 캠퍼스에서”…배민, 서울대와 다회용기 확산 나선다          | 2026-09-20 10:40 | https://www.ddaily.co.kr/page/view/2026092010222295262                                        |
+| 서울대학교 | 강원도민일보  | 중정서 사흘만에 변사체…최종길 서울대교수 유족 진실규명 신청              | 2026-09-20 10:34 | https://www.kado.net/news/articleView.html?idxno=2073755                                      |
+| 서울대학교 | 전자신문    | 배민, 서울대와 다회용기 배달 확대…'제로웨이스트 캠퍼스' 추진            | 2026-09-20 10:27 | https://www.etnews.com/20260920000042                                                         |
+| 서울대학교 | SLIST   | 배민, 서울대와 제로웨이스트 캠퍼스 협약…ABC마트, 청년축제 참여          | 2026-09-20 10:02 | https://www.slist.kr/news/articleView.html?idxno=767505                                       |
