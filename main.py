@@ -406,12 +406,14 @@ def extract_media_name(original_url: str, naver_url: str) -> str:
     return clean_domain
 
 def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
-    """기사 품질 필터링"""
+    """기사 품질 필터링: 제외어 차단 후 제목 또는 본문 요약(desc) 내 대학명 포함 여부 검증"""
     combined_text = f"{title} {desc}"
     for exc in must_exclude:
         if exc in combined_text:
             return False
-    return any(inc in title for inc in must_include)
+            
+    # 제목뿐만 아니라 본문 요약(description)에 대학명이 포함된 연구 보도자료도 수집 허용
+    return any(inc in combined_text for inc in must_include)
 
 def get_report_date_str(pub_dt: datetime) -> str:
     """전날 08:00 ~ 당일 08:00 기준 일별 탭 이름(YYYY-MM-DD) 계산"""
