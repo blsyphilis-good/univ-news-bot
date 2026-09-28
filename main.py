@@ -19,6 +19,7 @@ CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
 SPREADSHEET_ID = os.environ.get("SPREADSHEET_ID")
 GCP_SA_KEY = os.environ.get("GCP_SA_KEY")
+USER_EMAIL = os.environ.get("USER_GMAIL", "blsyphilis@gmail.com")
 
 # 2. 170+ 주요 언론사 매핑 테이블 (서브도메인 특화 매체 최우선 매칭)
 MEDIA_DOMAIN_MAP = {
@@ -413,20 +414,19 @@ def is_valid_article(title: str, desc: str, must_include: list, must_exclude: li
             return False
     return any(inc in combined_text for inc in must_include)
 
-def get_report_date_str(pub_dt: datetime) -> str:
-    """전날 08:00 ~ 당일 08:00 기준 일별 탭 이름(YYYY-MM-DD) 계산"""
+def get_report_date(pub_dt: datetime) -> datetime.date:
+    """전날 08:00 ~ 당일 08:00 기준 보고 일자 계산"""
     shifted = pub_dt - timedelta(hours=8)
-    report_date = shifted.date() + timedelta(days=1)
-    return report_date.strftime("%Y-%m-%d")
+    return shifted.date() + timedelta(days=1)
+
+def get_report_date_str(pub_dt: datetime) -> str:
+    """일별 탭 이름(YYYY-MM-DD) 반환"""
+    return get_report_date(pub_dt).strftime("%Y-%m-%d")
 
 def get_search_cutoff(now_dt: datetime, kst: timezone) -> datetime:
-    """수집 시작점: 매월 1~2일은 전월 1일 00:00부터, 평소는 당월 1일 00:00부터 수집"""
-    if now_dt.day in [1, 2]:
-        first_of_this_month = datetime(now_dt.year, now_dt.month, 1, 0, 0, 0, tzinfo=kst)
-        last_day_prev_month = first_of_this_month - timedelta(days=1)
-        return datetime(last_day_prev_month.year, last_day_prev_month.month, 1, 0, 0, 0, tzinfo=kst)
-    else:
-        return datetime(now_dt.year, now_dt.month, 1, 0, 0, 0, tzinfo=kst)
+    """수집 기준 시각: 전날 08:00:00 (KST) 이후 기사 수집 (전월 좀비 생성 방지)"""
+    yesterday = now_dt - timedelta(days=1)
+    return datetime(yesterday.year, yesterday.month, yesterday.day, 8, 0, 0, tzinfo=kst)
 
 def fetch_naver_news_paging(target: dict, cutoff_time: datetime, kst: timezone) -> list:
     """네이버 API 페이징(최대 1000건)을 순회하며 기준 시각 이후 기사 전량 수집"""
@@ -483,8 +483,10 @@ def fetch_naver_news_paging(target: dict, cutoff_time: datetime, kst: timezone) 
             naver_link = item.get("link", "")
             media_name = extract_media_name(orig_link, naver_link)
             
-            month_tab = f"{pub_datetime.year}년 {pub_datetime.month}월"
-            day_tab = get_report_date_str(pub_datetime)
+            # 08:00 기준 라우팅 일자 계산 (일별 탭 및 월별 누적 탭 동기화)
+            rep_date = get_report_date(pub_datetime)
+            month_tab = f"{rep_date.year}년 {rep_date.month}월"
+            day_tab = rep_date.strftime("%Y-%m-%d")
             pub_time_str = pub_datetime.strftime("%Y-%m-%d %H:%M")
 
             news_list.append({
@@ -732,6 +734,75 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
                 print(f"[Google Sheets Error] 탭 '{tab_name}' 동기화 실패: {e}")
                 break
 
+def get_sheet_year_month(title: str):
+    """시트 이름에서 (year, month) 튜플 추출 (미매칭 시 None)"""
+    t = title.strip()
+    m_match = re.match(r'^(\d{4})년\s*(\d{1,2})월$', t)
+    if m_match:
+        return int(m_match.group(1)), int(m_match.group(2))
+    d_match = re.match(r'^(\d{4})-(\d{2})-(\d{2})$', t)
+    if d_match:
+        return int(d_match.group(1)), int(d_match.group(2))
+    return None
+
+def backup_and_cleanup_sheets(client, doc, now_kst: datetime, user_email: str) -> list:
+    """
+    월 전환 시 백업 및 정리 (2차 무결성 검증 포함):
+    1. 전월 탭이 존재하는 경우 현재 시트 상태 그대로 복제
+    2. 생성된 복제 파일을 다시 열어 시트 개수 및 무결성을 2차 검증 (실패 시 즉시 중단)
+    3. 복제본에 사용자 계정 편집 권한 부여
+    4. 검증이 완전히 통과된 경우에만 삭제 대상 탭 ID 리스트 반환
+    """
+    curr_ym = (now_kst.year, now_kst.month)
+    all_sheets = doc.worksheets()
+
+    prev_sheets = []
+    prev_yms = []
+    for ws in all_sheets:
+        ym = get_sheet_year_month(ws.title)
+        if ym and ym < curr_ym:
+            prev_sheets.append(ws)
+            prev_yms.append(ym)
+
+    if not prev_sheets:
+        return []
+
+    latest_prev_ym = max(prev_yms)
+    archive_title = f"대학 뉴스 모니터링(서울대, 고려대, 연세대) {latest_prev_ym[0]}년 {latest_prev_ym[1]}월"
+    print(f"\n[월간 아카이빙] 전월({latest_prev_ym[0]}년 {latest_prev_ym[1]}월) 탭 {len(prev_sheets)}개 감지")
+
+    try:
+        print(f"[Google Drive] 백업 파일 복제 시도: '{archive_title}'...")
+        backup_doc = client.copy(doc.id, title=archive_title)
+        print(f"[Google Drive] 백업 파일 생성 호출 성공 (ID: {backup_doc.id})")
+
+        # [2차 안전 검증] 복제된 파일이 실제로 온전하게 생성되었는지 재오픈 및 시트 수 대조
+        time.sleep(2.0)
+        verified_backup = client.open_by_key(backup_doc.id)
+        backup_sheets_count = len(verified_backup.worksheets())
+        origin_sheets_count = len(all_sheets)
+
+        if backup_sheets_count < origin_sheets_count:
+            raise RuntimeError(
+                f"복제 파일 무결성 검증 실패: 원본 시트 수({origin_sheets_count})보다 복제본 시트 수({backup_sheets_count})가 적습니다."
+            )
+        print(f"[Google Drive] 백업 파일 무결성 2차 검증 통과 (시트 {backup_sheets_count}개 정상 일치)")
+
+        if user_email:
+            try:
+                backup_doc.share(user_email, perm_type='user', role='writer')
+                print(f"[Google Drive] 사용자 계정({user_email}) 공유 완료 (편집 권한)")
+            except Exception as share_err:
+                print(f"[Google Drive Share 경고] 사용자 공유 중 오류 발생: {share_err}")
+
+        # 모든 검증 완료 후 삭제 대상 시트 ID 반환
+        return [ws.id for ws in prev_sheets]
+
+    except Exception as e:
+        print(f"[Google Drive Error] 백업 복제 또는 무결성 검증 실패: {e}")
+        print("[Google Drive] 원본 시트의 데이터 유실을 방지하기 위해 탭 삭제 작업을 일체 수행하지 않습니다.")
+        return []
+
 def reorder_all_sheets(doc):
     """월별 시트 최우선 ➡️ 일별 시트 최신순 내림차순 정렬"""
     for attempt in range(3):
@@ -836,17 +907,30 @@ def main():
             client = gspread.service_account_from_dict(key_dict)
             doc = client.open_by_key(SPREADSHEET_ID)
 
-            # [A] 월간 누적 탭 동기화
+            # [A] 전월 시트 아카이빙 (백업 복제, 2차 무결성 검증, 권한 공유)
+            sheets_to_cleanup = backup_and_cleanup_sheets(client, doc, now_kst, USER_EMAIL)
+
+            # [B] 월간 누적 탭 동기화
             month_grouped = df.groupby("month_tab")
             for month_tab_name, group_df in month_grouped:
                 write_sheet_data_with_format(doc, month_tab_name, group_df)
 
-            # [B] 일별 탭 동기화
+            # [C] 일별 탭 동기화
             day_grouped = df.groupby("day_tab")
             for day_tab_name, group_df in day_grouped:
                 write_sheet_data_with_format(doc, day_tab_name, group_df)
 
-            # [C] 탭 순서 재정렬
+            # [D] 신규 탭 생성 완료 후, 원본에서 전월 탭 일괄 삭제 (단일 batch_update)
+            if sheets_to_cleanup:
+                try:
+                    print(f"[Google Sheets] 원본 시트에서 전월 탭 {len(sheets_to_cleanup)}개 삭제 시작...")
+                    delete_reqs = [{"deleteSheet": {"sheetId": s_id}} for s_id in sheets_to_cleanup]
+                    doc.batch_update({"requests": delete_reqs})
+                    print(f"[Google Sheets] 원본 시트에서 전월 탭 {len(sheets_to_cleanup)}개 삭제 완료")
+                except Exception as del_err:
+                    print(f"[Google Sheets Error] 전월 탭 삭제 실패: {del_err}")
+
+            # [E] 탭 순서 재정렬
             reorder_all_sheets(doc)
 
         except Exception as e:
