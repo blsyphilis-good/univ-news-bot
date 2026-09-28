@@ -2,6 +2,7 @@ import os
 import re
 import html
 import json
+import time
 from urllib.parse import urlparse
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -323,14 +324,13 @@ def clean_title_for_dedup(title: str) -> str:
     return re.sub(r'\s+', ' ', t)
 
 def robust_parse_date(val):
-    """다양한 형식(시리얼, 한국어 AM/PM, ISO 등)의 날짜를 pd.Timestamp로 안전 변환"""
+    """다양한 형식의 날짜를 pd.Timestamp로 변환"""
     if not val or pd.isna(val):
         return pd.NaT
     if isinstance(val, (datetime, pd.Timestamp)):
         return pd.to_datetime(val)
     val_str = str(val).strip()
 
-    # 엑셀 시리얼 넘버 변환
     try:
         f = float(val_str)
         base = datetime(1899, 12, 30)
@@ -406,13 +406,11 @@ def extract_media_name(original_url: str, naver_url: str) -> str:
     return clean_domain
 
 def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
-    """기사 품질 필터링: 제외어 차단 후 제목 또는 본문 요약(desc) 내 대학명 포함 여부 검증"""
+    """기사 품질 필터링: 본문 요약문(desc) 포함 여부까지 확장 검증"""
     combined_text = f"{title} {desc}"
     for exc in must_exclude:
         if exc in combined_text:
             return False
-            
-    # 제목뿐만 아니라 본문 요약(description)에 대학명이 포함된 연구 보도자료도 수집 허용
     return any(inc in combined_text for inc in must_include)
 
 def get_report_date_str(pub_dt: datetime) -> str:
@@ -504,7 +502,7 @@ def fetch_naver_news_paging(target: dict, cutoff_time: datetime, kst: timezone) 
     return news_list
 
 def extract_url_from_cell(val: str) -> str:
-    """기존 셀의 =HYPERLINK("url", ...) 수식 또는 일반 URL에서 순수 URL 문자열 추출"""
+    """셀의 수식 또는 문자열에서 순수 URL 추출"""
     if not val:
         return ""
     m = re.search(r'=HYPERLINK\("([^"]+)"', str(val))
@@ -513,7 +511,7 @@ def extract_url_from_cell(val: str) -> str:
     return str(val).strip()
 
 def read_existing_sheet_df(worksheet) -> pd.DataFrame:
-    """기존 시트 데이터를 읽어와 DataFrame으로 복원"""
+    """기존 시트 데이터 안전 복원"""
     try:
         data = worksheet.get_all_values(value_render_option="FORMULA")
         if not data or len(data) <= 1:
@@ -538,161 +536,253 @@ def read_existing_sheet_df(worksheet) -> pd.DataFrame:
         print(f"[Sheet Read Note] 기존 데이터 파싱 건너뜀: {e}")
         return pd.DataFrame()
 
-def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
-    """안전 정규화 및 날짜 파싱 후 월별/일별 정렬 적용하여 시트 갱신"""
-    try:
-        try:
-            worksheet = doc.worksheet(tab_name)
-            existing_df = read_existing_sheet_df(worksheet)
-        except gspread.WorksheetNotFound:
-            worksheet = doc.add_worksheet(title=tab_name, rows=max(len(new_df) + 50, 100), cols=7)
-            existing_df = pd.DataFrame()
-
-        # 기존 데이터와 신규 수집 데이터 병합
-        if not existing_df.empty:
-            combined_df = pd.concat([new_df, existing_df], ignore_index=True)
-        else:
-            combined_df = new_df.copy()
-
-        # 언론사명 최신 매핑
-        combined_df["언론사"] = combined_df.apply(
-            lambda r: extract_media_name(r.get("언론사 링크", ""), r.get("네이버 링크", "")), axis=1
-        )
-
-        # 1. 안전 날짜 파싱 (NaT 발생 완전 차단)
-        combined_df["dt_parsed"] = combined_df["발행시각"].apply(robust_parse_date)
-        
-        # 2. 따옴표 탈락으로 인한 중복 방지 정규화
-        combined_df["title_dedup"] = combined_df["기사 제목"].apply(clean_title_for_dedup)
-        combined_df.drop_duplicates(subset=["대학", "title_dedup"], inplace=True)
-
-        # 3. 2자리 시간 문자열(%Y-%m-%d %H:%M)로 표준화
-        combined_df["발행시각"] = combined_df["dt_parsed"].dt.strftime("%Y-%m-%d %H:%M").fillna(combined_df["발행시각"])
-
-        # 4. 정렬 로직
-        if "월" in tab_name:
-            # 월별 시트: 발행시각 내림차순 (최신순)
-            combined_df.sort_values(by="dt_parsed", ascending=False, inplace=True)
-        else:
-            # 날짜별 시트: 1) 대학명(고려대 -> 연세대 -> 서울대), 2) 발행시각 내림차순(최신순)
-            univ_order = ["고려대학교", "연세대학교", "서울대학교"]
-            combined_df["대학_순서"] = pd.Categorical(combined_df["대학"], categories=univ_order, ordered=True)
-            combined_df.sort_values(by=["대학_순서", "dt_parsed"], ascending=[True, False], inplace=True)
-            combined_df.drop(columns=["대학_순서"], inplace=True)
-
-        combined_df.drop(columns=["dt_parsed", "title_dedup"], inplace=True)
-
-        # 시트 데이터 행 생성
-        headers = ["대학", "언론사명", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
-        rows = [headers]
-
-        for _, r in combined_df.iterrows():
-            orig_url = r.get("언론사 링크", "")
-            nav_url = r.get("네이버 링크", "")
-            
-            orig_formula = f'=HYPERLINK("{orig_url}", "기사링크(언론사)")' if orig_url else ""
-            nav_formula = f'=HYPERLINK("{nav_url}", "기사링크(네이버)")' if nav_url else ""
-            
-            rows.append([
-                r["대학"],
-                r["언론사"],
-                r["기사 제목"],
-                r["기사 요약"],
-                r["발행시각"],
-                orig_formula,
-                nav_formula
-            ])
-
-        worksheet.clear()
-        worksheet.update(values=rows, range_name="A1", value_input_option="USER_ENTERED")
-        worksheet.freeze(rows=1)
-
-        # 헤더 서식 (네이비 배경 + 화이트 볼드)
-        header_format = {
-            "backgroundColor": {"red": 0.12, "green": 0.22, "blue": 0.38},
-            "textFormat": {"bold": True, "foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}},
-            "horizontalAlignment": "CENTER",
-            "verticalAlignment": "MIDDLE"
+def apply_sheet_formatting_batch(doc, worksheet):
+    """모든 서식(틀고정, 배경색, 정렬, 줄바꿈, 2자리시간, 열너비)을 단 1회의 batch_update로 일괄 적용"""
+    sheet_id = worksheet.id
+    reqs = [
+        # 1. 틀 고정 (1행)
+        {
+            "updateSheetProperties": {
+                "properties": {
+                    "sheetId": sheet_id,
+                    "gridProperties": {"frozenRowCount": 1}
+                },
+                "fields": "gridProperties.frozenRowCount"
+            }
+        },
+        # 2. 헤더 서식 (A1:G1)
+        {
+            "repeatCell": {
+                "range": {"sheetId": sheet_id, "startRowIndex": 0, "endRowIndex": 1, "startColumnIndex": 0, "endColumnIndex": 7},
+                "cell": {
+                    "userEnteredFormat": {
+                        "backgroundColor": {"red": 0.12, "green": 0.22, "blue": 0.38},
+                        "textFormat": {"bold": True, "foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}},
+                        "horizontalAlignment": "CENTER",
+                        "verticalAlignment": "MIDDLE"
+                    }
+                },
+                "fields": "userEnteredFormat(backgroundColor,textFormat,horizontalAlignment,verticalAlignment)"
+            }
+        },
+        # 3. 본문 A:B 열 (가운데 정렬)
+        {
+            "repeatCell": {
+                "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 0, "endColumnIndex": 2},
+                "cell": {
+                    "userEnteredFormat": {
+                        "horizontalAlignment": "CENTER",
+                        "verticalAlignment": "MIDDLE"
+                    }
+                },
+                "fields": "userEnteredFormat(horizontalAlignment,verticalAlignment)"
+            }
+        },
+        # 4. 본문 C열 (기사 제목: 줄바꿈, 좌측 정렬)
+        {
+            "repeatCell": {
+                "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 2, "endColumnIndex": 3},
+                "cell": {
+                    "userEnteredFormat": {
+                        "wrapStrategy": "WRAP",
+                        "horizontalAlignment": "LEFT",
+                        "verticalAlignment": "MIDDLE"
+                    }
+                },
+                "fields": "userEnteredFormat(wrapStrategy,horizontalAlignment,verticalAlignment)"
+            }
+        },
+        # 5. 본문 D열 (기사 요약: 줄바꿈, 상단 좌측 정렬)
+        {
+            "repeatCell": {
+                "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 3, "endColumnIndex": 4},
+                "cell": {
+                    "userEnteredFormat": {
+                        "wrapStrategy": "WRAP",
+                        "horizontalAlignment": "LEFT",
+                        "verticalAlignment": "TOP"
+                    }
+                },
+                "fields": "userEnteredFormat(wrapStrategy,horizontalAlignment,verticalAlignment)"
+            }
+        },
+        # 6. 본문 E열 (발행시각: yyyy-mm-dd hh:mm 2자리 시간 강제)
+        {
+            "repeatCell": {
+                "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 4, "endColumnIndex": 5},
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "DATE_TIME", "pattern": "yyyy-mm-dd hh:mm"},
+                        "horizontalAlignment": "CENTER",
+                        "verticalAlignment": "MIDDLE"
+                    }
+                },
+                "fields": "userEnteredFormat(numberFormat,horizontalAlignment,verticalAlignment)"
+            }
+        },
+        # 7. 본문 F:G 열 (링크: 가운데 정렬)
+        {
+            "repeatCell": {
+                "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 5, "endColumnIndex": 7},
+                "cell": {
+                    "userEnteredFormat": {
+                        "horizontalAlignment": "CENTER",
+                        "verticalAlignment": "MIDDLE"
+                    }
+                },
+                "fields": "userEnteredFormat(horizontalAlignment,verticalAlignment)"
+            }
         }
-        worksheet.format("A1:G1", header_format)
+    ]
 
-        # 본문 줄바꿈 및 정렬
-        worksheet.format("A2:B", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
-        worksheet.format("C2:C", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "MIDDLE"})
-        worksheet.format("D2:D", {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "TOP"})
-        
-        # E열(발행시각) 2자리 시간 포맷 (yyyy-mm-dd hh:mm)
-        worksheet.format("E2:E", {
-            "numberFormat": {
-                "type": "DATE_TIME",
-                "pattern": "yyyy-mm-dd hh:mm"
-            },
-            "horizontalAlignment": "CENTER",
-            "verticalAlignment": "MIDDLE"
+    # 8. 열 너비 픽셀 적용 (A:85, B:110, C:320, D:420, E:125, F:120, G:120)
+    col_widths = [85, 110, 320, 420, 125, 120, 120]
+    for i, width in enumerate(col_widths):
+        reqs.append({
+            "updateDimensionProperties": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "dimension": "COLUMNS",
+                    "startIndex": i,
+                    "endIndex": i + 1
+                },
+                "properties": {"pixelSize": width},
+                "fields": "pixelSize"
+            }
         })
-        worksheet.format("F2:G", {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"})
 
-        # 열 너비 픽셀 설정 (대학:85, 언론사:110, 제목:320, 요약:420, 발행시각:125, 링크:120, 링크:120)
-        col_widths = [85, 110, 320, 420, 125, 120, 120]
-        requests_body = []
-        for i, width in enumerate(col_widths):
-            requests_body.append({
-                "updateDimensionProperties": {
-                    "range": {
-                        "sheetId": worksheet.id,
-                        "dimension": "COLUMNS",
-                        "startIndex": i,
-                        "endIndex": i + 1
-                    },
-                    "properties": {"pixelSize": width},
-                    "fields": "pixelSize"
-                }
-            })
-        doc.batch_update({"requests": requests_body})
-        print(f"[Google Sheets] 동기화 완료: 탭 '{tab_name}' (총 {len(combined_df)}건 정렬 완료)")
+    doc.batch_update({"requests": reqs})
 
-    except Exception as e:
-        print(f"[Google Sheets Error] 탭 '{tab_name}' 동기화 실패: {e}")
+def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
+    """단일 batch_update 및 지수 백오프로 429 에러를 차단하며 안전하게 시트 동기화"""
+    for attempt in range(3):
+        try:
+            try:
+                worksheet = doc.worksheet(tab_name)
+                existing_df = read_existing_sheet_df(worksheet)
+            except gspread.WorksheetNotFound:
+                worksheet = doc.add_worksheet(title=tab_name, rows=max(len(new_df) + 50, 100), cols=7)
+                existing_df = pd.DataFrame()
+
+            # 기존 데이터와 병합
+            if not existing_df.empty:
+                combined_df = pd.concat([new_df, existing_df], ignore_index=True)
+            else:
+                combined_df = new_df.copy()
+
+            combined_df["언론사"] = combined_df.apply(
+                lambda r: extract_media_name(r.get("언론사 링크", ""), r.get("네이버 링크", "")), axis=1
+            )
+
+            # 날짜 파싱 및 따옴표 중복 방지 정규화
+            combined_df["dt_parsed"] = combined_df["발행시각"].apply(robust_parse_date)
+            combined_df["title_dedup"] = combined_df["기사 제목"].apply(clean_title_for_dedup)
+            combined_df.drop_duplicates(subset=["대학", "title_dedup"], inplace=True)
+
+            combined_df["발행시각"] = combined_df["dt_parsed"].dt.strftime("%Y-%m-%d %H:%M").fillna(combined_df["발행시각"])
+
+            # 시트 유형별 정렬
+            if "월" in tab_name:
+                combined_df.sort_values(by="dt_parsed", ascending=False, inplace=True)
+            else:
+                univ_order = ["고려대학교", "연세대학교", "서울대학교"]
+                combined_df["대학_순서"] = pd.Categorical(combined_df["대학"], categories=univ_order, ordered=True)
+                combined_df.sort_values(by=["대학_순서", "dt_parsed"], ascending=[True, False], inplace=True)
+                combined_df.drop(columns=["대학_순서"], inplace=True)
+
+            combined_df.drop(columns=["dt_parsed", "title_dedup"], inplace=True)
+
+            headers = ["대학", "언론사명", "기사 제목", "기사 요약", "발행시각", "언론사 링크", "네이버 링크"]
+            rows = [headers]
+
+            for _, r in combined_df.iterrows():
+                orig_url = r.get("언론사 링크", "")
+                nav_url = r.get("네이버 링크", "")
+                
+                orig_formula = f'=HYPERLINK("{orig_url}", "기사링크(언론사)")' if orig_url else ""
+                nav_formula = f'=HYPERLINK("{nav_url}", "기사링크(네이버)")' if nav_url else ""
+                
+                rows.append([
+                    r["대학"],
+                    r["언론사"],
+                    r["기사 제목"],
+                    r["기사 요약"],
+                    r["발행시각"],
+                    orig_formula,
+                    nav_formula
+                ])
+
+            # 1. 데이터 초기화 및 작성
+            worksheet.clear()
+            worksheet.update(values=rows, range_name="A1", value_input_option="USER_ENTERED")
+
+            # 2. 모든 서식을 단 1회의 batch_update로 적용
+            apply_sheet_formatting_batch(doc, worksheet)
+            print(f"[Google Sheets] 동기화 완료: 탭 '{tab_name}' (총 {len(combined_df)}건 정렬 및 서식 완료)")
+            
+            # API 쿼터 안전 대기
+            time.sleep(1.2)
+            break
+
+        except Exception as e:
+            if "429" in str(e) and attempt < 2:
+                print(f"[Google Sheets 429] 쿼터 초과 감지. 5초 대기 후 재시도 (시도 {attempt+1}/3)...")
+                time.sleep(5)
+            else:
+                print(f"[Google Sheets Error] 탭 '{tab_name}' 동기화 실패: {e}")
+                break
 
 def reorder_all_sheets(doc):
-    """월별 시트 최우선 배치 ➡️ 일별 시트 최신 날짜순 내림차순 정렬 ➡️ 기타 시트 맨 뒤 배치"""
-    try:
-        all_worksheets = doc.worksheets()
+    """월별 시트 최우선 ➡️ 일별 시트 최신순 내림차순 정렬"""
+    for attempt in range(3):
+        try:
+            time.sleep(1.5)
+            all_worksheets = doc.worksheets()
 
-        def sheet_sort_key(ws):
-            name = ws.title.strip()
-            # 1. 월별 시트 ("YYYY년 M월") -> 최신 연월 우선
-            m_match = re.match(r'^(\d{4})년\s*(\d{1,2})월$', name)
-            if m_match:
-                y, m = int(m_match.group(1)), int(m_match.group(2))
-                return (0, -y, -m, "")
-            # 2. 일별 시트 ("YYYY-MM-DD") -> 최신 일자 우선
-            d_match = re.match(r'^(\d{4})-(\d{2})-(\d{2})$', name)
-            if d_match:
-                y, m, d = int(d_match.group(1)), int(d_match.group(2)), int(d_match.group(3))
-                return (1, -y, -m, -d)
-            # 3. 기타 시트 ('시트1' 등) -> 맨 뒤
-            return (2, 0, 0, name)
+            def sheet_sort_key(ws):
+                name = ws.title.strip()
+                m_match = re.match(r'^(\d{4})년\s*(\d{1,2})월$', name)
+                if m_match:
+                    y, m = int(m_match.group(1)), int(m_match.group(2))
+                    return (0, -y, -m, "")
+                d_match = re.match(r'^(\d{4})-(\d{2})-(\d{2})$', name)
+                if d_match:
+                    y, m, d = int(d_match.group(1)), int(d_match.group(2)), int(d_match.group(3))
+                    return (1, -y, -m, -d)
+                return (2, 0, 0, name)
 
-        sorted_worksheets = sorted(all_worksheets, key=sheet_sort_key)
+            sorted_worksheets = sorted(all_worksheets, key=sheet_sort_key)
 
-        requests_body = []
-        for index, ws in enumerate(sorted_worksheets):
-            requests_body.append({
-                "updateSheetProperties": {
-                    "properties": {
-                        "sheetId": ws.id,
-                        "index": index
-                    },
-                    "fields": "index"
-                }
-            })
+            if [ws.id for ws in all_worksheets] == [ws.id for ws in sorted_worksheets]:
+                print("[Google Sheets] 시트 탭 순서가 이미 올바르게 정렬되어 있습니다.")
+                return
 
-        if requests_body:
-            doc.batch_update({"requests": requests_body})
+            if hasattr(doc, "reorder_worksheets"):
+                doc.reorder_worksheets(sorted_worksheets)
+            else:
+                requests_body = []
+                for index, ws in enumerate(sorted_worksheets):
+                    requests_body.append({
+                        "updateSheetProperties": {
+                            "properties": {
+                                "sheetId": ws.id,
+                                "index": index
+                            },
+                            "fields": "index"
+                        }
+                    })
+                doc.batch_update({"requests": requests_body})
+
             print(f"[Google Sheets] 전체 탭 순서 정렬 완료 (월별 탭 우선 ➡️ 일별 최신순 내림차순)")
-    except Exception as e:
-        print(f"[Google Sheets Error] 시트 순서 재정렬 실패: {e}")
+            break
+
+        except Exception as e:
+            if "429" in str(e) and attempt < 2:
+                print(f"[Google Sheets 429] 탭 정렬 중 쿼터 초과. 5초 대기 후 재시도...")
+                time.sleep(5)
+            else:
+                print(f"[Google Sheets Error] 시트 순서 재정렬 실패: {e}")
+                break
 
 def main():
     if not CLIENT_ID or not CLIENT_SECRET:
@@ -746,17 +836,17 @@ def main():
             client = gspread.service_account_from_dict(key_dict)
             doc = client.open_by_key(SPREADSHEET_ID)
 
-            # [A] 월간 누적 탭 동기화 (발행시각 내림차순 정렬)
+            # [A] 월간 누적 탭 동기화
             month_grouped = df.groupby("month_tab")
             for month_tab_name, group_df in month_grouped:
                 write_sheet_data_with_format(doc, month_tab_name, group_df)
 
-            # [B] 일별 탭 동기화 (대학순 -> 발행시각 내림차순 정렬)
+            # [B] 일별 탭 동기화
             day_grouped = df.groupby("day_tab")
             for day_tab_name, group_df in day_grouped:
                 write_sheet_data_with_format(doc, day_tab_name, group_df)
 
-            # [C] 탭 순서 재정렬 (월별 탭 우선 -> 최신 일별 탭 내림차순)
+            # [C] 탭 순서 재정렬
             reorder_all_sheets(doc)
 
         except Exception as e:
