@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-09-28 11:28:10 (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** 2026-09-29 11:28:10 (매일 오전 08:03 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사      | 기사 제목                                        | 발행시각             | 언론사 링크                                                                          |
-|:------|:---------|:---------------------------------------------|:-----------------|:--------------------------------------------------------------------------------|
-| 연세대학교 | 한국경제     | 섹타나인, 한순욱 신임 대표 선임…"디지털·AI 플랫폼 전환 가속"        | 2026-09-28 11:27 | https://www.hankyung.com/article/202609288770g                                  |
-| 서울대학교 | 굿모닝충청    | 서울대·시립대, 양자 세계 속 원자·빛 상호작용에서 거대한 연결망 발...    | 2026-09-28 11:26 | https://www.goodmorningcc.com/news/articleView.html?idxno=452997                |
-| 고려대학교 | EBN 산업경제 | 디지털자산 해킹 막는다…'TRUST404' 29일 개최               | 2026-09-28 11:24 | https://www.ebn.co.kr/news/articleView.html?idxno=1725805                       |
-| 연세대학교 | 디지틀조선일보  | 섹타나인, 한순욱 전 카카오페이 COO 신임 대표 선임               | 2026-09-28 11:24 | http://digitalchosun.dizzo.com/site/data/html_dir/2026/09/28/2026092880090.html |
-| 서울대학교 | 헤럴드경제    | “보고 안 돼 몰랐다” 면책 안돼… 삼일PwC “의사결정 문서화·내부통...   | 2026-09-28 11:24 | https://biz.heraldcorp.com/article/10885994?ref=naver                           |
-| 연세대학교 | 더밸류뉴스    | [더밸류 브리핑] 오늘의 손해보험 소식…현대해상·KB손해보험            | 2026-09-28 11:24 | http://www.thevaluenews.co.kr/news/view.php?idx=201888                          |
-| 고려대학교 | 전자신문     | “옵트아웃 집단소송, 위헌 소지·기업 부담 우려”... 율촌 세미나서 ...   | 2026-09-28 11:23 | https://www.etnews.com/20260928000191                                           |
-| 서울대학교 | 파이낸셜뉴스   | 단체교섭 거부·노조원 인사 불이익…좋은책신사고 대표 재판행             | 2026-09-28 11:22 | https://www.fnnews.com/news/202609281028011655                                  |
-| 고려대학교 | 머니투데이    | 예약·결제하는 '뮤즈' 돌풍에…韓 '모두의 AI' 시험대              | 2026-09-28 11:22 | https://www.mt.co.kr/tech/2026/09/28/2026092810395583214                        |
-| 서울대학교 | 쿠키뉴스     | 대구대 영재교육원, 2027학년도 AI·융합·외국어 신입생 모집          | 2026-09-28 11:20 | https://www.kukinews.com/article/view/kuk202609280079                           |
-| 고려대학교 | 직썰       | 고대안암병원, 권역응급센터 소아응급실 개소···"소아 전담의 3명 충...    | 2026-09-28 11:20 | https://www.ziksir.com/news/articleView.html?idxno=147570                       |
-| 고려대학교 | 헤럴드경제    | 고대안암병원 권역응급의료센터 ‘소아응급실’ 개소                   | 2026-09-28 11:18 | https://biz.heraldcorp.com/article/10885965?ref=naver                           |
-| 연세대학교 | BBS NEWS | "AI 시대, 도시의 미래는 ?"...SLW 2026 국제포럼 10월 6일 개막 | 2026-09-28 11:16 | https://news.bbsi.co.kr/news/articleView.html?idxno=4108644                     |
-| 연세대학교 | 머니투데이    | 도쿄·나폴리·마닐라 시장단 AI 도시 논한다…'스마트라이프위크' 개최       | 2026-09-28 11:15 | https://www.mt.co.kr/policy/2026/09/28/2026092715343695520                      |
-| 연세대학교 | 뉴스1      | 세계 도시·AI 전문가 300명 서울 집결…미래도시 해법 논의           | 2026-09-28 11:15 | https://www.news1.kr/local/moi/6302890                                          |
-| 고려대학교 | 메디칼업저버   | [동정] 김용엽 교수, 우수 연제상 수상                       | 2026-09-28 11:14 | https://www.monews.co.kr/news/articleView.html?idxno=414172                     |
-| 고려대학교 | 주간한국     | 고대안암병원, 권역응급의료센터 소아응급실 개소                    | 2026-09-28 11:14 | https://weekly.hankooki.com/news/articleView.html?idxno=7186124                 |
-| 서울대학교 | 전남일보     | "지역완결형 암 치료 체계 구축"…화순전남대병원, AI 연구 착수         | 2026-09-28 11:14 | https://www.jnilbo.com/news/articleView.html?idxno=90000069097                  |
-| 서울대학교 | 톱스타뉴스    | 오유경 "과학자 남편 얼굴 보며 매일 행복" 애정 고백               | 2026-09-28 11:14 | https://www.topstarnews.net/news/articleView.html?idxno=16222010                |
-| 고려대학교 | 연합뉴스     | 고대 안암병원, 권역응급의료센터 소아응급실 문 열어                 | 2026-09-28 11:12 | https://www.yna.co.kr/view/AKR20260928069000530?input=1195m                     |
-| 서울대학교 | 연합인포맥스   | 카카오, CA협의체 공동의장으로 김도영 카카오X 대표 내정             | 2026-09-28 11:12 | https://news.einfomax.co.kr/news/articleView.html?idxno=4436669                 |
-| 서울대학교 | 세계비즈     | 카카오 CA협의체, 정신아-김도영 공동의장 체제로                  | 2026-09-28 11:12 | http://www.segyebiz.com/newsView/20260928506937?OutUrl=naver                    |
-| 서울대학교 | 아시아경제    | 카카오, CA협의체 공동의장에 김도영 카카오X 대표 내정자…인적분할 본...   | 2026-09-28 11:11 | https://view.asiae.co.kr/article/2026092811113195406                            |
-| 서울대학교 | 뉴스드림     | 수면 측정부터 습관 교정까지…코웨이, '비렉스 슬립 싱크' 매트리스 출...   | 2026-09-28 11:10 | http://www.newsdream.kr/news/articleView.html?idxno=118942                      |
-| 서울대학교 | 정보통신신문   | 콴델라, 한국서 광양자컴퓨팅 제조 생태계 구축…"FTQC로 간다"         | 2026-09-28 11:10 | https://www.koit.co.kr/news/articleView.html?idxno=209235                       |
-| 서울대학교 | 머니투데이    | 지평법정책연구소, '에너지 전환기의 법정책 과제' 세미나 개최           | 2026-09-28 11:10 | https://www.mt.co.kr/society/2026/09/28/2026092810140462276                     |
-| 서울대학교 | 뉴시안      | 카카오, CA협의체 공동 의장에 김도영…인적분할 대비 체제 강화          | 2026-09-28 11:08 | http://www.newsian.co.kr/news/articleView.html?idxno=96091                      |
-| 고려대학교 | 뉴스프리존    | 고대안암병원, 권역응급의료센터 소아응급실 개소...진료 역량 강화         | 2026-09-28 11:08 | https://www.newsfreezone.co.kr/news/articleView.html?idxno=711195               |
-| 고려대학교 | 메디컬투데이   | "나이도 대학도 제한?"…한화에어로, 채용 가이드 논란 결국 사과         | 2026-09-28 11:06 | https://www.mdtoday.co.kr/news/articleView.html?idxno=616480                    |
-| 고려대학교 | 뉴데일리경제   | '자본 8억' 휴니버스글로벌, 셀리드 최대주주 오른다 … 투자금은 EB로 ... | 2026-09-28 11:06 | https://biz.newdaily.co.kr/site/data/html/2026/09/28/2026092800105.html         |
+| 대학    | 언론사         | 기사 제목                                             | 발행시각             | 언론사 링크                                                                         |
+|:------|:------------|:--------------------------------------------------|:-----------------|:-------------------------------------------------------------------------------|
+| 연세대학교 | 더팩트         | 신한금융, 한·일 금융협력 컨퍼런스서 기후·디지털 금융 논의                 | 2026-09-29 11:27 | https://news.tf.co.kr/read/economy/2370672.htm                                 |
+| 서울대학교 | 베타뉴스        | 윤영석 연금특위 위원장, 여야 공동 토론회…국민·기초·퇴직연금 구조...          | 2026-09-29 11:26 | https://www.betanews.net/article/view/beta202609290030                         |
+| 연세대학교 | 베타뉴스        | 윤영석 연금특위 위원장, 여야 공동 토론회…국민·기초·퇴직연금 구조...          | 2026-09-29 11:26 | https://www.betanews.net/article/view/beta202609290030                         |
+| 서울대학교 | 한국대학신문      | 2026 국회 교육위 국정감사, 다음달 7일부터 시작… 교육부·대학 등 67개...    | 2026-09-29 11:24 | https://news.unn.net/news/articleView.html?idxno=597998                        |
+| 서울대학교 | 서울신문        | 나주 글로벌 에너지포럼 30일 개막…세계 석학 모인다                     | 2026-09-29 11:24 | https://www.seoul.co.kr/news/society/2026/09/29/20260929500092?wlog_tag3=naver |
+| 서울대학교 | 헤럴드경제       | “추격자는 이제 끝…AI 선도로 패러다임 대전환” [헤럴드 기업포럼 2...        | 2026-09-29 11:24 | https://biz.heraldcorp.com/article/10887426?ref=naver                          |
+| 연세대학교 | 한강타임즈       | 신한금융, 한·일 탄소시장·디지털금융 협력 방안 논의                     | 2026-09-29 11:24 | https://www.hg-times.com/news/articleView.html?idxno=305640                    |
+| 서울대학교 | e대한경제       | “시공 뒤에 머문 엔지니어링, 길잡이로 세워야”                        | 2026-09-29 11:22 | https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609242046479600370             |
+| 서울대학교 | CCDAILYNEWS | 예산군 오가면, 자유와 평화 지킨 삼학사 숭고한 뜻 기려                   | 2026-09-29 11:20 | https://www.ccdailynews.com/news/articleView.html?idxno=2443432                |
+| 연세대학교 | 에너지경제       | 신한금융, 한·일 ‘금융 협력’ 넓힌다...전환금융·디지털자산 논의             | 2026-09-29 11:20 | https://www.ekn.kr/web/view.php?key=20260929024099864                          |
+| 연세대학교 | 글로벌E        | 신한금융, 한·일 금융협력 논의···전환금융·디지털자산 협력 모색              | 2026-09-29 11:20 | https://www.globale.co.kr/news/articleView.html?idxno=40689                    |
+| 연세대학교 | 라포르시안       | 대웅제약, 송도에 '첨단바이오의약품 제조소' 개소..."첨단재생의료 상...        | 2026-09-29 11:20 | https://www.rapportian.com/news/articleView.html?idxno=240793                  |
+| 고려대학교 | 스마트경제       | '21승 11무 20패' 고려대 1승 차 아슬아슬한 선두… 2026 정기 고연전 개... | 2026-09-29 11:20 | http://www.dailysmart.co.kr/news/articleView.html?idxno=130343                 |
+| 연세대학교 | 스마트경제       | '21승 11무 20패' 고려대 1승 차 아슬아슬한 선두… 2026 정기 고연전 개... | 2026-09-29 11:20 | http://www.dailysmart.co.kr/news/articleView.html?idxno=130343                 |
+| 서울대학교 | 헤럴드경제       | NST, 전기硏 강상희·원자력硏 정우식 신임원장 선임                     | 2026-09-29 11:19 | https://biz.heraldcorp.com/article/10887406?ref=naver                          |
+| 연세대학교 | 헤럴드경제       | 신한금융, 한일 컨퍼런스서 기후·디지털 금융협력 논의                     | 2026-09-29 11:19 | https://biz.heraldcorp.com/article/10887404?ref=naver                          |
+| 고려대학교 | 잡포스트        | AI로 되살린 고려 건축…은평서 만나는 황해도 '성불사 극락전'               | 2026-09-29 11:18 | https://www.job-post.co.kr/news/articleView.html?idxno=229570                  |
+| 서울대학교 | 전북도민일보      | 제12회 가천그림그리기대회 수상자 발표                             | 2026-09-29 11:18 | http://www.domin.co.kr/news/articleView.html?idxno=1570281                     |
+| 연세대학교 | 더퍼블릭        | 대웅제약, 송도 첨단바이오의약품 제조소 개소…임상·생산 기반 확보              | 2026-09-29 11:18 | https://www.thepublic.kr/news/articleView.html?idxno=320392                    |
+| 서울대학교 | 시민의소리       | 나주 글로벌 에너지포럼 30일 개막… 세계 석학 한자리                    | 2026-09-29 11:16 | https://www.siminsori.com/news/articleView.html?idxno=401767                   |
+| 연세대학교 | 포인트데일리      | 대웅제약, '첨단바이오의약품 제조소' 개소                           | 2026-09-29 11:16 | https://www.pointdaily.co.kr/news/articleView.html?idxno=320668                |
+| 서울대학교 | 이뉴스투데이      | 강남심포니, '아메리카노'로 떠나는 음악여행, 올해 마티네콘서트 피날...         | 2026-09-29 11:15 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2475010                |
+| 서울대학교 | 남도일보        | 전남광주통합특별시 초대 산업경제부시장, 강명수 전 산자부 상임위원...           | 2026-09-29 11:14 | https://www.namdonews.com/news/articleView.html?idxno=924670                   |
+| 연세대학교 | 청년의사        | "임상 현장의 목소리가 신약이 된다"…송당 암 심포지엄, 11월 5일 개최         | 2026-09-29 11:14 | http://www.docdocdoc.co.kr/news/articleView.html?idxno=3043098                 |
+| 서울대학교 | FORBESKOREA | 강인철 플러그링크 대표 - 전기차 5만 대 충전망 만든 성장 공식              | 2026-09-29 11:12 | https://www.forbeskorea.co.kr/news/articleView.html?idxno=402593               |
+| 연세대학교 | 인더뉴스        | ‘연구에서 임상으로’…대웅제약, 송도에 첨단바이오의약품 제조소 열...           | 2026-09-29 11:12 | https://www.inthenews.co.kr/news/article.html?no=92440                         |
+| 연세대학교 | 한국경제TV      | 대웅제약, 바이오의약품 제조소 신설…”첨단바이오 물질 생산”                 | 2026-09-29 11:12 | http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609290062&t=NN       |
+| 연세대학교 | 소비자가 만드는 신문 | 대웅제약, 인천 송도에 세포치료제 임상·생산 거점 구축                    | 2026-09-29 11:12 | http://www.consumernews.co.kr/news/articleView.html?idxno=764815               |
+| 연세대학교 | FOODNEWS    | "대학 축제서 도파민 충전"…매일유업, Z세대 마음 잡는다                  | 2026-09-29 11:12 | http://www.foodnews.co.kr/news/articleView.html?idxno=120331                   |
+| 연세대학교 | 코메디닷컴       | 제24회 화이자의학상 수상자에 장보근·김중선·김동욱 교수                   | 2026-09-29 11:11 | https://kormedi.com/?p=2874627                                                 |
