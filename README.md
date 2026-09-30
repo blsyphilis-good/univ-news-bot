@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-09-29 11:28:10 (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** 2026-09-30 10:48:28 (매일 오전 08:03 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사         | 기사 제목                                             | 발행시각             | 언론사 링크                                                                         |
-|:------|:------------|:--------------------------------------------------|:-----------------|:-------------------------------------------------------------------------------|
-| 연세대학교 | 더팩트         | 신한금융, 한·일 금융협력 컨퍼런스서 기후·디지털 금융 논의                 | 2026-09-29 11:27 | https://news.tf.co.kr/read/economy/2370672.htm                                 |
-| 서울대학교 | 베타뉴스        | 윤영석 연금특위 위원장, 여야 공동 토론회…국민·기초·퇴직연금 구조...          | 2026-09-29 11:26 | https://www.betanews.net/article/view/beta202609290030                         |
-| 연세대학교 | 베타뉴스        | 윤영석 연금특위 위원장, 여야 공동 토론회…국민·기초·퇴직연금 구조...          | 2026-09-29 11:26 | https://www.betanews.net/article/view/beta202609290030                         |
-| 서울대학교 | 한국대학신문      | 2026 국회 교육위 국정감사, 다음달 7일부터 시작… 교육부·대학 등 67개...    | 2026-09-29 11:24 | https://news.unn.net/news/articleView.html?idxno=597998                        |
-| 서울대학교 | 서울신문        | 나주 글로벌 에너지포럼 30일 개막…세계 석학 모인다                     | 2026-09-29 11:24 | https://www.seoul.co.kr/news/society/2026/09/29/20260929500092?wlog_tag3=naver |
-| 서울대학교 | 헤럴드경제       | “추격자는 이제 끝…AI 선도로 패러다임 대전환” [헤럴드 기업포럼 2...        | 2026-09-29 11:24 | https://biz.heraldcorp.com/article/10887426?ref=naver                          |
-| 연세대학교 | 한강타임즈       | 신한금융, 한·일 탄소시장·디지털금융 협력 방안 논의                     | 2026-09-29 11:24 | https://www.hg-times.com/news/articleView.html?idxno=305640                    |
-| 서울대학교 | e대한경제       | “시공 뒤에 머문 엔지니어링, 길잡이로 세워야”                        | 2026-09-29 11:22 | https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609242046479600370             |
-| 서울대학교 | CCDAILYNEWS | 예산군 오가면, 자유와 평화 지킨 삼학사 숭고한 뜻 기려                   | 2026-09-29 11:20 | https://www.ccdailynews.com/news/articleView.html?idxno=2443432                |
-| 연세대학교 | 에너지경제       | 신한금융, 한·일 ‘금융 협력’ 넓힌다...전환금융·디지털자산 논의             | 2026-09-29 11:20 | https://www.ekn.kr/web/view.php?key=20260929024099864                          |
-| 연세대학교 | 글로벌E        | 신한금융, 한·일 금융협력 논의···전환금융·디지털자산 협력 모색              | 2026-09-29 11:20 | https://www.globale.co.kr/news/articleView.html?idxno=40689                    |
-| 연세대학교 | 라포르시안       | 대웅제약, 송도에 '첨단바이오의약품 제조소' 개소..."첨단재생의료 상...        | 2026-09-29 11:20 | https://www.rapportian.com/news/articleView.html?idxno=240793                  |
-| 고려대학교 | 스마트경제       | '21승 11무 20패' 고려대 1승 차 아슬아슬한 선두… 2026 정기 고연전 개... | 2026-09-29 11:20 | http://www.dailysmart.co.kr/news/articleView.html?idxno=130343                 |
-| 연세대학교 | 스마트경제       | '21승 11무 20패' 고려대 1승 차 아슬아슬한 선두… 2026 정기 고연전 개... | 2026-09-29 11:20 | http://www.dailysmart.co.kr/news/articleView.html?idxno=130343                 |
-| 서울대학교 | 헤럴드경제       | NST, 전기硏 강상희·원자력硏 정우식 신임원장 선임                     | 2026-09-29 11:19 | https://biz.heraldcorp.com/article/10887406?ref=naver                          |
-| 연세대학교 | 헤럴드경제       | 신한금융, 한일 컨퍼런스서 기후·디지털 금융협력 논의                     | 2026-09-29 11:19 | https://biz.heraldcorp.com/article/10887404?ref=naver                          |
-| 고려대학교 | 잡포스트        | AI로 되살린 고려 건축…은평서 만나는 황해도 '성불사 극락전'               | 2026-09-29 11:18 | https://www.job-post.co.kr/news/articleView.html?idxno=229570                  |
-| 서울대학교 | 전북도민일보      | 제12회 가천그림그리기대회 수상자 발표                             | 2026-09-29 11:18 | http://www.domin.co.kr/news/articleView.html?idxno=1570281                     |
-| 연세대학교 | 더퍼블릭        | 대웅제약, 송도 첨단바이오의약품 제조소 개소…임상·생산 기반 확보              | 2026-09-29 11:18 | https://www.thepublic.kr/news/articleView.html?idxno=320392                    |
-| 서울대학교 | 시민의소리       | 나주 글로벌 에너지포럼 30일 개막… 세계 석학 한자리                    | 2026-09-29 11:16 | https://www.siminsori.com/news/articleView.html?idxno=401767                   |
-| 연세대학교 | 포인트데일리      | 대웅제약, '첨단바이오의약품 제조소' 개소                           | 2026-09-29 11:16 | https://www.pointdaily.co.kr/news/articleView.html?idxno=320668                |
-| 서울대학교 | 이뉴스투데이      | 강남심포니, '아메리카노'로 떠나는 음악여행, 올해 마티네콘서트 피날...         | 2026-09-29 11:15 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2475010                |
-| 서울대학교 | 남도일보        | 전남광주통합특별시 초대 산업경제부시장, 강명수 전 산자부 상임위원...           | 2026-09-29 11:14 | https://www.namdonews.com/news/articleView.html?idxno=924670                   |
-| 연세대학교 | 청년의사        | "임상 현장의 목소리가 신약이 된다"…송당 암 심포지엄, 11월 5일 개최         | 2026-09-29 11:14 | http://www.docdocdoc.co.kr/news/articleView.html?idxno=3043098                 |
-| 서울대학교 | FORBESKOREA | 강인철 플러그링크 대표 - 전기차 5만 대 충전망 만든 성장 공식              | 2026-09-29 11:12 | https://www.forbeskorea.co.kr/news/articleView.html?idxno=402593               |
-| 연세대학교 | 인더뉴스        | ‘연구에서 임상으로’…대웅제약, 송도에 첨단바이오의약품 제조소 열...           | 2026-09-29 11:12 | https://www.inthenews.co.kr/news/article.html?no=92440                         |
-| 연세대학교 | 한국경제TV      | 대웅제약, 바이오의약품 제조소 신설…”첨단바이오 물질 생산”                 | 2026-09-29 11:12 | http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609290062&t=NN       |
-| 연세대학교 | 소비자가 만드는 신문 | 대웅제약, 인천 송도에 세포치료제 임상·생산 거점 구축                    | 2026-09-29 11:12 | http://www.consumernews.co.kr/news/articleView.html?idxno=764815               |
-| 연세대학교 | FOODNEWS    | "대학 축제서 도파민 충전"…매일유업, Z세대 마음 잡는다                  | 2026-09-29 11:12 | http://www.foodnews.co.kr/news/articleView.html?idxno=120331                   |
-| 연세대학교 | 코메디닷컴       | 제24회 화이자의학상 수상자에 장보근·김중선·김동욱 교수                   | 2026-09-29 11:11 | https://kormedi.com/?p=2874627                                                 |
+| 대학    | 언론사     | 기사 제목                                       | 발행시각             | 언론사 링크                                                                                                                               |
+|:------|:--------|:--------------------------------------------|:-----------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| 고려대학교 | 이코노믹리뷰  | 한진, 정책기획담당 부사장직 신설…최종석 전 CSO 선임             | 2026-09-30 10:46 | https://www.econovill.com/news/articleView.html?idxno=752250                                                                         |
+| 연세대학교 | 인더스트리뉴스 | 부산교육청, 교원 선발·학교 리더십 강화…교육현장 새판 짠다           | 2026-09-30 10:46 | https://www.industrynews.co.kr/news/articleView.html?idxno=86743                                                                     |
+| 고려대학교 | 베리타스알파  | 전북대 프랑스·아프리카연구소 고교생 대상 찾아가는 아프리카 인문강...     | 2026-09-30 10:46 | https://www.veritas-a.com/news/articleView.html?idxno=629987                                                                         |
+| 서울대학교 | 이코노믹리뷰  | 한진, 정책기획담당 부사장직 신설…최종석 전 CSO 선임             | 2026-09-30 10:46 | https://www.econovill.com/news/articleView.html?idxno=752250                                                                         |
+| 서울대학교 | 스마트경제   | "사이버대 유일 통합건강관리학, 디지털 헬스와 손잡았다"… 서울사이버...   | 2026-09-30 10:46 | http://www.dailysmart.co.kr/news/articleView.html?idxno=130382                                                                       |
+| 서울대학교 | 파이낸스투데이 | 코스맥스, AI로 원형탈모 예측···맞춤형 헤어케어 확대             | 2026-09-30 10:46 | http://www.finomy.com/news/articleView.html?idxno=262576                                                                             |
+| 서울대학교 | 브레이크뉴스  | 부산시, 제12회 R&D 주간 개최...미래기술과 지역 혁신 논의        | 2026-09-30 10:46 | http://www.breaknews.com/1239927                                                                                                     |
+| 서울대학교 | 에듀동아    | 가천대, '2027 THE 세계대학평가' 국내 공동 14위            | 2026-09-30 10:44 | https://edu.donga.com/news/articleView.html?idxno=112369                                                                             |
+| 서울대학교 | 싱글리스트   | '유퀴즈' 국중박 분장놀이 대상 출격…전은슬 "잉어 연적, 단돈 4만원으... | 2026-09-30 10:44 | https://www.slist.kr/news/articleView.html?idxno=769898                                                                              |
+| 서울대학교 | 뉴스드림    | 한진, 최종석 정책기획 부사장 발탁…대내외 리스크 관리 속도           | 2026-09-30 10:44 | http://www.newsdream.kr/news/articleView.html?idxno=119091                                                                           |
+| 서울대학교 | 한국경제    | 장동혁 "AI 기술패권 시대 도래…정치가 머뭇거려선 안 돼"           | 2026-09-30 10:44 | https://www.hankyung.com/article/202609304168i                                                                                       |
+| 서울대학교 | 블로터     | 한진, 정책기획담당 부사장직 신설…노동부 출신 최종석 선임            | 2026-09-30 10:44 | https://www.bloter.net/news/articleView.html?idxno=674693                                                                            |
+| 연세대학교 | 에듀동아    | 가천대, '2027 THE 세계대학평가' 국내 공동 14위            | 2026-09-30 10:44 | https://edu.donga.com/news/articleView.html?idxno=112369                                                                             |
+| 고려대학교 | 에듀동아    | 가천대, '2027 THE 세계대학평가' 국내 공동 14위            | 2026-09-30 10:44 | https://edu.donga.com/news/articleView.html?idxno=112369                                                                             |
+| 고려대학교 | 뉴스드림    | 한진, 최종석 정책기획 부사장 발탁…대내외 리스크 관리 속도           | 2026-09-30 10:44 | http://www.newsdream.kr/news/articleView.html?idxno=119091                                                                           |
+| 고려대학교 | 블로터     | 한진, 정책기획담당 부사장직 신설…노동부 출신 최종석 선임            | 2026-09-30 10:44 | https://www.bloter.net/news/articleView.html?idxno=674693                                                                            |
+| 서울대학교 | 서울경제    | 건강검진 2200만건 학습…코스맥스, AI로 원형탈모 위험 예측한다       | 2026-09-30 10:43 | https://www.sedaily.com/article/20096473?ref=naver                                                                                   |
+| 연세대학교 | 에듀동아    | 연세대 김원석 교수팀, 독도 해저단구에 새겨진 60만 년 지형 진화의 비... | 2026-09-30 10:42 | https://edu.donga.com/news/articleView.html?idxno=112367                                                                             |
+| 서울대학교 | 비즈니스포스트 | 한진, 최종석 전 안전보안실장 정책기획담당 부사장으로 복귀시켜          | 2026-09-30 10:42 | https://www.businesspost.co.kr/BP?command=article_view&num=448258                                                                    |
+| 서울대학교 | 공감신문    | 남북 관계에 대한 놀라운 변화, 보수보다 진보가 더 불안해하는 이유는...   | 2026-09-30 10:42 | https://www.gokorea.kr/news/articleView.html?idxno=880035                                                                            |
+| 서울대학교 | 브릿지경제   | 부산 R&D 주간 개막… ‘연결되는 부산, 확장되는 미래’            | 2026-09-30 10:42 | https://www.viva100.com/article/20260930500600                                                                                       |
+| 고려대학교 | 비즈니스포스트 | 한진, 최종석 전 안전보안실장 정책기획담당 부사장으로 복귀시켜          | 2026-09-30 10:42 | https://www.businesspost.co.kr/BP?command=article_view&num=448258                                                                    |
+| 고려대학교 | 데일리메디   | ﻿국내 연구진 '흡입형 폐암 나노치료제' 개발                   | 2026-09-30 10:40 | https://www.dailymedi.com/news/news_view.php?wr_id=940972                                                                            |
+| 서울대학교 | 뉴스1     | 딥노이드, 180억원 규모 국가 과제 참여…노인 정신건강 AI 개발       | 2026-09-30 10:39 | https://www.news1.kr/bio/healthcare/6305725                                                                                          |
+| 서울대학교 | 아시아경제   | UST, 신입학 지원 '역대 최다'…"정원 늘려도 충원 100%"        | 2026-09-30 10:38 | https://view.asiae.co.kr/article/2026093010385867455                                                                                 |
+| 연세대학교 | 파이낸셜뉴스  | 내신 부담에 '역전 카드'… 논술에 지원 절반 몰렸다               | 2026-09-30 10:38 | https://www.fnnews.com/news/202609301036477137                                                                                       |
+| 서울대학교 | 서울신문    | 김현덕 경기도의원, 제26회 경기도 장애인 IT Festival 참석      | 2026-09-30 10:36 | https://www.seoul.co.kr/news/publicnews/local_govern/kyungki_do/2026/09/30/20260930500063?wlog_tag3=naver                            |
+| 서울대학교 | 아주경제    | 수원시 출신 김훈동 작가, 선경도서관에 2200여 권 도서 기증         | 2026-09-30 10:36 | https://www.ajunews.com/view/20260930100609722                                                                                       |
+| 고려대학교 | 조선비즈    | 한진, 신임 정책기획담당 부사장에 고용노동부 출신 최종석 CSO 선임      | 2026-09-30 10:35 | https://biz.chosun.com/industry/company/2026/09/30/XXIEEXPXUNE2VAEDS3OS4HGD5E/?utm_source=naver&utm_medium=original&utm_campaign=biz |
+| 서울대학교 | 한국경제    | 30년간 '쉬운 수학'만 좇은 한국…AI 시대 '보복'이 시작됐다        | 2026-09-30 10:35 | https://www.hankyung.com/article/2026092926911                                                                                       |
