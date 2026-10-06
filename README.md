@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-10-05 10:45:33 (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** 2026-10-06 10:43:19 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사      | 기사 제목                                            | 발행시각             | 언론사 링크                                                                         |
-|:------|:---------|:-------------------------------------------------|:-----------------|:-------------------------------------------------------------------------------|
-| 서울대학교 | 내일신문     | 중국 동북, 과거 넘어 협력의 땅으로                             | 2026-10-05 10:42 | https://www.naeil.com/news/read/604151?ref=naver                               |
-| 서울대학교 | 경향신문     | 대학 건물 6동 중 1동 40년 넘어…2035년엔 3동 중 1동              | 2026-10-05 10:36 | https://www.khan.co.kr/article/202610051036001                                 |
-| 고려대학교 | 연합뉴스     | 연고전 암표 잡으려 학생들이 '함정수사'…학내선 단속방식 논란               | 2026-10-05 10:32 | https://www.yna.co.kr/view/AKR20261005022800004?input=1195m                    |
-| 연세대학교 | 연합뉴스     | 연고전 암표 잡으려 학생들이 '함정수사'…학내선 단속방식 논란               | 2026-10-05 10:32 | https://www.yna.co.kr/view/AKR20261005022800004?input=1195m                    |
-| 연세대학교 | 천지일보     | '계약결혼' 최정현, "진짜 결혼할 수도"… 새 신부 만난 뒤 적극 변신         | 2026-10-05 10:30 | https://www.newscj.com/news/articleView.html?idxno=3437870                     |
-| 연세대학교 | 아주경제     | [이병종 칼럼] 카니 총리가 말하는 중견국 연대는 가능한가?                | 2026-10-05 10:30 | https://www.ajunews.com/view/20261005101900298                                 |
-| 서울대학교 | DDANZI   | [뉴공 아카이브]퍼니포: DMZ 정보 출처 해명 요구에… 한동훈 ‘고 노무...     | 2026-10-05 10:30 | http://www.ddanzi.com/896315450                                                |
-| 서울대학교 | 연합뉴스     | [연합뉴스 이 시각 헤드라인] - 10:30                         | 2026-10-05 10:30 | https://www.yna.co.kr/view/AKR20261005021200011?input=1195m                    |
-| 연세대학교 | 엑스포츠뉴스   | 32기 회계사 영수, SRT 승무원 국화와 '계약결혼'? 9kg 감량까지 "절박해... | 2026-10-05 10:30 | https://www.xportsnews.com/article/2204227                                     |
-| 고려대학교 | SIDAE    | "AI 페라리급 해킹, AI로 막아야 "…정교한 2차 공격도 우려             | 2026-10-05 10:22 | https://www.sidae.com/article/2026100423160669954                              |
-| 서울대학교 | 전자신문     | [반도체 라이징 스타]엑시나, 스스로 계산하는 메모리로 AI 인프라 비...       | 2026-10-05 10:21 | https://www.etnews.com/20261005000055                                          |
-| 연세대학교 | 스포티비뉴스   | '나솔' 32기 막말 영수, 9kg 감량→확 달라진 비주얼…새 신부 보자 "너...   | 2026-10-05 10:19 | https://www.spotvnews.co.kr/news/articleView.html?idxno=1011361                |
-| 서울대학교 | 아시아경제    | SNS에 일상 적극 공유하는 고령층…"외로움 더 느낀다"                  | 2026-10-05 10:11 | https://view.asiae.co.kr/article/2026100509521660589                           |
-| 고려대학교 | 뉴시스      | "비번 끝 숫자만 바꾸면 뚫린다"…금융 AI 해킹 '2차 피해' 막으려면[긴...    | 2026-10-05 10:07 | https://www.newsis.com/view/NISX20261004_0003814078                            |
-| 서울대학교 | 여성경제신문   | [김성재 칼럼] 코넬대 집단 성폭행 사건, 대학의 미래에 어떤 메시지를...       | 2026-10-05 10:06 | https://www.womaneconomy.co.kr/news/articleView.html?idxno=259322              |
-| 서울대학교 | MHN스포츠   | 노작홍사용문학관, '이상·윤동주 삶과 시세계' 집중 조명하는 문학특강...        | 2026-10-05 10:00 | https://www.mhns.co.kr/news/articleView.html?idxno=762716                      |
-| 서울대학교 | 매경헬스     | 항암방사선치료해도 남는 식도암…'종양 가장자리'에 단서                   | 2026-10-05 10:00 | http://www.mkhealth.co.kr/news/articleView.html?idxno=80328                    |
-| 고려대학교 | 주간조선     | "은행이 이렇게 쉽게 뚫린다고?"…금융사 7곳 덮친 'AI 해커'             | 2026-10-05 10:00 | http://weekly.chosun.com/news/articleView.html?idxno=55883                     |
-| 고려대학교 | MBC      | [시선집중] 김승주 "금융권 해킹, 정문 아닌 관리 부실한 '쪽문' 뚫린 것...    | 2026-10-05 09:55 | https://n.news.naver.com/mnews/article/214/0001527193?sid=100                  |
-| 연세대학교 | MBC      | '계약결혼' 두 번째 새신랑 최정현, 환골탈태한 모습으로 등장 "절박해...       | 2026-10-05 09:52 | http://enews.imbc.com/News/RetrieveNewsInfo/520093                             |
-| 연세대학교 | 한경매거진    | 미국 주식시장이 하락하지 않는 이유… “변화가 돈이다” [조병문의 M...        | 2026-10-05 09:44 | https://magazine.hankyung.com/business/article/202610017941b                   |
-| 연세대학교 | 치과신문     | 서울대치과병원 인체유래물은행 심포지엄                             | 2026-10-05 09:44 | https://www.dentalnews.or.kr/news/article.html?no=48347                        |
-| 서울대학교 | 치과신문     | 서울대치과병원 인체유래물은행 심포지엄                             | 2026-10-05 09:44 | https://www.dentalnews.or.kr/news/article.html?no=48347                        |
-| 연세대학교 | 스포츠조선    | 32기 돌싱 영수, 9kg 빼더니 자신감도 올랐나…3시간 만에 손 덥석(계약...    | 2026-10-05 09:32 | https://www.sportschosun.com/entertainment/2026-10-05/202610050100030440001937 |
-| 고려대학교 | BBS NEWS | 서울시 기후동행카드, 2천500만건 충전...이달부터 기후동행 패스로 정...      | 2026-10-05 09:30 | https://news.bbsi.co.kr/news/articleView.html?idxno=4110296                    |
-| 고려대학교 | 경남도민일보   | 인제대 강규완·박용준 씨 '2026 STOB 리그' 대상·최우수상             | 2026-10-05 09:22 | https://www.idomin.com/news/articleView.html?idxno=2016223                     |
-| 서울대학교 | 공감신문     | SNS 공유가 외로움 키운다? 서울대 연구의 충격적 결과                  | 2026-10-05 09:20 | https://www.gokorea.kr/news/articleView.html?idxno=880422                      |
-| 서울대학교 | TBC대구방송  | 경북대 교수 5년간 53명 징계...'거점 국립대 최다'                  | 2026-10-05 09:18 | https://www.tbc.co.kr/news/view?pno=20261004105632AE06372&id=211727            |
-| 고려대학교 | 뉴시스      | "7분 만에 뚫리면 7초 만에 막아야"…AI 해커 맞설 AI 보안체계 시급[긴...   | 2026-10-05 09:17 | https://www.newsis.com/view/NISX20261004_0003814055                            |
-| 고려대학교 | 스마트경제    | "피 안 뽑고 땀으로 약물 감시"… 고려대, 땀 속 약물·대사물질 추적 '...     | 2026-10-05 09:16 | http://www.dailysmart.co.kr/news/articleView.html?idxno=130577                 |
+| 대학    | 언론사          | 기사 제목                                                 | 발행시각             | 언론사 링크                                                                                                   |
+|:------|:-------------|:------------------------------------------------------|:-----------------|:---------------------------------------------------------------------------------------------------------|
+| 고려대학교 | e대한경제        | ‘씨엘스톤 더 써밋 구로구청’ 10월 초 분양                             | 2026-10-06 10:42 | https://www.dnews.co.kr/uhtml/view.jsp?idxno=202610061031426030525                                       |
+| 연세대학교 | 매일일보         | 서울시, 서울건강총괄관에 김현철 연세대 교수 위촉                           | 2026-10-06 10:42 | https://www.m-i.kr/news/articleView.html?idxno=2002834                                                   |
+| 서울대학교 | 한국대학신문       | "AI는 피할 수 없지만 필연적이지는 않다" 대학교육 재설계 화두 던진 C...          | 2026-10-06 10:42 | https://news.unn.net/news/articleView.html?idxno=598284                                                  |
+| 서울대학교 | 뉴스웍스         | [부동산 나들이] LH '사진 공모전'-'기숙사형 전세 임대 확대'·대우 '싱...        | 2026-10-06 10:42 | https://www.newsworks.co.kr/news/articleView.html?idxno=855636                                           |
+| 서울대학교 | 매일일보         | 서울시, 서울건강총괄관에 김현철 연세대 교수 위촉                           | 2026-10-06 10:42 | https://www.m-i.kr/news/articleView.html?idxno=2002834                                                   |
+| 연세대학교 | 아시아타임즈       | 네이버 분쟁조정센터, 소비자 피해 10건 중 8건 '구제'                      | 2026-10-06 10:42 | https://www.asiatime.co.kr/article/20261006500082                                                        |
+| 고려대학교 | 이코노믹리뷰       | 카카오모빌리티, 고려대 C5ISRT연구원과 손잡고 유·무인 복합 관제 플랫...          | 2026-10-06 10:40 | https://www.econovill.com/news/articleView.html?idxno=752777                                             |
+| 고려대학교 | 뉴데일리경제       | 869개 보안항목 쌓아도 뚫렸다 … AI가 바꾼 금융권 해킹 '공격지도' [신...        | 2026-10-06 10:40 | https://biz.newdaily.co.kr/site/data/html/2026/10/06/2026100600092.html                                  |
+| 서울대학교 | 중소기업신문       | 누리호에 실린 국산 위성 15기…어떤 임무 맡나                            | 2026-10-06 10:40 | http://www.smedaily.co.kr/news/articleView.html?idxno=364179                                             |
+| 서울대학교 | 메디컬월드뉴스      | 국립대병원 의사 회복세에도 정원보다 2,602명 부족                         | 2026-10-06 10:40 | https://medicalworldnews.co.kr/news/view.php?idx=1510977642                                              |
+| 연세대학교 | 아시아경제        | '물고기는 어떻게 뭍으로 올라왔나'…'틱타알릭' 발견자 닐 슈빈 방한                | 2026-10-06 10:39 | https://view.asiae.co.kr/article/2026100610393482336                                                     |
+| 고려대학교 | 아시아경제        | AI發 해킹사고 줄줄이 터지는데 대응 체계 역부족                           | 2026-10-06 10:39 | https://view.asiae.co.kr/article/2026100609522541198                                                     |
+| 고려대학교 | 서울경제         | 카카오모빌리티, 고려대와 국방 AX 협력…유·무인 복합체계 개발                   | 2026-10-06 10:38 | https://www.sedaily.com/article/20098390?ref=naver                                                       |
+| 연세대학교 | 메디파나뉴스       | 수술 전 8가지 정보로 '급성 신장 손상' 위험 예측                         | 2026-10-06 10:38 | https://www.medipana.com/news/articleView.html?idxno=418795                                              |
+| 연세대학교 | 컨슈머타임스       | 코람코, 사내 MBA 첫 결실…차세대 리더 15명 수료                        | 2026-10-06 10:38 | https://www.cstimes.com/news/articleView.html?idxno=722963                                               |
+| 고려대학교 | 보건뉴스         | 고려대의료원-식품의약품안전평가원, 바이오헬스 제품화 맞손                       | 2026-10-06 10:38 | http://www.bokuennews.com/news/article.html?no=285106                                                    |
+| 고려대학교 | STARTUPTODAY | [Weekly 제약&바이오] 차병원·차바이오그룹·동아제약·심평원                   | 2026-10-06 10:36 | https://www.startuptoday.co.kr/news/articleView.html?idxno=815030                                        |
+| 연세대학교 | 내일신문         | 양병내 신임 KTC 원장 취임                                      | 2026-10-06 10:36 | https://www.naeil.com/news/read/604241?ref=naver                                                         |
+| 연세대학교 | 이코노믹리뷰       | 네이버 분쟁조정센터 피해 구제율 83.6% "자율규제위 분석에서 확인"               | 2026-10-06 10:36 | https://www.econovill.com/news/articleView.html?idxno=752774                                             |
+| 고려대학교 | 이코노믹리뷰       | 네이버 분쟁조정센터 피해 구제율 83.6% "자율규제위 분석에서 확인"               | 2026-10-06 10:36 | https://www.econovill.com/news/articleView.html?idxno=752774                                             |
+| 서울대학교 | 약사공론         | 병원약사회, '2026 병원 약제부서 관리자 역량강화교육' 개최                   | 2026-10-06 10:36 | https://www.kpanews.co.kr/news/articleView.html?idxno=545588                                             |
+| 서울대학교 | 노컷뉴스         | 박범계 "한동훈의 盧 언급, 盧 존경했다던 尹보다 못해"                       | 2026-10-06 10:35 | https://www.nocutnews.co.kr/news/6587348?utm_source=naver&utm_medium=article&utm_campaign=20261006103410 |
+| 서울대학교 | 아시아A         | LH, 기숙사형 전세임대 500호 공모...청년 주거지원 확대                    | 2026-10-06 10:34 | https://www.asiaa.co.kr/news/articleView.html?idxno=265141                                               |
+| 고려대학교 | BBS NEWS     | 카카오모빌리티, 고려대와 국방 AI 분야 맞손                             | 2026-10-06 10:34 | https://news.bbsi.co.kr/news/articleView.html?idxno=4110426                                              |
+| 고려대학교 | 이코노믹리뷰       | 뮤지컬 '드라큘라' 장르 통합 1위…'광화문연가' 2위 [10월 5일 공연 예...        | 2026-10-06 10:34 | https://www.econovill.com/news/articleView.html?idxno=752761                                             |
+| 고려대학교 | 포인트엔         | NHN클라우드, 'AI 페스타 2026' 참가…'FactoryX' 앞세워 AI 인프라 역량... | 2026-10-06 10:34 | https://www.pointe.co.kr/news/articleView.html?idxno=85616                                               |
+| 서울대학교 | 브레이크뉴스       | 류근일 전 조선일보 주필의 신문 패망선언? “재래식 언론은 실패했다!...             | 2026-10-06 10:34 | http://www.breaknews.com/1241064                                                                         |
+| 서울대학교 | TV조선         | 서울대생 60명 '역세권 신축' 입주…LH, 기숙사 200호 공급                  | 2026-10-06 10:32 | https://news.tvchosun.com/site/data/html_dir/2026/10/06/2026100690072.html                               |
+| 고려대학교 | 경인일보         | [새얼굴] 양정열 제2대 경기고용노동청장 취임… “현장 중심 노동행정...             | 2026-10-06 10:32 | https://www.kyeongin.com/article/1772029                                                                 |
+| 고려대학교 | 의사신문         | 손장원 부천성모병원 교수, 운동신경·혈관 내피세포 통합한 3차원 인간...             | 2026-10-06 10:32 | http://www.doctorstimes.com/news/articleView.html?idxno=240312                                           |
