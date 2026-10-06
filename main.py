@@ -10,9 +10,9 @@ from email.utils import parsedate_to_datetime
 import requests
 import pandas as pd
 import gspread
+from google.oauth2.credentials import Credentials
 from dotenv import load_dotenv
 
-# 분리된 언론사 매핑 테이블 로드
 from media_map import MEDIA_DOMAIN_MAP
 
 load_dotenv()
@@ -22,7 +22,11 @@ CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET")
 SPREADSHEET_ID = os.environ.get("SPREADSHEET_ID")
 GCP_SA_KEY = os.environ.get("GCP_SA_KEY")
-USER_EMAIL = os.environ.get("USER_GMAIL", "blsyphilis@gmail.com")
+
+# 본인 계정 OAuth2 환경 변수 (드라이브 복제 용량 우회용)
+OAUTH_CLIENT_ID = os.environ.get("GCP_OAUTH_CLIENT_ID")
+OAUTH_CLIENT_SECRET = os.environ.get("GCP_OAUTH_CLIENT_SECRET")
+OAUTH_REFRESH_TOKEN = os.environ.get("GCP_OAUTH_REFRESH_TOKEN")
 
 # 2. 네이버 링크 전용 언론사 코드 매핑 테이블
 NAVER_PRESS_CODE_MAP = {
@@ -71,7 +75,7 @@ def clean_html(text: str) -> str:
     return text.strip()
 
 def clean_title_for_dedup(title: str) -> str:
-    """중복 제거를 위한 제목 정규화 (따옴표 및 공백 정제)"""
+    """중복 제거를 위한 제목 정규화"""
     if not title:
         return ""
     t = str(title).strip().strip("'").strip('"').strip("`").strip("‘").strip("’").strip("“").strip("”")
@@ -160,7 +164,7 @@ def extract_media_name(original_url: str, naver_url: str) -> str:
     return clean_domain
 
 def is_valid_article(title: str, desc: str, must_include: list, must_exclude: list) -> bool:
-    """기사 품질 필터링: 본문 요약문(desc) 포함 여부까지 확장 검증"""
+    """기사 품질 필터링: 제목 및 본문 요약문 결합 검증"""
     combined_text = f"{title} {desc}"
     for exc in must_exclude:
         if exc in combined_text:
@@ -177,7 +181,7 @@ def get_report_date_str(pub_dt: datetime) -> str:
     return get_report_date(pub_dt).strftime("%Y-%m-%d")
 
 def get_search_cutoff(now_dt: datetime, kst: timezone) -> datetime:
-    """수집 기준 시각: 전날 08:00:00 (KST) 이후 기사 수집 (전월 좀비 탭 생성 차단)"""
+    """수집 기준 시각: 전날 08:00:00 (KST) 이후 기사 수집"""
     yesterday = now_dt - timedelta(days=1)
     return datetime(yesterday.year, yesterday.month, yesterday.day, 8, 0, 0, tzinfo=kst)
 
@@ -291,16 +295,13 @@ def read_existing_sheet_df(worksheet) -> pd.DataFrame:
         return pd.DataFrame()
 
 def apply_sheet_formatting_batch(doc, worksheet):
-    """모든 서식(틀고정, 배경색, 정렬, 줄바꿈, 2자리시간, 열너비)을 단 1회의 batch_update로 일괄 적용"""
+    """모든 서식을 단 1회의 batch_update로 일괄 적용"""
     sheet_id = worksheet.id
     reqs = [
-        # 1. 틀 고정 (1행)
+        # 1. 틀 고정
         {
             "updateSheetProperties": {
-                "properties": {
-                    "sheetId": sheet_id,
-                    "gridProperties": {"frozenRowCount": 1}
-                },
+                "properties": {"sheetId": sheet_id, "gridProperties": {"frozenRowCount": 1}},
                 "fields": "gridProperties.frozenRowCount"
             }
         },
@@ -323,12 +324,7 @@ def apply_sheet_formatting_batch(doc, worksheet):
         {
             "repeatCell": {
                 "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 0, "endColumnIndex": 2},
-                "cell": {
-                    "userEnteredFormat": {
-                        "horizontalAlignment": "CENTER",
-                        "verticalAlignment": "MIDDLE"
-                    }
-                },
+                "cell": {"userEnteredFormat": {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"}},
                 "fields": "userEnteredFormat(horizontalAlignment,verticalAlignment)"
             }
         },
@@ -336,13 +332,7 @@ def apply_sheet_formatting_batch(doc, worksheet):
         {
             "repeatCell": {
                 "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 2, "endColumnIndex": 3},
-                "cell": {
-                    "userEnteredFormat": {
-                        "wrapStrategy": "WRAP",
-                        "horizontalAlignment": "LEFT",
-                        "verticalAlignment": "MIDDLE"
-                    }
-                },
+                "cell": {"userEnteredFormat": {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "MIDDLE"}},
                 "fields": "userEnteredFormat(wrapStrategy,horizontalAlignment,verticalAlignment)"
             }
         },
@@ -350,27 +340,15 @@ def apply_sheet_formatting_batch(doc, worksheet):
         {
             "repeatCell": {
                 "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 3, "endColumnIndex": 4},
-                "cell": {
-                    "userEnteredFormat": {
-                        "wrapStrategy": "WRAP",
-                        "horizontalAlignment": "LEFT",
-                        "verticalAlignment": "TOP"
-                    }
-                },
+                "cell": {"userEnteredFormat": {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT", "verticalAlignment": "TOP"}},
                 "fields": "userEnteredFormat(wrapStrategy,horizontalAlignment,verticalAlignment)"
             }
         },
-        # 6. 본문 E열 (발행시각: yyyy-mm-dd hh:mm 2자리 시간 강제)
+        # 6. 본문 E열 (발행시각: yyyy-mm-dd hh:mm 포맷)
         {
             "repeatCell": {
                 "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 4, "endColumnIndex": 5},
-                "cell": {
-                    "userEnteredFormat": {
-                        "numberFormat": {"type": "DATE_TIME", "pattern": "yyyy-mm-dd hh:mm"},
-                        "horizontalAlignment": "CENTER",
-                        "verticalAlignment": "MIDDLE"
-                    }
-                },
+                "cell": {"userEnteredFormat": {"numberFormat": {"type": "DATE_TIME", "pattern": "yyyy-mm-dd hh:mm"}, "horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"}},
                 "fields": "userEnteredFormat(numberFormat,horizontalAlignment,verticalAlignment)"
             }
         },
@@ -378,28 +356,17 @@ def apply_sheet_formatting_batch(doc, worksheet):
         {
             "repeatCell": {
                 "range": {"sheetId": sheet_id, "startRowIndex": 1, "startColumnIndex": 5, "endColumnIndex": 7},
-                "cell": {
-                    "userEnteredFormat": {
-                        "horizontalAlignment": "CENTER",
-                        "verticalAlignment": "MIDDLE"
-                    }
-                },
+                "cell": {"userEnteredFormat": {"horizontalAlignment": "CENTER", "verticalAlignment": "MIDDLE"}},
                 "fields": "userEnteredFormat(horizontalAlignment,verticalAlignment)"
             }
         }
     ]
 
-    # 8. 열 너비 픽셀 적용 (A:85, B:110, C:320, D:420, E:125, F:120, G:120)
     col_widths = [85, 110, 320, 420, 125, 120, 120]
     for i, width in enumerate(col_widths):
         reqs.append({
             "updateDimensionProperties": {
-                "range": {
-                    "sheetId": sheet_id,
-                    "dimension": "COLUMNS",
-                    "startIndex": i,
-                    "endIndex": i + 1
-                },
+                "range": {"sheetId": sheet_id, "dimension": "COLUMNS", "startIndex": i, "endIndex": i + 1},
                 "properties": {"pixelSize": width},
                 "fields": "pixelSize"
             }
@@ -408,7 +375,7 @@ def apply_sheet_formatting_batch(doc, worksheet):
     doc.batch_update({"requests": reqs})
 
 def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
-    """단일 batch_update 및 지수 백오프로 429 에러를 차단하며 안전하게 시트 동기화"""
+    """단일 batch_update 및 지수 백오프로 시트 동기화"""
     for attempt in range(3):
         try:
             try:
@@ -418,7 +385,6 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
                 worksheet = doc.add_worksheet(title=tab_name, rows=max(len(new_df) + 50, 100), cols=7)
                 existing_df = pd.DataFrame()
 
-            # 기존 데이터와 병합
             if not existing_df.empty:
                 combined_df = pd.concat([new_df, existing_df], ignore_index=True)
             else:
@@ -428,14 +394,12 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
                 lambda r: extract_media_name(r.get("언론사 링크", ""), r.get("네이버 링크", "")), axis=1
             )
 
-            # 날짜 파싱 및 따옴표 중복 방지 정규화
             combined_df["dt_parsed"] = combined_df["발행시각"].apply(robust_parse_date)
             combined_df["title_dedup"] = combined_df["기사 제목"].apply(clean_title_for_dedup)
             combined_df.drop_duplicates(subset=["대학", "title_dedup"], inplace=True)
 
             combined_df["발행시각"] = combined_df["dt_parsed"].dt.strftime("%Y-%m-%d %H:%M").fillna(combined_df["발행시각"])
 
-            # 시트 유형별 정렬
             if "월" in tab_name:
                 combined_df.sort_values(by="dt_parsed", ascending=False, inplace=True)
             else:
@@ -452,42 +416,30 @@ def write_sheet_data_with_format(doc, tab_name: str, new_df: pd.DataFrame):
             for _, r in combined_df.iterrows():
                 orig_url = r.get("언론사 링크", "")
                 nav_url = r.get("네이버 링크", "")
-                
                 orig_formula = f'=HYPERLINK("{orig_url}", "기사링크(언론사)")' if orig_url else ""
                 nav_formula = f'=HYPERLINK("{nav_url}", "기사링크(네이버)")' if nav_url else ""
-                
                 rows.append([
-                    r["대학"],
-                    r["언론사"],
-                    r["기사 제목"],
-                    r["기사 요약"],
-                    r["발행시각"],
-                    orig_formula,
-                    nav_formula
+                    r["대학"], r["언론사"], r["기사 제목"], r["기사 요약"],
+                    r["발행시각"], orig_formula, nav_formula
                 ])
 
-            # 1. 데이터 초기화 및 작성
             worksheet.clear()
             worksheet.update(values=rows, range_name="A1", value_input_option="USER_ENTERED")
-
-            # 2. 모든 서식을 단 1회의 batch_update로 적용
             apply_sheet_formatting_batch(doc, worksheet)
-            print(f"[Google Sheets] 동기화 완료: 탭 '{tab_name}' (총 {len(combined_df)}건 정렬 및 서식 완료)")
-            
-            # API 쿼터 안전 대기
+            print(f"[Google Sheets] 동기화 완료: 탭 '{tab_name}' (총 {len(combined_df)}건)")
             time.sleep(1.2)
             break
 
         except Exception as e:
             if "429" in str(e) and attempt < 2:
-                print(f"[Google Sheets 429] 쿼터 초과 감지. 5초 대기 후 재시도 (시도 {attempt+1}/3)...")
+                print(f"[Google Sheets 429] 쿼터 초과 감지. 5초 대기 후 재시도...")
                 time.sleep(5)
             else:
                 print(f"[Google Sheets Error] 탭 '{tab_name}' 동기화 실패: {e}")
                 break
 
 def get_sheet_year_month(title: str):
-    """시트 이름에서 (year, month) 튜플 추출 (미매칭 시 None)"""
+    """시트 이름에서 (year, month) 튜플 추출"""
     t = title.strip()
     m_match = re.match(r'^(\d{4})년\s*(\d{1,2})월$', t)
     if m_match:
@@ -497,13 +449,9 @@ def get_sheet_year_month(title: str):
         return int(d_match.group(1)), int(d_match.group(2))
     return None
 
-def backup_and_cleanup_sheets(client, doc, now_kst: datetime, user_email: str) -> list:
+def backup_and_cleanup_sheets(client, doc, now_kst: datetime) -> list:
     """
-    월 전환 시 백업 및 정리 (2차 무결성 검증 포함):
-    1. 전월 탭이 존재하는 경우 현재 시트 상태 그대로 복제
-    2. 생성된 복제 파일을 다시 열어 시트 개수 및 무결성을 2차 검증 (실패 시 즉시 중단)
-    3. 복제본에 사용자 계정 편집 권한 부여
-    4. 검증이 완전히 통과된 경우에만 삭제 대상 탭 ID 리스트 반환
+    본인 계정(OAuth2) 명의로 전월 복제본 생성 후 삭제 대상 탭 ID 반환
     """
     curr_ym = (now_kst.year, now_kst.month)
     all_sheets = doc.worksheets()
@@ -524,39 +472,32 @@ def backup_and_cleanup_sheets(client, doc, now_kst: datetime, user_email: str) -
     print(f"\n[월간 아카이빙] 전월({latest_prev_ym[0]}년 {latest_prev_ym[1]}월) 탭 {len(prev_sheets)}개 감지")
 
     try:
-        print(f"[Google Drive] 백업 파일 복제 시도: '{archive_title}'...")
+        print(f"[Google Drive] 사용자 계정 드라이브로 백업 파일 복제 시도: '{archive_title}'...")
+        # 사용자 OAuth2 토큰으로 복제하므로 15GB 용량 적용되어 403 에러 원천 차단
         backup_doc = client.copy(doc.id, title=archive_title)
-        print(f"[Google Drive] 백업 파일 생성 호출 성공 (ID: {backup_doc.id})")
+        print(f"[Google Drive] 백업 파일 복제 성공! (새 파일 ID: {backup_doc.id})")
 
-        # [2차 안전 검증] 복제된 파일이 실제로 온전하게 생성되었는지 재오픈 및 시트 수 대조
-        time.sleep(2.0)
+        # 무결성 2차 검증
+        time.sleep(3.0)
         verified_backup = client.open_by_key(backup_doc.id)
         backup_sheets_count = len(verified_backup.worksheets())
         origin_sheets_count = len(all_sheets)
 
         if backup_sheets_count < origin_sheets_count:
             raise RuntimeError(
-                f"복제 파일 무결성 검증 실패: 원본 시트 수({origin_sheets_count})보다 복제본 시트 수({backup_sheets_count})가 적습니다."
+                f"복제 파일 무결성 불일치: 원본 시트 수({origin_sheets_count}) != 복제본({backup_sheets_count})"
             )
-        print(f"[Google Drive] 백업 파일 무결성 2차 검증 통과 (시트 {backup_sheets_count}개 정상 일치)")
+        print(f"[Google Drive] 백업 파일 무결성 확인 완료 (시트 {backup_sheets_count}개 일치)")
 
-        if user_email:
-            try:
-                backup_doc.share(user_email, perm_type='user', role='writer')
-                print(f"[Google Drive] 사용자 계정({user_email}) 공유 완료 (편집 권한)")
-            except Exception as share_err:
-                print(f"[Google Drive Share 경고] 사용자 공유 중 오류 발생: {share_err}")
-
-        # 모든 검증 완료 후 삭제 대상 시트 ID 반환
         return [ws.id for ws in prev_sheets]
 
     except Exception as e:
-        print(f"[Google Drive Error] 백업 복제 또는 무결성 검증 실패: {e}")
-        print("[Google Drive] 원본 시트의 데이터 유실을 방지하기 위해 탭 삭제 작업을 일체 수행하지 않습니다.")
+        print(f"[Google Drive Error] 백업 복제 실패: {e}")
+        print("[Google Drive] 데이터 유실을 방지하기 위해 탭 삭제를 진행하지 않습니다.")
         return []
 
 def reorder_all_sheets(doc):
-    """월별 시트 최우선 ➡️ 일별 시트 최신순 내림차순 정렬"""
+    """월별 시트 우선 ➡️ 일별 시트 최신순 내림차순 정렬"""
     for attempt in range(3):
         try:
             time.sleep(1.5)
@@ -587,16 +528,13 @@ def reorder_all_sheets(doc):
                 for index, ws in enumerate(sorted_worksheets):
                     requests_body.append({
                         "updateSheetProperties": {
-                            "properties": {
-                                "sheetId": ws.id,
-                                "index": index
-                            },
+                            "properties": {"sheetId": ws.id, "index": index},
                             "fields": "index"
                         }
                     })
                 doc.batch_update({"requests": requests_body})
 
-            print(f"[Google Sheets] 전체 탭 순서 정렬 완료 (월별 탭 우선 ➡️ 일별 최신순 내림차순)")
+            print(f"[Google Sheets] 전체 탭 순서 정렬 완료")
             break
 
         except Exception as e:
@@ -606,6 +544,33 @@ def reorder_all_sheets(doc):
             else:
                 print(f"[Google Sheets Error] 시트 순서 재정렬 실패: {e}")
                 break
+
+def get_gspread_client():
+    """사용자 OAuth2 토큰 우선 인증 (실패 시 서비스 계정 fallback)"""
+    if OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET and OAUTH_REFRESH_TOKEN:
+        try:
+            creds = Credentials(
+                token=None,
+                refresh_token=OAUTH_REFRESH_TOKEN,
+                token_uri="https://oauth2.googleapis.com/token",
+                client_id=OAUTH_CLIENT_ID,
+                client_secret=OAUTH_CLIENT_SECRET,
+                scopes=[
+                    "https://www.googleapis.com/auth/spreadsheets",
+                    "https://www.googleapis.com/auth/drive"
+                ]
+            )
+            print("[인증] 사용자 계정(OAuth2)으로 Google Sheets/Drive에 접속합니다.")
+            return gspread.authorize(creds)
+        except Exception as e:
+            print(f"[인증 경고] OAuth2 연결 실패, 서비스 계정으로 전환합니다: {e}")
+
+    if GCP_SA_KEY:
+        print("[인증] 서비스 계정(GCP_SA_KEY)으로 Google Sheets에 접속합니다.")
+        key_dict = json.loads(GCP_SA_KEY)
+        return gspread.service_account_from_dict(key_dict)
+
+    return None
 
 def main():
     if not CLIENT_ID or not CLIENT_SECRET:
@@ -644,7 +609,7 @@ def main():
 
     # 2. README.md 갱신
     readme_content = f"""# 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** {now_kst.strftime('%Y-%m-%d %H:%M:%S')} (매일 오전 08:03 자동 갱신)  
+> **최근 업데이트:** {now_kst.strftime('%Y-%m-%d %H:%M:%S')} (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
 {df[export_cols].head(30)[["대학", "언론사", "기사 제목", "발행시각", "언론사 링크"]].to_markdown(index=False)}
@@ -652,15 +617,18 @@ def main():
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
 
-    # 3. Google 스프레드시트 누적 동기화 및 탭 자동 정렬
-    if SPREADSHEET_ID and GCP_SA_KEY:
+    # 3. Google 스프레드시트 누적 동기화 및 전월 백업/삭제
+    if SPREADSHEET_ID:
         try:
-            key_dict = json.loads(GCP_SA_KEY)
-            client = gspread.service_account_from_dict(key_dict)
+            client = get_gspread_client()
+            if not client:
+                print("[Google Sheets Error] 인증 정보(OAuth2 또는 GCP_SA_KEY)가 없습니다.")
+                return
+
             doc = client.open_by_key(SPREADSHEET_ID)
 
-            # [A] 전월 시트 아카이빙 (백업 복제, 2차 무결성 검증, 권한 공유)
-            sheets_to_cleanup = backup_and_cleanup_sheets(client, doc, now_kst, USER_EMAIL)
+            # [A] 전월 시트 아카이빙 (본인 드라이브에 복제 후 검증)
+            sheets_to_cleanup = backup_and_cleanup_sheets(client, doc, now_kst)
 
             # [B] 월간 누적 탭 동기화
             month_grouped = df.groupby("month_tab")
@@ -672,7 +640,7 @@ def main():
             for day_tab_name, group_df in day_grouped:
                 write_sheet_data_with_format(doc, day_tab_name, group_df)
 
-            # [D] 신규 탭 생성 완료 후, 원본에서 전월 탭 일괄 삭제 (단일 batch_update)
+            # [D] 신규 탭 생성 완료 후, 원본에서 전월 탭 일괄 삭제
             if sheets_to_cleanup:
                 try:
                     print(f"[Google Sheets] 원본 시트에서 전월 탭 {len(sheets_to_cleanup)}개 삭제 시작...")
@@ -688,7 +656,7 @@ def main():
         except Exception as e:
             print(f"[Google Sheets Error] 스프레드시트 동기화 중 오류 발생: {e}")
     else:
-        print("[Google Sheets] SPREADSHEET_ID 또는 GCP_SA_KEY 환경 변수가 없습니다.")
+        print("[Google Sheets] SPREADSHEET_ID 환경 변수가 없습니다.")
 
 if __name__ == "__main__":
     main()

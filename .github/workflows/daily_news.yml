@@ -31,8 +31,11 @@ jobs:
               env:
                   NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
                   NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-                  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
                   SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+                  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+                  GCP_OAUTH_CLIENT_ID: ${{ secrets.GCP_OAUTH_CLIENT_ID }}
+                  GCP_OAUTH_CLIENT_SECRET: ${{ secrets.GCP_OAUTH_CLIENT_SECRET }}
+                  GCP_OAUTH_REFRESH_TOKEN: ${{ secrets.GCP_OAUTH_REFRESH_TOKEN }}
               run: |
                   python main.py
 
