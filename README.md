@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-10-07 09:15:15 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-10-07 10:51:52 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사        | 기사 제목                                         | 발행시각             | 언론사 링크                                                                                                   |
-|:------|:-----------|:----------------------------------------------|:-----------------|:---------------------------------------------------------------------------------------------------------|
-| 고려대학교 | 주간한국       | 김동현 고려대 교수 개발 총괄 안구건조증 신약, 국내 임상 2상 승인        | 2026-10-07 09:14 | https://weekly.hankooki.com/news/articleView.html?idxno=7187702                                          |
-| 고려대학교 | 노컷뉴스       | 박경리 탄생 100주년 특별상 '우리이음상'…첫 수상자 안톤 허           | 2026-10-07 09:12 | https://www.nocutnews.co.kr/news/6587917?utm_source=naver&utm_medium=article&utm_campaign=20261007091121 |
-| 서울대학교 | 노컷뉴스       | 박경리 탄생 100주년 특별상 '우리이음상'…첫 수상자 안톤 허           | 2026-10-07 09:12 | https://www.nocutnews.co.kr/news/6587917?utm_source=naver&utm_medium=article&utm_campaign=20261007091121 |
-| 서울대학교 | 연합뉴스       | HD현중 등 조선·원자력 12개 기관, SMR 해양기술실증센터 출범         | 2026-10-07 09:10 | https://www.yna.co.kr/view/AKR20261007037900057?input=1195m                                              |
-| 연세대학교 | 연합뉴스       | 원주시, 하반기 대학생 학자금 10만원 지원                      | 2026-10-07 09:08 | https://www.yna.co.kr/view/AKR20261007036400062?input=1195m                                              |
-| 연세대학교 | 퍼블릭뉴스      | [부고] 이상길(연세암병원 병원장)씨 부친상                      | 2026-10-07 09:08 | https://www.public25.com/news/articleView.html?idxno=56016                                               |
-| 연세대학교 | 연합뉴스       | 원주시, 학생비만 예방·건강격차 해소 4자 협력체계 구축               | 2026-10-07 09:07 | https://www.yna.co.kr/view/AKR20261007035600062?input=1195m                                              |
-| 서울대학교 | 한국강사신문     | 노작홍사용문학관, 권영민·김신정 문학평론가 초청 문학특강 개최            | 2026-10-07 09:06 | https://www.lecturernews.com/news/articleView.html?idxno=211626                                          |
-| 고려대학교 | 이코노믹포스트    | 대기업 오너 4·5세 94%는 유학파 … 美 컬럼비아대 '최다'           | 2026-10-07 09:06 | http://www.efnews.co.kr/news/articleView.html?idxno=132923                                               |
-| 서울대학교 | 이코노믹포스트    | 대기업 오너 4·5세 94%는 유학파 … 美 컬럼비아대 '최다'           | 2026-10-07 09:06 | http://www.efnews.co.kr/news/articleView.html?idxno=132923                                               |
-| 연세대학교 | 이코노믹포스트    | 대기업 오너 4·5세 94%는 유학파 … 美 컬럼비아대 '최다'           | 2026-10-07 09:06 | http://www.efnews.co.kr/news/articleView.html?idxno=132923                                               |
-| 서울대학교 | 한경매거진      | 김성환 “2030년 재생에너지 100GW 가능” [ESG 뉴스 5]         | 2026-10-07 09:03 | https://magazine.hankyung.com/business/article/202610077225b                                             |
-| 고려대학교 | SR타임스      | 국내 오너 일가 졸업 대학 고려대 1위…서울대·연세대 뒤이어             | 2026-10-07 09:02 | http://www.srtimes.kr/news/articleView.html?idxno=214117                                                 |
-| 연세대학교 | 한스경제       | [단독 인터뷰] "행복한 완벽주의자" 30승 뒤 신지애가 꺼낸 이야기        | 2026-10-07 09:02 | http://www.hansbiz.co.kr/news/articleView.html?idxno=870614                                              |
-| 연세대학교 | SR타임스      | 국내 오너 일가 졸업 대학 고려대 1위…서울대·연세대 뒤이어             | 2026-10-07 09:02 | http://www.srtimes.kr/news/articleView.html?idxno=214117                                                 |
-| 서울대학교 | SR타임스      | 국내 오너 일가 졸업 대학 고려대 1위…서울대·연세대 뒤이어             | 2026-10-07 09:02 | http://www.srtimes.kr/news/articleView.html?idxno=214117                                                 |
-| 서울대학교 | 메디소비자뉴스    | 강스템바이오텍, 혈관·면역 통합 차세대 피부 오가노이드 개발             | 2026-10-07 09:02 | http://www.medisobizanews.com/news/articleView.html?idxno=142887                                         |
-| 서울대학교 | SBS        | "커피 들고 오면 광탈입니다"…논란 부른 면접관의 진짜 속마음 [스프]       | 2026-10-07 09:02 | https://news.sbs.co.kr/news/endPage.do?news_id=N1008784648&plink=ORI&cooper=NAVER                        |
-| 서울대학교 | SEOULTIMES | [뉴스 앤 데이터] 대기업 오너 4·5세 10명 중 9명 유학파…학부부터 해... | 2026-10-07 09:00 | https://www.seoultimes.news/news/article.html?no=2000100601                                              |
-| 연세대학교 | SEOULTIMES | [뉴스 앤 데이터] 대기업 오너 4·5세 10명 중 9명 유학파…학부부터 해... | 2026-10-07 09:00 | https://www.seoultimes.news/news/article.html?no=2000100601                                              |
-| 연세대학교 | KOREADAILY | 이대역 마포 프론티어, 2차 임차인 모집…전용 49~74㎡ 647가구 계획     | 2026-10-07 09:00 | https://www.koreadaily.com/article/20261006170005884                                                     |
-| 고려대학교 | SEOULTIMES | [뉴스 앤 데이터] 대기업 오너 4·5세 10명 중 9명 유학파…학부부터 해... | 2026-10-07 09:00 | https://www.seoultimes.news/news/article.html?no=2000100601                                              |
-| 서울대학교 | 머니투데이      | 딥테크 스타트업 성장거점 '디노랩 테크센터'…연합 생태계로 확장           | 2026-10-07 09:00 | https://www.mt.co.kr/future/2026/10/07/2026100700145722549                                               |
-| 고려대학교 | 국제뉴스       | 박승원 시장 "재정분권 필요"…지방정부 자율성 강조                  | 2026-10-07 09:00 | https://www.gukjenews.com/news/articleView.html?idxno=3714607                                            |
-| 서울대학교 | 조선일보       | [서동인의 커리業] 스마트폰 압수가 실패하는 이유                   | 2026-10-07 09:00 | https://edu.chosun.com/site/data/html_dir/2026/10/02/2026100280026.html                                  |
-| 서울대학교 | 머니투데이      | 피지컬 AI부터 초소형 원자로까지… 서울대, 16일 테크 IR 데이 개최      | 2026-10-07 09:00 | https://www.mt.co.kr/future/2026/10/07/2026100707301848082                                               |
-| 고려대학교 | BTNNEWS    | 강화 전등사, 삼랑성축제 학술대회‥세계유산 가치·서운대종사 사상 조...      | 2026-10-07 08:58 | https://www.btnnews.tv/news/articleView.html?idxno=91872                                                 |
-| 연세대학교 | 데일리메디      | 명지병원 '간호·간병 피지컬 AI' 첫발                        | 2026-10-07 08:56 | https://www.dailymedi.com/news/news_view.php?wr_id=941164                                                |
-| 서울대학교 | 중소기업신문     | 고려아연, 故 최창걸 명예회장 1주기 추모                       | 2026-10-07 08:54 | http://www.smedaily.co.kr/news/articleView.html?idxno=364253                                             |
-| 서울대학교 | SR타임스      | 보증금 단돈 100만원에 풀옵션…LH, '기숙사형 전세임대' 500호 전국 공모  | 2026-10-07 08:52 | http://www.srtimes.kr/news/articleView.html?idxno=214114                                                 |
+| 대학    | 언론사        | 기사 제목                                           | 발행시각             | 언론사 링크                                                                  |
+|:------|:-----------|:------------------------------------------------|:-----------------|:------------------------------------------------------------------------|
+| 고려대학교 | 동아사이언스     | 러 실험실서 페스트균 유출 의심 '파문'…"위험 크지 않지만 경계해야"         | 2026-10-07 10:51 | https://www.dongascience.com/news/view/80227                            |
+| 연세대학교 | 우먼타임스      | 신한은행, 연세대 기술지주와 스타트업 성장 지원 협약                   | 2026-10-07 10:50 | https://www.womentimes.co.kr/news/articleView.html?idxno=106832         |
+| 서울대학교 | 디지털데일리     | 리사 수 “韓서 AI 연구인력 수백명 채용”…AMD, AI CoE 설립 착수      | 2026-10-07 10:47 | https://www.ddaily.co.kr/page/view/2026100710231345969                  |
+| 서울대학교 | MONEYSTORM | HD현대重, 해양 원자력 시장 공략…"주요 12개 기관과 SMR 사업화 협력"     | 2026-10-07 10:47 | https://www.moneystorm.kr/news/articleView.html?idxno=7090              |
+| 고려대학교 | 한국강사신문     | 고려대학교 원왕연 교수팀, "바이오플라스틱, 탄소배출 얼마나 줄일까…...       | 2026-10-07 10:46 | https://www.lecturernews.com/news/articleView.html?idxno=211611         |
+| 연세대학교 | 헤럴드경제      | 신한은행, 연세대 기술지주와 혁신 스타트업 육성                      | 2026-10-07 10:46 | https://biz.heraldcorp.com/article/10895350?ref=naver                   |
+| 서울대학교 | 스카이데일리     | 육지 갇힌 원전, 바다로 갈까? 12개 산학연 승부수                   | 2026-10-07 10:46 | https://m.skyedaily.com/news_view.html?ID=312604                        |
+| 서울대학교 | 아시아타임즈     | [AT 현장] 리사 수 "韓에 AI 연구센터 연내 설립"…국산 AI반도체와 협력... | 2026-10-07 10:46 | https://www.asiatime.co.kr/article/20261007500097                       |
+| 연세대학교 | 연합뉴스       | "의료기기 실증 받으러 출장…실증지원센터 대부분 수도권에"                | 2026-10-07 10:46 | https://www.yna.co.kr/view/AKR20261007069700063?input=1195m             |
+| 연세대학교 | 파이낸셜투데이    | 신한은행, 연세대 기술지주와 혁신 스타트업 발굴·성장 지원                | 2026-10-07 10:46 | http://www.ftoday.co.kr/news/articleView.html?idxno=366763              |
+| 서울대학교 | 이뉴스투데이     | 세종뮤지엄갤러리, 조인호 작가 개인전 개최, 수묵산수로 떠나는 자유의...       | 2026-10-07 10:45 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2477661         |
+| 서울대학교 | 경북매일       | 구미, 학교·학생별 맞춤교육으로 대입 경쟁력 높인다                    | 2026-10-07 10:44 | https://www.kbmaeil.com/article/20261007500140                          |
+| 서울대학교 | 디지털데일리     | HD현대重, 조선·원자력 업계와 'SMR 해양기술 실증센터' 출범            | 2026-10-07 10:44 | https://www.ddaily.co.kr/page/view/2026100710334377714                  |
+| 연세대학교 | 경북매일       | 구미, 학교·학생별 맞춤교육으로 대입 경쟁력 높인다                    | 2026-10-07 10:44 | https://www.kbmaeil.com/article/20261007500140                          |
+| 연세대학교 | 더페어        | "대학 우수 기술 사업화 물꼬 틔운다"…신한은행, 연세대 기술지주와 맞...      | 2026-10-07 10:44 | https://www.thefairnews.co.kr/news/articleView.html?idxno=89995         |
+| 고려대학교 | 뉴데일리       | 금융보안의 시계를 앞서간 해커의 경고 [취재수첩]                     | 2026-10-07 10:44 | https://www.newdaily.co.kr/site/data/html/2026/10/07/2026100700120.html |
+| 서울대학교 | 투데이에너지     | HD현대重 등 12개 기관, 'SMR 해양 기술 실증센터' 출범             | 2026-10-07 10:44 | https://www.todayenergy.kr/news/articleView.html?idxno=303906           |
+| 서울대학교 | 비즈니스코리아    | 한국과 프랑스, '아시아 산불역량 강화' 본격화                      | 2026-10-07 10:44 | https://www.businesskorea.co.kr/news/articleView.html?idxno=278349      |
+| 고려대학교 | 경북매일       | 구미, 학교·학생별 맞춤교육으로 대입 경쟁력 높인다                    | 2026-10-07 10:44 | https://www.kbmaeil.com/article/20261007500140                          |
+| 연세대학교 | SEOULTIMES | 신한은행, 연세대 기술지주와 혁신기업 키운다…투자·금융·TIPS 지원          | 2026-10-07 10:43 | https://www.seoultimes.news/news/article.html?no=2000100614             |
+| 고려대학교 | 메디칼트리뷴     | 운동기능 저하 '루게릭병' 개선 후보물질 발견                       | 2026-10-07 10:42 | http://www.medical-tribune.co.kr/news/articleView.html?idxno=215387     |
+| 연세대학교 | EBN 산업경제   | 신한은행, 연세대 기술지주와 혁신 스타트업 성장 지원                   | 2026-10-07 10:42 | https://www.ebn.co.kr/news/articleView.html?idxno=1726956               |
+| 고려대학교 | CNB저널      | 고려대학교 연구팀, 아이섀도 속 PFAS 안구 전달 규명…바른 양의 38% 눈...  | 2026-10-07 10:42 | https://www.cnbizm.com/news/articleView.html?idxno=317291               |
+| 서울대학교 | 굿모닝충청      | [국감] 대한민국학술원 회원 80% 서울대 출신…남성 96.4%             | 2026-10-07 10:40 | https://www.goodmorningcc.com/news/articleView.html?idxno=453578        |
+| 연세대학교 | 퀸          | 신한은행-연세대 기술지주, 혁신 스타트업 성장 지원 협약                 | 2026-10-07 10:40 | http://www.queen.co.kr/news/articleView.html?idxno=464376               |
+| 서울대학교 | 비즈워크       | 포니정 영리더상에 안세영·김도형 선정                            | 2026-10-07 10:40 | https://www.bizwork.co.kr/news/articleView.html?idxno=419653            |
+| 서울대학교 | 에너지신문      | HD현대중공업, 해양 SMR 실증센터 구축···12개 기관 협력             | 2026-10-07 10:40 | https://www.energy-news.co.kr/news/articleView.html?idxno=228813        |
+| 서울대학교 | 매일일보       | 영등포구 "AI시대, 인간다운 삶의 답을 찾다" …과학 분야 명사특강 개...     | 2026-10-07 10:40 | https://www.m-i.kr/news/articleView.html?idxno=2003356                  |
+| 서울대학교 | 신아일보       | 대한적십자사, 영화 '레지스탕스'로 국제인도법 의미 조명                 | 2026-10-07 10:40 | https://www.shinailbo.co.kr/news/articleView.html?idxno=5069389         |
+| 서울대학교 | 대학저널       | 세종대 세종뮤지엄갤러리 1관, 조인호 기획초대전                      | 2026-10-07 10:40 | https://dhnews.co.kr/news/view/1065576755259200                         |
