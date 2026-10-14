@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-10-13 12:14:35 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-10-14 10:27:12 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사     | 기사 제목                                          | 발행시각             | 언론사 링크                                                                            |
-|:------|:--------|:-----------------------------------------------|:-----------------|:----------------------------------------------------------------------------------|
-| 연세대학교 | 문화일보    | 서울시립대서도 ‘스마트 안경’ 부정행위 적발                       | 2026-10-13 12:12 | https://www.munhwa.com/article/11623129?ref=naver                                 |
-| 연세대학교 | 한겨레     | 연세대 논술서 ‘스마트 안경’ 적발…시험 도중 안경 바꿔 써              | 2026-10-13 12:12 | https://www.hani.co.kr/arti/society/schooling/1282111.html                        |
-| 연세대학교 | 매일경제    | 연세대 수시서 ‘스마트안경’ 부정행위 적발…대학입시 ‘비상’              | 2026-10-13 12:12 | https://www.mk.co.kr/article/12174336                                             |
-| 연세대학교 | 세계비즈    | [현장] 현대바이오 “살인진드기 치료제 개발에 전력… 뎅기열 범용제”         | 2026-10-13 12:12 | http://www.segyebiz.com/newsView/20261013511898?OutUrl=naver                      |
-| 고려대학교 | 문화일보    | “반도체 뺀 韓 산업 경쟁력, 이미 하락세… 구조 다변화 정책 시급”         | 2026-10-13 12:11 | https://www.munhwa.com/article/11623123?ref=naver                                 |
-| 서울대학교 | NC      | 지역 어르신의 기억, 무형유산 기록으로…청년 연구자들 조사 결과            | 2026-10-13 12:10 | https://www.nc.press/news/articleView.html?idxno=628410                           |
-| 서울대학교 | 교수신문    | 윤휴                                             | 2026-10-13 12:06 | https://www.kyosu.net/news/articleView.html?idxno=211181                          |
-| 고려대학교 | 아유경제    | [아유경제_가로주택정비] 구로동 511 일원 가로주택정비, 시공자 현장설...    | 2026-10-13 12:06 | http://www.areyou.co.kr/news/articleView.html?idxno=95764                         |
-| 고려대학교 | 후생신보    | 고려대 의대 전옥희 교수, 83억 규모 국책 과제 수주                 | 2026-10-13 12:02 | http://www.whosaeng.com/sub_read.html?uid=174382&section=sc7                      |
-| 서울대학교 | 후생신보    | 고려대 의대 전옥희 교수, 83억 규모 국책 과제 수주                 | 2026-10-13 12:02 | http://www.whosaeng.com/sub_read.html?uid=174382&section=sc7                      |
-| 서울대학교 | 뉴스펭귄    | 한반도 폭우 60년 변천사...비구름은 왜 갈수록 난폭해지는가             | 2026-10-13 12:00 | https://www.newspenguin.com/news/articleView.html?idxno=22289                     |
-| 서울대학교 | 에너지경제   | 국내 초미세먼지·오존 오염, 노년층 파킨슨병 위험 높인다 [환경포커스...      | 2026-10-13 12:00 | https://www.ekn.kr/web/view.php?key=20261013029155233                             |
-| 연세대학교 | 경북도민일보  | 시험 시작하자 'AI 안경'으로 바꿔 썼다…연세대·서울시립대서 잇따라...      | 2026-10-13 12:00 | https://www.hidomin.com/news/articleView.html?idxno=724619                        |
-| 고려대학교 | 의학신문    | "지역 필수의료 지키려면 공공·민간 협력이 핵심"                    | 2026-10-13 12:00 | https://www.bosa.co.kr/news/articleView.html?idxno=3013761                        |
-| 고려대학교 | 에너지경제   | “근시 관리, 평생 눈 건강의 기본…시작 늦추고 진행 줄여야”             | 2026-10-13 12:00 | https://www.ekn.kr/web/view.php?key=20261013024225365                             |
-| 연세대학교 | SBS     | 대입 논술시험서 AI 안경 쓴 수험생들 적발…시립대 "응시 3년 금지"        | 2026-10-13 11:57 | https://news.sbs.co.kr/news/endPage.do?news_id=N1008795041&plink=ORI&cooper=NAVER |
-| 고려대학교 | 엑스포츠뉴스  | '올림픽 銅메달 사실상 도둑 맞은' 차준환, 태극마크 반납→피겨 활동 ...     | 2026-10-13 11:55 | https://www.xportsnews.com/article/2206949                                        |
-| 서울대학교 | 데일리벳    | 모교 서울대 수의대에 12억 원 기부한 박종수 동문의 마음 ‘힐링·회복...     | 2026-10-13 11:52 | https://www.dailyvet.co.kr/news/college/300189                                    |
-| 서울대학교 | 데일리벳    | 2026 경기북부수의컨퍼런스 열린다..11월 7·8일 일산 킨텍스           | 2026-10-13 11:52 | https://www.dailyvet.co.kr/news/association/300170                                |
-| 연세대학교 | 메디칼타임즈  | "포스트 렉라자, 우연에 기댈 수 없다"…글로벌 신약의 조건              | 2026-10-13 11:50 | https://www.medicaltimes.com/Main/News/NewsView.html?ID=1171149&ref=naverpc       |
-| 연세대학교 | 청년의사    | ISO 국제표준 승인 과제 발돋움… 바이오솔루션 '솔루오랄' 글로벌 진출...    | 2026-10-13 11:48 | http://www.docdocdoc.co.kr/news/articleView.html?idxno=3043580                    |
-| 연세대학교 | 뉴스클레임   | [동원 인사 전망] 3년 연속 10월 말 대표 인사…김성용 수익성·조점근 ...   | 2026-10-13 11:48 | https://www.newsclaim.co.kr/news/articleView.html?idxno=3078168                   |
-| 서울대학교 | 뉴스클레임   | [동원 인사 전망] 3년 연속 10월 말 대표 인사…김성용 수익성·조점근 ...   | 2026-10-13 11:48 | https://www.newsclaim.co.kr/news/articleView.html?idxno=3078168                   |
-| 고려대학교 | 뉴스클레임   | [동원 인사 전망] 3년 연속 10월 말 대표 인사…김성용 수익성·조점근 ...   | 2026-10-13 11:48 | https://www.newsclaim.co.kr/news/articleView.html?idxno=3078168                   |
-| 고려대학교 | 건강다이제스트 | '볼릭스(Bolix)', 실리프팅 정밀도 높여 자연스러운 얼굴 라인 구현에 도... | 2026-10-13 11:48 | https://www.ikunkang.com/news/articleView.html?idxno=51657                        |
-| 고려대학교 | 경향신문    | 선관위 특검, 포렌식 전문가들과 중앙선관위 방문···“수사에 적극적...       | 2026-10-13 11:43 | https://www.khan.co.kr/article/202610131143001                                    |
-| 연세대학교 | 연합뉴스    | 대입 논술시험서 AI안경 쓴 수험생들 적발…시립대 "응시 3년 금지"         | 2026-10-13 11:43 | https://www.yna.co.kr/view/AKR20261013090600004?input=1195m                       |
-| 서울대학교 | 경향신문    | 선관위 특검, 포렌식 전문가들과 중앙선관위 방문···“수사에 적극적...       | 2026-10-13 11:43 | https://www.khan.co.kr/article/202610131143001                                    |
-| 고려대학교 | 데일리메디   | 강남베드로병원, '국제진료센터' 출범                           | 2026-10-13 11:40 | https://www.dailymedi.com/news/news_view.php?wr_id=941380                         |
-| 고려대학교 | 뉴스맵     | 경희대, 양자센싱 기반 심근손상 조기진단 기술 개발 착수                | 2026-10-13 11:40 | https://www.newsmap.co.kr/news/articleView.html?idxno=3958                        |
+| 대학    | 언론사     | 기사 제목                                            | 발행시각             | 언론사 링크                                                                      |
+|:------|:--------|:-------------------------------------------------|:-----------------|:----------------------------------------------------------------------------|
+| 고려대학교 | 아시아타임즈  | [14일 김포시] 24일 김포예술제 개최 등                         | 2026-10-14 10:26 | https://www.asiatime.co.kr/article/20261014500063                           |
+| 서울대학교 | 더퍼블릭    | 美 정보공유 제한 6개월 넘겼는데…외교-안보라인 쇄신 가능성은?              | 2026-10-14 10:24 | https://www.thepublic.kr/news/articleView.html?idxno=322159                 |
+| 연세대학교 | 비즈워크    | S-OIL, 오케스트라로 문화예술 나눔 확대                         | 2026-10-14 10:18 | https://www.bizwork.co.kr/news/articleView.html?idxno=419861                |
+| 연세대학교 | 세정일보    | "가치평가 실무 지원 강화"… 한공회, 제10회 가치평가 포럼 성료            | 2026-10-14 10:18 | https://www.sejungilbo.com/news/articleView.html?idxno=60560                |
+| 연세대학교 | bnt뉴스   | 전현무계획4, 경주 묵 해장국 맛집                              | 2026-10-14 10:16 | https://www.bntnews.co.kr/article/view/bnt202610140178                      |
+| 서울대학교 | 메가경제    | 서울시, 아시아 첫 건강도시 국제 워크숍 개최…폭염 대응 논의               | 2026-10-14 10:16 | https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065573978683195      |
+| 서울대학교 | 라이브뉴스   | 베링거인겔하임, 차세대 돼지 파보 백신 ‘파보플렉스 주’ 국내 출시            | 2026-10-14 10:16 | https://www.livesnews.com/news/article.html?no=64935                        |
+| 서울대학교 | 경기신문    | [단체장 취임 100일] 최대호 안양시장, "피지컬 AI 도시로 안양 미래 완...   | 2026-10-14 10:14 | https://www.kgnews.co.kr/news/article.html?no=914714                        |
+| 서울대학교 | 중기이코노미  | 신한글로벌액티브리츠, 영업이익 58.8% 증가                        | 2026-10-14 10:14 | https://www.junggi.co.kr/news/articleView.html?idxno=38074                  |
+| 연세대학교 | 에너지경제   | [패트롤]경북도-경북교육청-경북연구원-한국국학진흥원                     | 2026-10-14 10:12 | https://www.ekn.kr/web/view.php?key=20261014025115915                       |
+| 고려대학교 | 베리타스알파  | 고려대 'J-PARC K10 국제공동연구그룹' 창립총회/워크숍 개최.. '쿼크 질... | 2026-10-14 10:10 | https://www.veritas-a.com/news/articleView.html?idxno=631744                |
+| 고려대학교 | 라포르시안   | 박정율 의협 국제협력위원장, '세계의사회' 회장 취임                    | 2026-10-14 10:10 | https://www.rapportian.com/news/articleView.html?idxno=241246               |
+| 서울대학교 | 브레이크뉴스  | 법무부, 검찰총장후보추천위원회 구성 및 천거 공고                      | 2026-10-14 10:08 | http://www.breaknews.com/1242821                                            |
+| 연세대학교 | 메디코파마뉴스 | 지아이이노베이션, J&J와 전립선암 병용 임상 본격화                    | 2026-10-14 10:08 | https://www.medicopharma.co.kr/news/articleView.html?idxno=69857            |
+| 고려대학교 | 메디코파마뉴스 | 지아이이노베이션, J&J와 전립선암 병용 임상 본격화                    | 2026-10-14 10:08 | https://www.medicopharma.co.kr/news/articleView.html?idxno=69857            |
+| 서울대학교 | 베타뉴스    | 서울시, 아시아 6개 도시와 폭염 대응 공유…블룸버그 건강도시 워크숍           | 2026-10-14 10:06 | https://www.betanews.net/article/view/beta202610140032                      |
+| 서울대학교 | 머니투데이   | 뉴온, 목련꽃봉오리추출물 식약처 잇몸 건강 기능성 인정...연내 건기식...       | 2026-10-14 10:06 | https://www.mt.co.kr/stock/2026/10/14/2026101410003213476                   |
+| 고려대학교 | 메디칼타임즈  | 박정율 의협 국제협력위원장 세계의사회 회장 취임                       | 2026-10-14 10:06 | https://www.medicaltimes.com/Main/News/InformView.html?ID=11392&ref=naverpc |
+| 서울대학교 | 대학저널    | 정성화, 스크린 주연 연타석 홈런 노린다                           | 2026-10-14 10:04 | https://dhnews.co.kr/news/view/1065596505698158                             |
+| 고려대학교 | 티티엘뉴스   | 식품공학‧AI를 접목한 연구‧교육으로 배고픔 없는 건강한 내일을 만든...        | 2026-10-14 10:04 | http://www.ttlnews.com/news/articleView.html?idxno=3151719                  |
+| 서울대학교 | 농업인신문   | 2027년 식품외식산업 전망 컨퍼런스 11월 개최                      | 2026-10-14 10:00 | http://www.nongup.net/news/articleView.html?idxno=33849                     |
+| 서울대학교 | IT비즈뉴스  | 청주오스코, AI 미래교육 한자리에…'2026 AI 에듀 엑스포' 11월 개최      | 2026-10-14 10:00 | https://www.itbiznews.com/news/articleView.html?idxno=227730                |
+| 연세대학교 | 여성경제신문  | [희귀질환의 무게] 학교 떠나고 일터 잃었는데···장애 인정 확대 5년...       | 2026-10-14 10:00 | https://www.womaneconomy.co.kr/news/articleView.html?idxno=259585           |
+| 연세대학교 | 인천in    | 인천인자위, '제약바이오 GMP 생산직무 양성과정' 훈련생 모집              | 2026-10-14 10:00 | http://www.incheonin.com/news/articleView.html?idxno=121448                 |
+| 연세대학교 | 신아일보    | 원주시, 캐나다 애드먼턴과 AI·의료 등 미래산업 협력 확대 추진             | 2026-10-14 09:58 | https://www.shinailbo.co.kr/news/articleView.html?idxno=5071523             |
+| 연세대학교 | 뉴스클레임   | [매일그룹 인사 전망] 매일유업 3인 대표 체제 1년 반 만에 종료…김정...      | 2026-10-14 09:58 | https://www.newsclaim.co.kr/news/articleView.html?idxno=3078369             |
+| 서울대학교 | 연합뉴스    | 서울대 80주년 유홍림총장 "왜 대학이어야 하는가 다시 물어야"              | 2026-10-14 09:55 | https://www.yna.co.kr/view/AKR20261014048000004?input=1195m                 |
+| 연세대학교 | 세정신문    | [프로필]조세심판원 국장급 전보(2명)                            | 2026-10-14 09:54 | https://www.taxtimes.co.kr/news/article.html?no=277279                      |
+| 고려대학교 | 의사신문    | 박정율 대한의사협회 국제협력위원장, 세계의사회 회장 취임                  | 2026-10-14 09:54 | http://www.doctorstimes.com/news/articleView.html?idxno=240471              |
+| 고려대학교 | 세정신문    | [프로필]조세심판원 국장급 전보(2명)                            | 2026-10-14 09:54 | https://www.taxtimes.co.kr/news/article.html?no=277279                      |
