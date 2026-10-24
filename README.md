@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-10-23 10:03:09 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-10-24 10:12:23 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사        | 기사 제목                                            | 발행시각             | 언론사 링크                                                                                                                                                                      |
-|:------|:-----------|:-------------------------------------------------|:-----------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 고려대학교 | 베리타스알파     | 고려대 미래성장연구원 11월3일 미래 모빌리티 공급망 정책 세미나 개최          | 2026-10-23 10:02 | https://www.veritas-a.com/news/articleView.html?idxno=633216                                                                                                                |
-| 고려대학교 | 와이드경제      | 핀다저축은행 첫 지휘봉에 '89년생' 박연현 전 토스뱅크 부문장 선임           | 2026-10-23 10:02 | https://www.widedaily.com/news/articleView.html?idxno=302249                                                                                                                |
-| 서울대학교 | 딜사이트       | [경영전략 써밋 2026] "AI가 성장 공식 바꾼다"…산업·금융 잇는 AI 대전... | 2026-10-23 10:02 | https://dealsite.co.kr/articles/171016                                                                                                                                      |
-| 서울대학교 | 딜사이트       | [경영전략 써밋 2026] 류근관 교수 "AX 확산 속도, 실질적 국가잠재력 회...  | 2026-10-23 10:02 | https://dealsite.co.kr/articles/171058                                                                                                                                      |
-| 서울대학교 | 위키트리       | "공부법·미래 직업·입시 멘탈까지" 남양주시, 학부모 진로특강 마련            | 2026-10-23 10:02 | https://www.wikitree.co.kr/articles/1168515                                                                                                                                 |
-| 연세대학교 | 위키트리       | "공부법·미래 직업·입시 멘탈까지" 남양주시, 학부모 진로특강 마련            | 2026-10-23 10:02 | https://www.wikitree.co.kr/articles/1168515                                                                                                                                 |
-| 서울대학교 | 전자신문       | 고려인삼학회, 국제인삼심포지엄 개최…홍삼 항노화 효능 조명                 | 2026-10-23 10:02 | https://www.etnews.com/20261023000056                                                                                                                                       |
-| 서울대학교 | 잡포스트       | 이상일 용인시장 "AI 시대, 사고력·분별력 중요"                     | 2026-10-23 10:00 | https://www.job-post.co.kr/news/articleView.html?idxno=234018                                                                                                               |
-| 서울대학교 | 위키트리       | [2026 단풍 시기] 단풍 명소・단풍 절정기 언제? (한눈에 정리)           | 2026-10-23 10:00 | https://www.wikitree.co.kr/articles/1168516                                                                                                                                 |
-| 연세대학교 | 한국강사신문     | 차의과학대학교 김성곤 교수, '2026 길 위의 인문학·지혜학교' 부모교육...     | 2026-10-23 10:00 | https://www.lecturernews.com/news/articleView.html?idxno=212418                                                                                                             |
-| 고려대학교 | 한스경제       | 핀다, 저축은행 30대 박연현 대표 발탁···디지털 금융 승부               | 2026-10-23 09:58 | http://www.hansbiz.co.kr/news/articleView.html?idxno=875585                                                                                                                 |
-| 연세대학교 | 전자신문       | 네이버, 입시 검색 강화…대학·학과·전형 한 번에 본다                   | 2026-10-23 09:57 | https://www.etnews.com/20261023000050                                                                                                                                       |
-| 고려대학교 | SR타임스      | 핀다, 저축은행 대표에 박연현 전 토스뱅크 부문장…AI 뱅킹 시동             | 2026-10-23 09:56 | http://www.srtimes.kr/news/articleView.html?idxno=215632                                                                                                                    |
-| 연세대학교 | 중앙이코노미뉴스   | "유산기부 문화 확산"…하나증권, 연세의료원과 업무협약                   | 2026-10-23 09:56 | https://www.joongangenews.com/news/articleView.html?idxno=557675                                                                                                            |
-| 고려대학교 | 더팩트        | 핀다저축은행, 초대 대표에 박연현 전 토스뱅크 부문장                    | 2026-10-23 09:55 | https://news.tf.co.kr/read/economy/2379857.htm                                                                                                                              |
-| 고려대학교 | FETV       | 핀다저축은행 첫 대표에 박연현…토스뱅크 공동대출 개발 주도                 | 2026-10-23 09:54 | https://www.fetv.co.kr/news/articleView.html?idxno=312313                                                                                                                   |
-| 서울대학교 | 공무원수험신문    | 서울대 건설환경종합연구소, ‘AI 시대, 건설 일자리와 조직 생태계 패...       | 2026-10-23 09:54 | https://www.gosiweek.com/article/1065574246149367                                                                                                                           |
-| 서울대학교 | 전국매일신문     | 서울시교육청, '초등 수업·평가 혁신 컨퍼런스' AI 시대 교육 방향 모색        | 2026-10-23 09:54 | https://www.jeonmae.co.kr/news/articleView.html?idxno=1304413                                                                                                               |
-| 고려대학교 | 딜사이트       | [제약+] 대웅제약 “펙스클루, 7일 제균요법 효과 확인” 外               | 2026-10-23 09:54 | https://dealsite.co.kr/articles/171214                                                                                                                                      |
-| 서울대학교 | 이데일리       | 남양주 학부모 대상 자녀 진로·진학 고민 덜어줄 특강 '풍성'               | 2026-10-23 09:52 | https://www.edaily.co.kr/News/Read?newsId=03214406645615872&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article |
-| 서울대학교 | 데일리한국      | [부산소식]부산시장·주한미국대사, 북극항로 협력 논의                    | 2026-10-23 09:52 | https://daily.hankooki.com/news/articleView.html?idxno=1417710                                                                                                              |
-| 연세대학교 | 이데일리       | 남양주 학부모 대상 자녀 진로·진학 고민 덜어줄 특강 '풍성'               | 2026-10-23 09:52 | https://www.edaily.co.kr/News/Read?newsId=03214406645615872&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article |
-| 고려대학교 | 한스경제       | 병원 ESG, 아이디어를 현장으로…진흥원·심평원 12건 시상                | 2026-10-23 09:52 | http://www.hansbiz.co.kr/news/articleView.html?idxno=875532                                                                                                                 |
-| 고려대학교 | 헤럴드경제      | 핀다저축은행 초대 대표, 토스뱅크 출신 박연현                        | 2026-10-23 09:51 | https://biz.heraldcorp.com/article/10912350?ref=naver                                                                                                                       |
-| 고려대학교 | 팜뉴스        | 시지메드텍, 글로벌 척추내시경 네트워크 확장...美 NASS서 워크숍 성료        | 2026-10-23 09:50 | https://www.pharmnews.com/news/articleView.html?idxno=307212                                                                                                                |
-| 고려대학교 | 현대불교신문     | '아는 불교'에서 '사는 불교'로의 전환                           | 2026-10-23 09:50 | https://www.hyunbulnews.com/news/articleView.html?idxno=505974                                                                                                              |
-| 서울대학교 | 뉴스워커       | 한국전력, '국내 기업 최초'... 유럽 최고 권위 Unleash 2년 연속 석권    | 2026-10-23 09:50 | https://www.newsworker.co.kr/news/articleView.html?idxno=510130                                                                                                             |
-| 서울대학교 | 건강다이제스트    | 가슴성형도 '조직 보존' 중요성 부각… 자연스러운 결과 위한 수술 설계...       | 2026-10-23 09:50 | https://www.ikunkang.com/news/articleView.html?idxno=51693                                                                                                                  |
-| 서울대학교 | 국세신문       | [판례평석] 공시송달을 실시하기에 앞서 과세관청이 선량한 관리자의 주...        | 2026-10-23 09:50 | http://www.intn.co.kr/news/articleView.html?idxno=2054237                                                                                                                   |
-| 고려대학교 | DAILYBRIEF | 핀다저축은행 CEO에 토스뱅크 출신 박연현 선임                       | 2026-10-23 09:49 | https://www.dailybrief.co.kr/news/articleView.html?idxno=7081                                                                                                               |
+| 대학    | 언론사      | 기사 제목                                            | 발행시각             | 언론사 링크                                                            |
+|:------|:---------|:-------------------------------------------------|:-----------------|:------------------------------------------------------------------|
+| 고려대학교 | EBN 산업경제 | [단독] 증권투자 사립대학, 원금 손실 수두룩…초라한 성적표                | 2026-10-24 10:08 | https://www.ebn.co.kr/news/articleView.html?idxno=1729016         |
+| 연세대학교 | EBN 산업경제 | [단독] 증권투자 사립대학, 원금 손실 수두룩…초라한 성적표                | 2026-10-24 10:08 | https://www.ebn.co.kr/news/articleView.html?idxno=1729016         |
+| 서울대학교 | 서울경제     | 비위 제보에 연기된 서울대 총장선거…교수회 “후보자 특별감사해야”             | 2026-10-24 10:01 | https://www.sedaily.com/article/20105532?ref=naver                |
+| 고려대학교 | 중앙일보     | 학연·지연·간섭 다 없앴다…부활한 한국 농구 진짜 저력                   | 2026-10-24 10:00 | https://www.joongang.co.kr/article/25472463                       |
+| 연세대학교 | 중앙일보     | 학연·지연·간섭 다 없앴다…부활한 한국 농구 진짜 저력                   | 2026-10-24 10:00 | https://www.joongang.co.kr/article/25472463                       |
+| 서울대학교 | 여성경제신문   | [민은미 더봄] 사랑이 길을 잃지 않도록···목지연 디자이너의 '달빛을...       | 2026-10-24 10:00 | https://www.womaneconomy.co.kr/news/articleView.html?idxno=259117 |
+| 연세대학교 | 건강다이제스트  | 서울시, 레지오넬라증 예방관리 교육 심포지엄 개최…수계시설 관리 역...         | 2026-10-24 09:56 | https://www.ikunkang.com/news/articleView.html?idxno=51709        |
+| 서울대학교 | 건강다이제스트  | 서울시, 레지오넬라증 예방관리 교육 심포지엄 개최…수계시설 관리 역...         | 2026-10-24 09:56 | https://www.ikunkang.com/news/articleView.html?idxno=51709        |
+| 연세대학교 | BBS NEWS | 포항시, 오는 27일 골목상권 활성화 위한 시민 공감 포럼 열린다             | 2026-10-24 09:54 | https://news.bbsi.co.kr/news/articleView.html?idxno=4114298       |
+| 고려대학교 | 포인트엔     | 경남 밀양시, '2027년 동아시아 문화도시' 최종 선정…아리랑의 가치 세...     | 2026-10-24 09:48 | https://www.pointe.co.kr/news/articleView.html?idxno=86562        |
+| 고려대학교 | 충청뉴스     | 세종시 식품산업, AI·R&D 융합으로 미래 경쟁력 확충에 나선다             | 2026-10-24 09:36 | http://www.ccnnews.co.kr/news/articleView.html?idxno=416725       |
+| 서울대학교 | 헤럴드경제    | 영등포구청 직원들 구청장 복 받았나?…민선 8·9기 이어진 ‘소통 리더...       | 2026-10-24 09:36 | https://biz.heraldcorp.com/article/10913393?ref=naver             |
+| 연세대학교 | 연합뉴스TV   | 브레이크 안 밟아도 제동…일상 스며드는 車 신기술                      | 2026-10-24 09:28 | http://www.yonhapnewstv.co.kr/news/MYH202610240926597n7           |
+| 서울대학교 | 약사공론     | 약학 미래 이끌 우수논문상 4인 "성공 넘어 실패도 함께 나누길"             | 2026-10-24 09:28 | https://www.kpanews.co.kr/news/articleView.html?idxno=547115      |
+| 서울대학교 | 잡포스트     | 남양주시, 학부모 진로특강 개최                                | 2026-10-24 09:26 | https://www.job-post.co.kr/news/articleView.html?idxno=234277     |
+| 연세대학교 | 잡포스트     | 남양주시, 학부모 진로특강 개최                                | 2026-10-24 09:26 | https://www.job-post.co.kr/news/articleView.html?idxno=234277     |
+| 서울대학교 | 약사공론     | "처방전 없이 살 수 있는 약 늘어날까"…전문약 일반약 전환 시동             | 2026-10-24 09:26 | https://www.kpanews.co.kr/news/articleView.html?idxno=547102      |
+| 서울대학교 | 뉴스엔      | 김태희 서울대→원빈 청담동 목격담 떴다, 얼굴이 얼굴…톱 아이돌도 “...        | 2026-10-24 09:20 | https://www.newsen.com/news_view.php?uid=202610240905262110       |
+| 서울대학교 | 한국강사신문   | 수나라 시대 『대지도론』부터 희귀 필사본까지 한자리에…국립중앙박...           | 2026-10-24 09:16 | https://www.lecturernews.com/news/articleView.html?idxno=212485   |
+| 서울대학교 | 세계일보     | “부캉이 너무 기특해”...동물도 ‘덕질’하는 시대                     | 2026-10-24 09:03 | https://www.segye.com/newsView/20261023506988?OutUrl=naver        |
+| 연세대학교 | 뉴스투데이    | [김연수의 식탁이야기(105)] 폐기능검사 국가검진 도입했지만, 정작 호흡...     | 2026-10-24 09:02 | https://www.news2day.co.kr/article/20261023500030                 |
+| 고려대학교 | 뉴시스      | PHP 치명적 결함에 전 세계 비상…사흘째 피해는 왜 잠잠할까               | 2026-10-24 09:00 | https://www.newsis.com/view/NISX20261023_0003839098               |
+| 서울대학교 | OSEN     | '16년째 작품無' 원빈, 청담동 목격담 떴다.."실물 미쳤다" 최강창민도 ...    | 2026-10-24 08:55 | http://www.osen.co.kr/article/G1112897572                         |
+| 서울대학교 | 한국강사신문   | EBS  AI 드라마-부활수업 , 쇼펜하우어가 전하는 고독과 외로움의 의미        | 2026-10-24 08:46 | https://www.lecturernews.com/news/articleView.html?idxno=212430   |
+| 연세대학교 | 주간경향     | ‘윤석열·오세훈 무죄’ 구회근 부장판사, 대법관 후보였다                  | 2026-10-24 08:31 | https://weekly.khan.co.kr/article/202610240831001                 |
+| 서울대학교 | 메디게이트뉴스  | 제약바이오협회 'AI 파마 코리아 컨퍼런스 2026' 개최                 | 2026-10-24 08:30 | https://www.medigatenews.com/news/1834968937                      |
+| 서울대학교 | 머니투데이    | 초혼 평균 33.8세라더니...서울 30대초 남자 10명 중 8명은 '미혼'       | 2026-10-24 08:30 | https://www.mt.co.kr/policy/2026/10/24/2026102116103799913        |
+| 서울대학교 | 위키트리     | 화제성 3위·5위 나란히 오른 김원훈·백현진…장기하 합류 한국 드라마           | 2026-10-24 08:26 | https://www.wikitree.co.kr/articles/1168737                       |
+| 서울대학교 | 전북의소리    | 전북 시골 초등학교 '가을 운동회'만 다녀가신 대통령님께!                 | 2026-10-24 08:14 | http://www.jbsori.com/news/articleView.html?idxno=18086           |
+| 서울대학교 | 인사이트     | "AI로 99점 맞았다" 자랑글에... 건국대 600명 전원 중간고사 '대면 재시... | 2026-10-24 08:10 | https://www.insight.co.kr/news/579004                             |
