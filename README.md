@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-10-26 09:46:43 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-10-27 10:39:25 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사        | 기사 제목                                         | 발행시각             | 언론사 링크                                                                              |
-|:------|:-----------|:----------------------------------------------|:-----------------|:------------------------------------------------------------------------------------|
-| 서울대학교 | 경인매일       | 김포시, 전국다문화도시협의회 국회 포럼 개최...지역 맞춤형 이민정책...     | 2026-10-26 09:44 | https://www.kmaeil.com/news/articleView.html?idxno=655630                           |
-| 연세대학교 | 데일리팜       | 큐리언트 모카시클립, 임상 1상서 항암 효능 확인…2상 기대감            | 2026-10-26 09:44 | https://www.dailypharm.com/user/news/343783?REFERER=NP                              |
-| 연세대학교 | 뉴시스        | 큐리언트 "ESMO서 모카시클립 임상 결과 발표"                   | 2026-10-26 09:43 | https://www.newsis.com/view/NISX20261026_0003840636                                 |
-| 연세대학교 | 아시아경제      | 난임 호르몬 주사 부담 줄인다…한 번 삽입하는 마이크로니들 개발           | 2026-10-26 09:43 | https://view.asiae.co.kr/article/2026102609430086342                                |
-| 연세대학교 | 뉴스1        | 큐리언트, ESMO서 항암제 '모카시클립' 임상 1상 성과 발표           | 2026-10-26 09:40 | https://www.news1.kr/bio/pharmaceutical-bio/6331543                                 |
-| 연세대학교 | 아시아경제      | "옷감, 치수 고르듯" 반도체 '게이트 전극' 맞춤형 설계              | 2026-10-26 09:40 | https://view.asiae.co.kr/article/2026102609405724630                                |
-| 고려대학교 | 일간스포츠      | 루시, 신곡 3곡·손편지로 전한 팬 사랑…서울 앙코르 콘서트 성료          | 2026-10-26 09:38 | https://isplus.com/article/view/isp202610260050                                     |
-| 서울대학교 | 더벨         | [더벨]'내부 육성' 지앤텍벤처, 초장기펀드 소형 GP 따냈다            | 2026-10-26 09:38 | https://www.thebell.co.kr/free/content/ArticleView.asp?key=202610150927528320108729 |
-| 서울대학교 | 전자신문       | 티쓰리큐, '2026 대한민국 AX 트렌드와 생존전략 컨퍼런스' 28일 개최    | 2026-10-26 09:38 | https://www.etnews.com/20261026000047                                               |
-| 서울대학교 | 한국정경신문     | “미생물형과 분쇄형, 뭐가 다를까?” 코웨이, 음식물처리기 선택 팁 방...    | 2026-10-26 09:38 | https://kpenews.com/View.aspx?No=4278442                                            |
-| 서울대학교 | 디지털데일리     | "생활 습관 맞춰 고른다"…코웨이, 제로 음식물처리기 2종 공개           | 2026-10-26 09:38 | https://www.ddaily.co.kr/page/view/2026102609363576043                              |
-| 고려대학교 | 전자신문       | 티쓰리큐, '2026 대한민국 AX 트렌드와 생존전략 컨퍼런스' 28일 개최    | 2026-10-26 09:38 | https://www.etnews.com/20261026000047                                               |
-| 고려대학교 | 뉴시스        | 고려대, '미래 모빌리티 공급망 구축' 정책 세미나 개최               | 2026-10-26 09:37 | https://www.newsis.com/view/NISX20261026_0003840582                                 |
-| 고려대학교 | 헬스경향       | 단순 어지럼증인 줄 알았는데…"놓치기 쉬운 뇌졸중 경고신호, 꼭 알아...     | 2026-10-26 09:36 | https://www.k-health.com/news/articleView.html?idxno=101859                         |
-| 서울대학교 | 뉴시스        | 서울대 소장 불정심다라니경, 보물 됐다                         | 2026-10-26 09:35 | https://www.newsis.com/view/NISX20261026_0003840481                                 |
-| 서울대학교 | 파이낸셜뉴스     | 강원 미래인재 10명 선발…중·고생 300만원·대학생 500만원 장학금       | 2026-10-26 09:34 | https://www.fnnews.com/news/202610260930585834                                      |
-| 서울대학교 | 미디어펜       | AI가 바꾸는 미래 밥상…식품·외식산업, 성장전략 찾는다               | 2026-10-26 09:32 | https://www.mediapen.com/news/view/1132385                                          |
-| 서울대학교 | 스포츠동아      | 정승제, 양세찬 수학 성적에 은퇴 걸었다…“6개월이면 상위 20%”         | 2026-10-26 09:32 | https://sports.donga.com/ent/article/all/20261026/134907275/1                       |
-| 고려대학교 | 코메디닷컴      | 고려대 구로병원 최의경 교수팀 모유수유 연구로 과학기술우수논문상           | 2026-10-26 09:32 | https://kormedi.com/?p=2891527                                                      |
-| 연세대학교 | 스포츠조선      | 난임 치료 반복적 호르몬 주사 부담 줄이는 '마이크로니들' 개발           | 2026-10-26 09:31 | https://www.sportschosun.com/life/2026-10-26/202610260100159650010391               |
-| 서울대학교 | 지디넷코리아     | 국가유산청, 한문·언해본 함께 담긴 ‘불정심다라니경’ 등 4건 보물 지...    | 2026-10-26 09:30 | https://zdnet.co.kr/view/?no=20261026091522                                         |
-| 고려대학교 | 베리타스알파     | 고려대 김희남 교수 '장내 미생물 기능 저하 가설' 제시.. '세균 소실과...  | 2026-10-26 09:30 | https://www.veritas-a.com/news/articleView.html?idxno=633390                        |
-| 서울대학교 | 약사공론       | 서울약대 동창의 날, 세대 아우른 화합의 장                      | 2026-10-26 09:28 | https://www.kpanews.co.kr/news/articleView.html?idxno=547200                        |
-| 서울대학교 | 매일경제       | ‘수학 1타 강사’ 정승제 “양세찬 6개월만에 상위 20% 안되면 은퇴”...   | 2026-10-26 09:27 | https://www.mk.co.kr/article/12185424                                               |
-| 고려대학교 | 메디칼업저버     | 고대 구로 최의경 교수팀, 우수논문상 수상                       | 2026-10-26 09:26 | https://www.monews.co.kr/news/articleView.html?idxno=414811                         |
-| 고려대학교 | 뉴스메이커      | 전북자치도, 전략산업 연계 국제회의 유치 나서…학회·협회 80여명 참여       | 2026-10-26 09:26 | http://www.newsmaker.or.kr/news/articleView.html?idxno=184637                       |
-| 연세대학교 | 팍스경제TV     | 세브란스병원, 호르몬 순차 전달하는 형상기억 마이크로니들 개발...'난...    | 2026-10-26 09:24 | http://www.paxetv.com/news/articleView.html?idxno=285131                            |
-| 고려대학교 | 청년의사       | 전 세계 61개국 부정맥 전문가들 부산 '한 자리'…APHRS 성료         | 2026-10-26 09:24 | http://www.docdocdoc.co.kr/news/articleView.html?idxno=3043956                      |
-| 서울대학교 | DELIGHTI   | 오큐라, 론칭 1년 만에 단일 제품 매출 100억 돌파…1주년 기념 고객 감... | 2026-10-26 09:24 | https://www.delighti.co.kr/news/articleView.html?idxno=123821                       |
-| 서울대학교 | 르몽드 디플로마티크 | [나연수의 투자칼럼] 대표지수도 집중돼 있습니다 — 그래도 개별주보다...     | 2026-10-26 09:22 | https://www.ilemonde.com/news/articleView.html?idxno=30852                          |
+| 대학    | 언론사        | 기사 제목                                              | 발행시각             | 언론사 링크                                                                                                                                             |
+|:------|:-----------|:---------------------------------------------------|:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
+| 고려대학교 | CNB저널      | 강남구,양재천 수변문화쉼터와 포이공원 출발마당에서 '2026 양재천 걷자...        | 2026-10-27 10:38 | https://www.cnbizm.com/news/articleView.html?idxno=319322                                                                                          |
+| 고려대학교 | NEWSTOMATO | [뉴스토마토프라임]모순과 이율배반의 시대                             | 2026-10-27 10:38 | http://www.newstomato.com/ReadNews.aspx?no=1318119&inflow=N                                                                                        |
+| 서울대학교 | 신아일보       | 시흥시, 경기도와 AI·바이오 융합산업 육성 협력 강화                     | 2026-10-27 10:38 | https://www.shinailbo.co.kr/news/articleView.html?idxno=5076200                                                                                    |
+| 서울대학교 | NEWSTOMATO | [뉴스토마토프라임]모순과 이율배반의 시대                             | 2026-10-27 10:38 | http://www.newstomato.com/ReadNews.aspx?no=1318119&inflow=N                                                                                        |
+| 서울대학교 | CNB저널      | 강남구,양재천 수변문화쉼터와 포이공원 출발마당에서 '2026 양재천 걷자...        | 2026-10-27 10:38 | https://www.cnbizm.com/news/articleView.html?idxno=319322                                                                                          |
+| 연세대학교 | 의협신문       | "재활을 혁신해 삶을 되살립니다"                                 | 2026-10-27 10:36 | http://www.doctorsnews.co.kr/news/articleView.html?idxno=166949                                                                                    |
+| 연세대학교 | 싱글리스트      | [나눔] 조선호텔앤리조트, 김장 나눔 봉사활동 성료 外                     | 2026-10-27 10:36 | https://www.slist.kr/news/articleView.html?idxno=776717                                                                                            |
+| 연세대학교 | 서울경제TV     | 경북테크노파크, '2026 국가기술사업대전 K-TECH Connect' 성황리에 마무... | 2026-10-27 10:34 | https://www.sentv.co.kr/article/view/sentv202610270068                                                                                             |
+| 고려대학교 | M이코노미뉴스    | [칼럼] "허리 통증 아침마다 심하다면"... '강직성척추염' 주의              | 2026-10-27 10:34 | https://www.meconomynews.com/news/articleView.html?idxno=202961                                                                                    |
+| 고려대학교 | 에듀동아       | 고려대에서 탄생한 기술, 1억8800만 원 기부로 돌아왔다                   | 2026-10-27 10:34 | https://edu.donga.com/news/articleView.html?idxno=113197                                                                                           |
+| 서울대학교 | 위키트리       | 결혼 3년 만에 경사…이르면 이틀 뒤 엄마 되는 '에이핑크 전 멤버'             | 2026-10-27 10:34 | https://www.wikitree.co.kr/articles/1169454                                                                                                        |
+| 서울대학교 | 조선일보       | 한미전략투자공사 초대 감사에 박종우 전 한은 부총재보                      | 2026-10-27 10:33 | https://www.chosun.com/economy/economy_general/2026/10/27/KYN3RRGM6VAYVK22WHZYHPLCRI/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news |
+| 연세대학교 | 에듀동아       | 연세대 김지현 교수, 한국미생물학회 제52대 회장 당선                     | 2026-10-27 10:32 | https://edu.donga.com/news/articleView.html?idxno=113195                                                                                           |
+| 연세대학교 | e의료정보      | 소세포폐암 예방적 뇌방사선치료, PET 검사로 효과 예측 가능                 | 2026-10-27 10:32 | http://www.kmedinfo.co.kr/news/articleView.html?idxno=98483                                                                                        |
+| 고려대학교 | 뉴스티앤티      | 고려대기술지주, 약학대학에 1억8800만 원 기부…연구 성과 다시 연구로...        | 2026-10-27 10:32 | https://www.newstnt.com/news/articleView.html?idxno=725097                                                                                         |
+| 고려대학교 | 에듀동아       | 연세대 김지현 교수, 한국미생물학회 제52대 회장 당선                     | 2026-10-27 10:32 | https://edu.donga.com/news/articleView.html?idxno=113195                                                                                           |
+| 서울대학교 | 디스커버리뉴스    | 광주시 청소년 IT 축제 개최…KAIST·서울대 동아리 참여                  | 2026-10-27 10:32 | https://www.discoverynews.kr/news/articleView.html?idxno=1105005                                                                                   |
+| 고려대학교 | AKOMNEWS   | 쓴메밀·락토페린 융합 ‘TbLF’…한의바이오의 재생의학 가능성 확인              | 2026-10-27 10:32 | https://www.akomnews.com/bbs/board.php?bo_table=news&wr_id=68815                                                                                   |
+| 서울대학교 | 메트로신문      | 예탁원·씨티은행, 국내 투자자 미국 주식 의결권 지원방안 논의                 | 2026-10-27 10:32 | http://www.metroseoul.co.kr/article/20261027500148                                                                                                 |
+| 서울대학교 | 에듀동아       | 연세대 김지현 교수, 한국미생물학회 제52대 회장 당선                     | 2026-10-27 10:32 | https://edu.donga.com/news/articleView.html?idxno=113195                                                                                           |
+| 서울대학교 | 헤럴드경제      | 강창일 민주평통 수석부의장 “국민 목소리 대통령에게”…경청과 소통...            | 2026-10-27 10:31 | https://biz.heraldcorp.com/article/10915298?ref=naver                                                                                              |
+| 고려대학교 | 베리타스알파     | 고려대 정석 교수팀 수축/변형 없는 '전층 인공피부' 개발.. 국제학술지...        | 2026-10-27 10:30 | https://www.veritas-a.com/news/articleView.html?idxno=633638                                                                                       |
+| 연세대학교 | 뉴스경남       | 국립창원대 정대운 교수 연구팀, 온실가스로 수소 만드는 고성능 촉매 ...          | 2026-10-27 10:30 | https://www.newsgn.com/news/articleView.html?idxno=581574                                                                                          |
+| 고려대학교 | 한국강사신문     | 고려대학교 박채용 교수팀, 팔 자세 바뀌어도 정확한 방향 안내하는 VR ...        | 2026-10-27 10:30 | https://www.lecturernews.com/news/articleView.html?idxno=212532                                                                                    |
+| 고려대학교 | 우먼타임스      | [김정현 변호사의 법률가이드] 내 아이가 학폭 가해자로 신고되었다면?             | 2026-10-27 10:30 | https://www.womentimes.co.kr/news/articleView.html?idxno=107320                                                                                    |
+| 고려대학교 | 뉴시스        | [신간]AI 시대 한국교회 무엇을 지켜야 하나…'AI 시대의 이해'              | 2026-10-27 10:30 | https://www.newsis.com/view/NISX20261027_0003842482                                                                                                |
+| 서울대학교 | 현대불교신문     | 정선 정암사, 창건 1381주년 개산문화제 성료                         | 2026-10-27 10:28 | https://www.hyunbulnews.com/news/articleView.html?idxno=506060                                                                                     |
+| 서울대학교 | 서울신문       | 연세대 김지현 교수, 한국미생물학회 52대 회장 당선                      | 2026-10-27 10:28 | https://www.seoul.co.kr/news/society/2026/10/27/20261027500054?wlog_tag3=naver                                                                     |
+| 연세대학교 | 메디코파마뉴스    | 바이오솔루션, 동물실험 대체제품 내년 해외 매출 기대                      | 2026-10-27 10:28 | https://www.medicopharma.co.kr/news/articleView.html?idxno=70053                                                                                   |
+| 연세대학교 | 서울신문       | 연세대 김지현 교수, 한국미생물학회 52대 회장 당선                      | 2026-10-27 10:28 | https://www.seoul.co.kr/news/society/2026/10/27/20261027500054?wlog_tag3=naver                                                                     |
