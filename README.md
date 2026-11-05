@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-11-04 11:45:58 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-11-05 11:55:15 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사      | 기사 제목                                         | 발행시각             | 언론사 링크                                                                                                                                   |
-|:------|:---------|:----------------------------------------------|:-----------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| 고려대학교 | 테크M      | 통신업계, AI 사업도 활용도 '잰걸음'...승자는?                 | 2026-11-04 11:44 | https://www.techm.kr/news/articleView.html?idxno=156902                                                                                  |
-| 연세대학교 | 연합뉴스     | 연세대, IBM 차세대 양자컴퓨터 프로세서 세계 최초 도입              | 2026-11-04 11:42 | https://www.yna.co.kr/view/AKR20261104086200004?input=1195m                                                                              |
-| 연세대학교 | 시원의소리    | '84년 한국시리즈 4승 신화' 최동원, 야구 선수 최초 대한민국 스포츠영...  | 2026-11-04 11:42 | https://swtvnews.com/news/newsview.php?ncode=1065580493506752                                                                            |
-| 서울대학교 | 스타뉴스     | '태클 없는 럭비, 누구나 즐긴다!' 대한태그럭비협회 공식 홈페이지 오...    | 2026-11-04 11:42 | https://www.starnewskorea.com/sports/2026/11/04/2026110411290697625                                                                      |
-| 서울대학교 | 위클리오늘    | [보험업계 동향] 삼성생명ㆍ한화생명ㆍ현대해상 (11.4)               | 2026-11-04 11:42 | http://www.weeklytoday.com/news/articleView.html?idxno=800926                                                                            |
-| 연세대학교 | 의사신문     | 시신경척수염환우회·신경면역학회, '제1회 한국 시신경척수염의 날' 기...     | 2026-11-04 11:42 | http://www.doctorstimes.com/news/articleView.html?idxno=240853                                                                           |
-| 고려대학교 | 워크투데이    | KT - 고려대, AI 공동연구서 논문 12건 성과 … 사업화 연계 본격화     | 2026-11-04 11:40 | http://www.worktoday.co.kr/news/articleView.html?idxno=91456                                                                             |
-| 연세대학교 | 이투데이     | 연세대에 'IBM 나이트호크' 가동…양자컴 처리속도 25배 빨라졌다         | 2026-11-04 11:38 | https://www.etoday.co.kr/news/view/2643971                                                                                               |
-| 연세대학교 | 지디넷코리아   | 연세대, 차세대 양자컴퓨터 가동…회로 처리량 25배↑                 | 2026-11-04 11:38 | https://zdnet.co.kr/view/?no=20261104110101                                                                                              |
-| 고려대학교 | EBN 산업경제 | [Telecom & Now] KT, AI로 말투·맥락 분석해 보이스피싱 잡는다 등 | 2026-11-04 11:36 | https://www.ebn.co.kr/news/articleView.html?idxno=1730405                                                                                |
-| 서울대학교 | 아주경제     | 정명근 화성시장, 반도체·AI에서 우주항공까지...'K-우주산업 성장축' ...  | 2026-11-04 11:34 | https://www.ajunews.com/view/20261104112759707                                                                                           |
-| 연세대학교 | 아주경제     | 정명근 화성시장, 반도체·AI에서 우주항공까지...'K-우주산업 성장축' ...  | 2026-11-04 11:34 | https://www.ajunews.com/view/20261104112759707                                                                                           |
-| 서울대학교 | 문화일보     | ‘AI 콘텐츠 페스티벌 2026’ 열린다…12~14일 코엑스서 진행         | 2026-11-04 11:34 | https://www.munhwa.com/article/11628692?ref=naver                                                                                        |
-| 서울대학교 | 한국보험신문   | 현대해상, 아동 발달 조기개입 지원 8개 팀 최종 선정… '골든타임' 확보...  | 2026-11-04 11:34 | https://www.insnews.co.kr/news/articleView.html?idxno=93665                                                                              |
-| 서울대학교 | 헬스경향     | 우리아이들의료재단, 소아청소년 특화 비대면진료 발전방향 제시             | 2026-11-04 11:34 | https://www.k-health.com/news/articleView.html?idxno=102018                                                                              |
-| 연세대학교 | 헤럴드경제    | IBM, 연세대 양자컴 ‘퀀텀 나이트호크’ 도입                    | 2026-11-04 11:33 | https://biz.heraldcorp.com/article/10925464?ref=naver                                                                                    |
-| 서울대학교 | 지디넷코리아   | [기고] 국방 AI체계, 온톨로지로 재구성해야                     | 2026-11-04 11:32 | https://zdnet.co.kr/view/?no=20261104113128                                                                                              |
-| 서울대학교 | 라이브뉴스    | 한국메타교육협회·환경을 생각하는 사람들, 기후불안 대응 기반 마련          | 2026-11-04 11:32 | https://www.livesnews.com/news/article.html?no=65640                                                                                     |
-| 서울대학교 | 헤럴드경제    | [오늘, 서울시의회] 윤선희 의원 “비판 언론 배제·교수 형사고소…서...     | 2026-11-04 11:29 | https://biz.heraldcorp.com/article/10925456?ref=naver                                                                                    |
-| 서울대학교 | 조선비즈     | 서울대 총장 선거 또 ‘진흙탕’…후보 검증 논란에 면접까지 연기           | 2026-11-04 11:28 | https://biz.chosun.com/topics/topics_social/2026/11/04/PMJQUXVVWNH2RM7IO5VDFE5CYA/?utm_source=naver&utm_medium=original&utm_campaign=biz |
-| 서울대학교 | 뉴스핌      | 초중고판 '서울대 10개'에 최대 4600억 지원…학교 통폐합·성과평가 과...  | 2026-11-04 11:28 | https://www.newspim.com/news/view/20261104000592                                                                                         |
-| 서울대학교 | 경향신문     | 육류 13% 대체하면…2050년 온실가스 345만t 줄어든다             | 2026-11-04 11:25 | https://www.khan.co.kr/article/202611041125001                                                                                           |
-| 연세대학교 | 문화일보     | AI 시대, 예술의 향방은…서울시립미술관 심포지엄                   | 2026-11-04 11:25 | https://www.munhwa.com/article/11628677?ref=naver                                                                                        |
-| 서울대학교 | 문화일보     | AI 시대, 예술의 향방은…서울시립미술관 심포지엄                   | 2026-11-04 11:25 | https://www.munhwa.com/article/11628677?ref=naver                                                                                        |
-| 서울대학교 | 뉴스핌      | 윤선희 시의원 "언론인 출신 대변인도 언론탄압 동조"                 | 2026-11-04 11:24 | https://www.newspim.com/news/view/20261104000583                                                                                         |
-| 연세대학교 | MHN스포츠   | 신인 OVUS, 정규 10곡·뮤직필름 10편으로 데뷔…이례적 행보          | 2026-11-04 11:21 | https://mhnse.com/news/articleView.html?idxno=1672229                                                                                    |
-| 고려대학교 | AP신문     | '씨엘스톤더 써밋구로구청', 2·7호선 교통망갖춘 오피스텔 눈길           | 2026-11-04 11:20 | https://www.apnews.kr/news/articleView.html?idxno=3052776                                                                                |
-| 서울대학교 | 서울신문     | 윤선희 서울시의회 문화체육관광위원회 부위원장, 대변인실 행감서 “호...      | 2026-11-04 11:20 | https://www.seoul.co.kr/news/publicnews/local_govern/smc_movement/2026/11/04/20261104500107?wlog_tag3=naver                              |
-| 연세대학교 | 문화저널21   | 의정부시, 반환공여지 첨단산업 클러스터 조성에 행정력 총동원             | 2026-11-04 11:20 | https://www.mhj21.com/news/articleView.html?idxno=254667                                                                                 |
-| 고려대학교 | 뉴시스      | 고려대, 병리영상의 AI 분석 속도 '약 12배' 높인 기술 개발          | 2026-11-04 11:19 | https://www.newsis.com/view/NISX20261104_0003854257                                                                                      |
+| 대학    | 언론사      | 기사 제목                                         | 발행시각             | 언론사 링크                                                             |
+|:------|:---------|:----------------------------------------------|:-----------------|:-------------------------------------------------------------------|
+| 고려대학교 | 아시아엔     | [신간] 안병준 두 번째 시집 …43년 기자의 '의기', 죽음 넘...       | 2026-11-05 11:54 | http://kor.theasian.asia/archives/420903                           |
+| 서울대학교 | 이사이언스    | KT·서울대, AI·6G 보안 전문가 키운다…융합보안 석사과정 신설         | 2026-11-05 11:54 | https://www.e-science.co.kr/news/articleView.html?idxno=139044     |
+| 연세대학교 | 문화일보     | “물적분할 ‘주식매수청구권’ 과잉 규제”                        | 2026-11-05 11:53 | https://www.munhwa.com/article/11629015?ref=naver                  |
+| 서울대학교 | 데일리벳     | 임상수의사를 위한 조직병리 검사 팁은? 아이덱스, 이중근 교수 초청 웨...    | 2026-11-05 11:52 | https://www.dailyvet.co.kr/news/academy/303159                     |
+| 서울대학교 | 전자신문     | [BIXPO 2026] 한전, 전력데이터 개방 확대…에너지 AI 신산업 육성    | 2026-11-05 11:51 | https://www.etnews.com/20261105000238                              |
+| 연세대학교 | 문화일보     | 장암·김형일 교수 ‘두산연강 환경학술상’ 수상                     | 2026-11-05 11:50 | https://www.munhwa.com/article/11629006?ref=naver                  |
+| 서울대학교 | 메디파나뉴스   | 글로벌 임상 넘어 '한국인 데이터'…독자적 치료 근거 마련 활발           | 2026-11-05 11:50 | https://www.medipana.com/news/articleView.html?idxno=420951        |
+| 서울대학교 | 비즈니스플러스  | [잘먹잘살+]코웨이·KT&G·코오롱FnC·비욘드·교원라이프·에이피뷰티·...    | 2026-11-05 11:50 | https://www.businessplus.kr/news/articleView.html?idxno=119348     |
+| 서울대학교 | 의학신문     | AI로 실명 위험 '황반변성' 새 치료 표적 찾았다                  | 2026-11-05 11:50 | https://www.bosa.co.kr/news/articleView.html?idxno=3015711         |
+| 서울대학교 | 뉴스1      | '데블스 플랜 : 데드 어게인' 출연자 현경렬                     | 2026-11-05 11:50 | https://www.news1.kr/photos/8198659                                |
+| 서울대학교 | 넥스트데일리   | 코웨이, 2026 한국서비스품질지수 정수기 10년 연속·공기청정기 9년 연...  | 2026-11-05 11:50 | https://www.nextdaily.co.kr/news/articleView.html?idxno=254600     |
+| 연세대학교 | 크리스천투데이  | “이승만 대통령 공과 균형 있게 서술해야”… 학계, 교과서 개편 촉구        | 2026-11-05 11:50 | https://www.christiantoday.co.kr/news/378403                       |
+| 고려대학교 | 잡포스트     | 동대문구, 학부모 대상 뇌과학 학습법 특강…자녀 자기주도학습 지원          | 2026-11-05 11:48 | https://www.job-post.co.kr/news/articleView.html?idxno=236714      |
+| 서울대학교 | 서울경제TV   | “AI·6G 보안 인재 직접 키운다”…KT, 서울대와 계약학과 설립         | 2026-11-05 11:44 | https://www.sentv.co.kr/article/view/sentv202611050128             |
+| 서울대학교 | 보건뉴스     | "약물 오남용·부작용 노출 심각"… 서울시약, 지역사회 약료 서비스 확...    | 2026-11-05 11:44 | http://www.bokuennews.com/news/article.html?no=286708              |
+| 서울대학교 | NSPNA    | KT·서울대 ‘융합보안 계약학과’ 설립 협약 체결                   | 2026-11-05 11:44 | https://www.nspna.com/news/?mode=view&newsid=834731                |
+| 고려대학교 | e대한경제    | 김원기 의정부시장, 신한대학교 DMZ연구원 개원 세미나 참석             | 2026-11-05 11:42 | https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611051033255910769 |
+| 연세대학교 | 셀럽미디어    | 피원하모니, 이번엔 히어로 선배로 변신…미니 10집 쇼케이스 성료          | 2026-11-05 11:42 | http://www.celuvmedia.com/article.php?aid=1793846419530384007      |
+| 서울대학교 | MBC      | [포토] 현경렬, 게임 기대하세요                            | 2026-11-05 11:42 | http://enews.imbc.com/News/RetrieveNewsInfo/523663                 |
+| 연세대학교 | 헤럴드경제    | 장암·김형일 교수, 두산연강환경학술상                          | 2026-11-05 11:41 | https://biz.heraldcorp.com/article/10926985?ref=naver              |
+| 서울대학교 | STOO     | [ST포토] 이도, '서울대 출신 사탐 강사'                     | 2026-11-05 11:40 | http://www.stoo.com/article.php?aid=109746913388                   |
+| 서울대학교 | 공무원수험신문  | 서울공대 안창범·박문서 교수팀 허찬 박사과정생, 美 PMI 국제학술상 국...   | 2026-11-05 11:40 | https://www.gosiweek.com/article/1065580597282214                  |
+| 서울대학교 | 와이드경제    | 교원라이프·코웨이, 2026 서비스품질지수 1위…상조·환경가전 A/S 석권     | 2026-11-05 11:38 | https://www.widedaily.com/news/articleView.html?idxno=302948       |
+| 연세대학교 | 의학신문     | 원주세브란스기독병원, 이명 재활센터 개소                        | 2026-11-05 11:38 | https://www.bosa.co.kr/news/articleView.html?idxno=3015710         |
+| 고려대학교 | 데일리메디    | 지아이이노베이션, J&J와 전립선암 병용 투약                     | 2026-11-05 11:38 | https://www.dailymedi.com/news/news_view.php?wr_id=942263          |
+| 고려대학교 | 주간한국     | 고려대 의대·예일대, 감염·암 면역 공동연구 협력 모색                | 2026-11-05 11:38 | https://weekly.hankooki.com/news/articleView.html?idxno=7192352    |
+| 고려대학교 | 로톡뉴스     | 기밀 명단을 백신 사이트에 통째로 업로드…대통령 전용기 탑승자 명단...      | 2026-11-05 11:38 | https://lawtalknews.co.kr/article/LFJSQEDHVCCD                     |
+| 서울대학교 | 주간한국     | 한림대·서울대 연구팀, 논문 5562편 AI 분석해 안질환 치료 표적 후보 ... | 2026-11-05 11:38 | https://weekly.hankooki.com/news/articleView.html?idxno=7192349    |
+| 서울대학교 | 스마트비즈엔   | 롯데렌터카, 올해 고객만족도 3개 조사서 렌터카 부문 1위              | 2026-11-05 11:38 | https://www.smartbizn.com/news/articleView.html?idxno=158526       |
+| 고려대학교 | EBN 산업경제 | 고려대 의대, 예일대와 감염·암 면역 공동연구 확대                  | 2026-11-05 11:36 | https://www.ebn.co.kr/news/articleView.html?idxno=1730588          |
