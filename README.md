@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-11-06 11:55:09 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-11-06 23:29:06 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사         | 기사 제목                                         | 발행시각             | 언론사 링크                                                                    |
-|:------|:------------|:----------------------------------------------|:-----------------|:--------------------------------------------------------------------------|
-| 서울대학교 | DELIGHTI    | LG전자, 美 밴더빌트대에 첫 해외 브랜드 공간 '라이프스굿 라운지' 열어     | 2026-11-06 11:54 | https://www.delighti.co.kr/news/articleView.html?idxno=124488             |
-| 연세대학교 | 인더뉴스        | 신세계, 백화점 부문장에 이석구 사장 선임…면세점 대표 겸직             | 2026-11-06 11:54 | https://www.inthenews.co.kr/news/article.html?no=94154                    |
-| 고려대학교 | 라포르시안       | 故 이광석 고대의대 교수 유족, 고대안암병원에 발전 기금 1억 기부         | 2026-11-06 11:52 | https://www.rapportian.com/news/articleView.html?idxno=242129             |
-| 서울대학교 | 매일일보        | 중기부, 신산업 中企 집중 지원 약속…기술탈취 과징금 강화 추진           | 2026-11-06 11:52 | https://www.m-i.kr/news/articleView.html?idxno=2015401                    |
-| 고려대학교 | 뉴스티앤티       | 고려대, 오픈소스 코드 재사용 계보 추적 기술 개발…취약점 전파 경로...     | 2026-11-06 11:50 | https://www.newstnt.com/news/articleView.html?idxno=727084                |
-| 연세대학교 | 데일리메디       | 원주세브란스기독병원, '이명 재활센터' 개소                      | 2026-11-06 11:50 | https://www.dailymedi.com/news/news_view.php?wr_id=942316                 |
-| 연세대학교 | 이뉴스투데이      | 원주시 창업기업 16곳 한자리에…우수제품·기술 선보여                 | 2026-11-06 11:50 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2489226           |
-| 연세대학교 | 디지털데일리      | 77세 이석구 다시 전면에…신세계가 ‘노장’을 택한 이유               | 2026-11-06 11:50 | https://www.ddaily.co.kr/page/view/2026110611285761460                    |
-| 고려대학교 | 주간한국        | 故 이광석 교수 배우자 이정순 여사, 고려대 안암병원에 1억원 기부         | 2026-11-06 11:50 | https://weekly.hankooki.com/news/articleView.html?idxno=7192572           |
-| 서울대학교 | NICEECONOMY | '삼성미래기술육성사업 애뉴얼 포럼'…연구팀 에이전트 부상에 과제 조...      | 2026-11-06 11:48 | https://www.niceeconomy.co.kr/news/articleView.html?idxno=91719           |
-| 서울대학교 | 비욘드포스트      | 호반그룹, 'K-과학인재 아카데미' 첫해 교육·연구 성과 발표            | 2026-11-06 11:46 | http://www.beyondpost.co.kr/view.php?ud=202611061143375368205868f676_30   |
-| 고려대학교 | 비욘드포스트      | 호반그룹, 'K-과학인재 아카데미' 첫해 교육·연구 성과 발표            | 2026-11-06 11:46 | http://www.beyondpost.co.kr/view.php?ud=202611061143375368205868f676_30   |
-| 연세대학교 | 국제뉴스        | 음성군장학회, 우수대학 탐방...중3, 66명 연세대학교 현장 체험         | 2026-11-06 11:46 | https://www.gukjenews.com/news/articleView.html?idxno=3743887             |
-| 고려대학교 | 파이낸셜포스트     | 호반, 'K-과학인재 아카데미' 성과 공유…과학기술 인재 육성 나서         | 2026-11-06 11:46 | https://www.financialpost.co.kr/news/articleView.html?idxno=285239        |
-| 서울대학교 | 국제뉴스        | 음성군장학회, 우수대학 탐방...중3, 66명 연세대학교 현장 체험         | 2026-11-06 11:46 | https://www.gukjenews.com/news/articleView.html?idxno=3743887             |
-| 서울대학교 | 파이낸셜포스트     | 호반, 'K-과학인재 아카데미' 성과 공유…과학기술 인재 육성 나서         | 2026-11-06 11:46 | https://www.financialpost.co.kr/news/articleView.html?idxno=285239        |
-| 서울대학교 | 공무원수험신문     | 뇌파 정보 보호부터 AI 사고 책임까지…BCI 상용화에 법적 쟁점 부상       | 2026-11-06 11:46 | https://www.gosiweek.com/article/1065577201965487                         |
-| 서울대학교 | 리걸타임즈       | [로펌 iN] 법무법인 태평양, 이종헌 변호사 합류                  | 2026-11-06 11:46 | http://www.legaltimes.co.kr/news/articleView.html?idxno=96861             |
-| 연세대학교 | 의학신문        | 강남세브란스 암병원, '2026 암병원 심포지엄' 개최                | 2026-11-06 11:44 | https://www.bosa.co.kr/news/articleView.html?idxno=3015840                |
-| 서울대학교 | 헤럴드경제       | 삼성, 인류발전 미래기술에 14년간 1.2조 투자                   | 2026-11-06 11:44 | https://biz.heraldcorp.com/article/10928471?ref=naver                     |
-| 서울대학교 | SBS Biz     | 최태원, 주가는 출렁여도 투자는 '앞으로'                       | 2026-11-06 11:43 | https://biz.sbs.co.kr/article_hub/20000344724?division=NAVER              |
-| 서울대학교 | THE-PR      | LG전자, 美 캠퍼스에 '라이프스굿' 심는다…해외 첫 대학 브랜드 공간 개...  | 2026-11-06 11:42 | https://www.the-pr.co.kr/news/articleView.html?idxno=63202                |
-| 서울대학교 | 포인트엔        | SK인텔릭스, AI 로봇 '나무엑스'로 시니어케어 시장 공략 본격화         | 2026-11-06 11:42 | https://www.pointe.co.kr/news/articleView.html?idxno=87279                |
-| 서울대학교 | 펜앤드마이크      | 노무현 정부 첫 외교장관 "韓, 중대기로에 있어...한미동맹 더욱 강화해...   | 2026-11-06 11:42 | https://www.pennmike.com/news/articleView.html?idxno=131138               |
-| 연세대학교 | 뉴스1         | 백화점 지휘봉 잡은 '신세계 해결사' 이석구…77세 현역 경영인의 저력       | 2026-11-06 11:41 | https://www.news1.kr/industry/distribution/6345495                        |
-| 서울대학교 | 엑스포츠뉴스      | K-스포츠커뮤니티, 제3차 스포츠로의 사람 세상 옴니버스 포럼 2026 개최... | 2026-11-06 11:40 | https://www.xportsnews.com/article/2216310                                |
-| 서울대학교 | 뉴스락         | 대상웰라이프, SK인텔릭스 등과 요양기관 건강관리 실증 추진             | 2026-11-06 11:40 | http://www.newslock.co.kr/news/articleView.html?idxno=139509              |
-| 서울대학교 | 미디어오늘       | 한국언론진흥재단 신임 이사장에 권태선 전 방문진 이사장                | 2026-11-06 11:40 | https://www.mediatoday.co.kr/news/articleView.html?idxno=338253           |
-| 서울대학교 | 더파워         | SK인텔릭스, AI 로봇 ‘나무엑스’ 요양 현장 투입…시니어케어 실증        | 2026-11-06 11:40 | https://www.thepowernews.co.kr/view.php?ud=202611061107204015de3f0aa1be_7 |
-| 서울대학교 | 한국일보        | 한국언론진흥재단 이사장에 권태선 전 방문진 이사장                   | 2026-11-06 11:40 | https://www.hankookilbo.com/news/article/A2026110610370002143?did=NA      |
+| 대학    | 언론사        | 기사 제목                                           | 발행시각             | 언론사 링크                                                                               |
+|:------|:-----------|:------------------------------------------------|:-----------------|:-------------------------------------------------------------------------------------|
+| 고려대학교 | 스포츠조선      | '점프 난조' 피겨 이해인, 그랑프리 3차 대회 쇼트 6위 '프리에서 메달...    | 2026-11-06 23:27 | https://www.sportschosun.com/sports-news/2026-11-06/202611060100047530004849         |
+| 고려대학교 | 점프볼        | ‘자신감 있게’ 김정현을 향한 애정 어린 조언                       | 2026-11-06 23:17 | https://m.sports.naver.com/basketball/article/065/0000304187                         |
+| 고려대학교 | 국민일보       | “檢수사권 뺏더니 파견검사가 수사”… 조작기소 특검법에 법조계 “위...        | 2026-11-06 23:14 | https://www.kmib.co.kr/article/20261106500635                                        |
+| 서울대학교 | 로봇신문       | SK인텔릭스, 4자 업무협약 체결···AI 웰니스 로봇 '나무엑스' 시니어...    | 2026-11-06 23:12 | https://www.irobotnews.com/news/articleView.html?idxno=49440                         |
+| 고려대학교 | 연합뉴스       | '점프 난조' 피겨 이해인, 그랑프리 3차 대회 여자 쇼트 6위(종합)         | 2026-11-06 23:11 | https://www.yna.co.kr/view/AKR20261106181051007?input=1195m                          |
+| 고려대학교 | 점프볼        | 챔피언결정전으로 향하는 심주언 “묵묵히 공헌하는 선수 되고파“              | 2026-11-06 23:09 | https://m.sports.naver.com/basketball/article/065/0000304186                         |
+| 연세대학교 | 점프볼        | 챔피언결정전으로 향하는 심주언 “묵묵히 공헌하는 선수 되고파“              | 2026-11-06 23:09 | https://m.sports.naver.com/basketball/article/065/0000304186                         |
+| 고려대학교 | 톱스타뉴스      | 송해나, 6세 연하 변호사와 깜짝 소개팅…첫 만남부터 결혼·자녀 이야...       | 2026-11-06 23:02 | https://www.topstarnews.net/news/articleView.html?idxno=16270369                     |
+| 연세대학교 | 세계일보       | 李대통령과 '오랜 인연' 이용철 법무장관 후보자, 공소취소 입장은?           | 2026-11-06 23:02 | https://www.segye.com/newsView/20261106514629?OutUrl=naver                           |
+| 서울대학교 | 뉴데일리경제     | 단국대 이용진 교수팀, 의대생 진료 실습용 'AI 가상 환자' 답변 검증 체...   | 2026-11-06 23:00 | https://biz.newdaily.co.kr/site/data/html/2026/11/06/2026110600311.html              |
+| 서울대학교 | KOREATIMES | “은퇴 계획 잘하고 계십니까”                                | 2026-11-06 22:58 | https://www.koreatimes.com/article/11630659?utm_source=naver                         |
+| 고려대학교 | 헤럴드경제      | 안덕수 국세청장 후보자 “민생안정·경제회복 뒷받침, 공정 세정 구현...        | 2026-11-06 22:52 | https://biz.heraldcorp.com/article/10929054?ref=naver                                |
+| 고려대학교 | 스포츠조선      | 송해나, '6세 연하' 184cm 훈남 변호사와 소개팅♥...첫 만남에 자녀·결... | 2026-11-06 22:41 | https://www.sportschosun.com/entertainment/2026-11-06/202611060100047550004850       |
+| 고려대학교 | MHN스포츠     | 송해나, 6살 연하 고대 경영학과 출신 변호사와 소개팅 ('신랑수업2')        | 2026-11-06 22:41 | https://mhnse.com/news/articleView.html?idxno=1684968                                |
+| 연세대학교 | 메디게이트뉴스    | 분당차병원, 건강보험 빅데이터 분석센터 개소                        | 2026-11-06 22:40 | https://www.medigatenews.com/news/3371835798                                         |
+| 연세대학교 | 메디컬월드뉴스    | [11월 6일 병원계 이모저모③]강남세브란스, 분당차, 자생한방병원 등 ...     | 2026-11-06 22:40 | https://medicalworldnews.co.kr/news/view.php?idx=1510978312                          |
+| 서울대학교 | 메디게이트뉴스    | 분당차병원, 건강보험 빅데이터 분석센터 개소                        | 2026-11-06 22:40 | https://www.medigatenews.com/news/3371835798                                         |
+| 연세대학교 | 메디게이트뉴스    | 세포기반인공혈액기술개발사업단, 4차년도 성과보고회 개최                  | 2026-11-06 22:38 | https://www.medigatenews.com/news/404355917                                          |
+| 고려대학교 | 메디게이트뉴스    | 고려대 안암병원, 故 이광석 교수 유족 발전기금 1억원 기부받아             | 2026-11-06 22:28 | https://www.medigatenews.com/news/1457901506                                         |
+| 서울대학교 | 법률저널       | [인터뷰] 5급 공채 국제통상직 수석 김도연 씨...강의를 줄이고 답안을...     | 2026-11-06 22:24 | http://www.lec.co.kr/news/articleView.html?idxno=752992                              |
+| 서울대학교 | 문화일보       | 전문가들 “美 민주당 압승에 핵잠 문제 지체 등 한미현안 장기화 우려...       | 2026-11-06 22:20 | https://www.munhwa.com/article/11629474?ref=naver                                    |
+| 연세대학교 | 메디게이트뉴스    | 강남세브란스 암병원, '2026 암병원 심포지엄' 13일 개최              | 2026-11-06 22:18 | https://www.medigatenews.com/news/2116448659                                         |
+| 고려대학교 | 티브이데일리     | 송해나 소개팅男, 6살 연하 ‘훈남’ 전문직 (‘신랑수업2’) [TV나우]       | 2026-11-06 22:17 | http://www.tvdaily.co.kr/read.php3?aid=17939708721808719019                          |
+| 서울대학교 | NEWSTOWN   | 한국토지주택공사, 3기 신도시 6개 지구 청약정보…11월 6일부터 수도권...     | 2026-11-06 22:04 | http://www.newstown.co.kr/news/articleView.html?idxno=721076                         |
+| 고려대학교 | 더퍼스트미디어    | 중앙손상관리센터, 청소년 중독 손상 90.7%는 치료약물…의약품 오남용...      | 2026-11-06 22:00 | http://www.thefirstmedia.net/news/articleView.html?idxno=212921                      |
+| 연세대학교 | KBS        | 순창 출신 이용철 방위사업청장, 법무부 장관 후보자 지명                 | 2026-11-06 21:56 | https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706383&ref=A                        |
+| 고려대학교 | 이뉴스투데이     | [고려대 소식] 고려대 연구팀, 머리카락 1000분의 1 두께 소재로 빛 12만... | 2026-11-06 21:50 | http://www.enewstoday.co.kr/news/articleView.html?idxno=2489592                      |
+| 서울대학교 | 매일경제       | 푸틴이 한국인에 직접 메달 줬다…러 국가 훈장 받은 여성, 뭐 했길래          | 2026-11-06 21:46 | https://www.mk.co.kr/article/12200964                                                |
+| 서울대학교 | 웹이코노미      | LH, 공공주택 5만호 착공 추진…건설업계 협력·현장 소통 강화             | 2026-11-06 21:38 | https://www.webeconomy.co.kr/news/articleView.html?idxno=2364971                     |
+| 고려대학교 | 국제신문       | 국세청장 후보자 "바르고 공평한 과세로 공정세정 구현할 것"               | 2026-11-06 21:35 | http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20261106.99099002087 |
