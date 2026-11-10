@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-11-09 11:07:51 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-11-10 13:23:27 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사         | 기사 제목                                          | 발행시각             | 언론사 링크                                                                        |
-|:------|:------------|:-----------------------------------------------|:-----------------|:------------------------------------------------------------------------------|
-| 연세대학교 | 메가경제        | 故 조석래 효성 명예회장, '한미우호상' 수상…조현준 회장 대리 수상         | 2026-11-09 11:06 | https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065578521628536        |
-| 연세대학교 | FETV        | 故 조석래 효성 명예회장, 경제협력 공로 '한미우호상' 수상              | 2026-11-09 11:06 | https://www.fetv.co.kr/news/articleView.html?idxno=313334                     |
-| 서울대학교 | 기호일보        | 아주대 연구팀, 희귀 금속 없이 빠르게 빛나는 유기 인광체 설계 원리 ...     | 2026-11-09 11:06 | https://www.kihoilbo.co.kr/news/articleView.html?idxno=3040268                |
-| 서울대학교 | GOLFHANKOOK | [방민준의 골프세상] 사자의 왕관보다 무서운 것                     | 2026-11-09 11:06 | https://golfhankook.hankooki.com/news/articleView.html?idxno=20022603         |
-| 서울대학교 | NGO저널       | '줄기세포 논문 조작' 황우석, UAE 국적 취득…한국 국적 상실 사실 뒤늦...  | 2026-11-09 11:06 | https://www.ngonews.kr/news/articleView.html?idxno=242647                     |
-| 서울대학교 | 지피코리아       | 한국타이어, 고무 업사이클링 자원순환 모델 제시…'디자인-부산2026' 참...   | 2026-11-09 11:06 | https://www.gpkorea.com/news/articleView.html?idxno=148428                    |
-| 연세대학교 | 글로벌에픽       | 故 조석래 효성 명예회장, 한미우호상 수상                        | 2026-11-09 11:04 | https://www.globalepic.co.kr/view.php?ud=20261109110013249248439a4874_29      |
-| 서울대학교 | 국민일보        | 낙타 복제 연구하는 황우석, 한국→UAE로 국적 변경                  | 2026-11-09 11:04 | https://www.kmib.co.kr/article/20261109500317                                 |
-| 고려대학교 | CNB저널       | 중구,주민들이 걸으며 모아 기부한 건강마일리지를 활용해 '건강나눔 릴...      | 2026-11-09 11:04 | https://www.cnbizm.com/news/articleView.html?idxno=320709                     |
-| 서울대학교 | CNB저널       | 중구,주민들이 걸으며 모아 기부한 건강마일리지를 활용해 '건강나눔 릴...      | 2026-11-09 11:04 | https://www.cnbizm.com/news/articleView.html?idxno=320709                     |
-| 서울대학교 | 한국경제        | '정치인들보다 낫다'…AI 더 신뢰하는 한국인들                     | 2026-11-09 11:03 | https://www.hankyung.com/article/202611094556g                                |
-| 서울대학교 | CBC뉴스       | [대학家] 서울대학교 ③ㅣ 제29대 총장 최해천 교수 선출…AI·로봇·융합...   | 2026-11-09 11:02 | https://www.cbci.co.kr/news/articleView.html?idxno=624705                     |
-| 연세대학교 | 증권경제신문      | LG U+, 서울대·KAIST·연세대 맞손 'K-보이스 엔진' 개발          | 2026-11-09 11:02 | http://www.koreastocknews.com/news/articleView.html?idxno=122158              |
-| 연세대학교 | 전민일보        | "전북 경제 성패, 덩치 아닌 성장 경로 재설계에 달렸다"…한은 세미나...     | 2026-11-09 11:02 | http://www.jeonmin.co.kr/news/articleView.html?idxno=450020                   |
-| 서울대학교 | 이투데이        | 황우석 전 교수 국적 상실...아랍에미리트연합 국적 취득                | 2026-11-09 11:02 | https://www.etoday.co.kr/news/view/2645724                                    |
-| 서울대학교 | 디지틀조선TV     | 버려진 고무의 화려한 변신…한국타이어, 부산서 친환경 디자인 선보인...       | 2026-11-09 11:02 | https://www.dizzotv.com/site/data/html_dir/2026/11/09/2026110980068.html      |
-| 서울대학교 | 증권경제신문      | LG U+, 서울대·KAIST·연세대 맞손 'K-보이스 엔진' 개발          | 2026-11-09 11:02 | http://www.koreastocknews.com/news/articleView.html?idxno=122158              |
-| 서울대학교 | 텐아시아        | "아프다면서 예능은 어떻게 나가요?"…이도에 팽당한 수험생들 '원성 폭...     | 2026-11-09 11:01 | https://www.tenasia.co.kr/article/2026110944104                               |
-| 서울대학교 | 연합뉴스TV      | '수능 코앞' 건강상 강의 중단?…사탐 강사 이도, 예능 직행 논란          | 2026-11-09 11:01 | http://www.yonhapnewstv.co.kr/news/AKR20261109110100ZnM                       |
-| 연세대학교 | 전자신문        | 코트라 등 6개 기관, 美 진출 희망 바이오 기업 31개사 통합 지원         | 2026-11-09 11:01 | https://www.etnews.com/20261109000157                                         |
-| 연세대학교 | WEEKLYTRADE | 고(故) 조석래 효성 명예회장, 한미우호상 수상... 한-미 FTA 체결·비자... | 2026-11-09 11:00 | https://weeklytrade.co.kr/news/view.html?section=1&category=5&item=&no=102119 |
-| 서울대학교 | 에너지경제       | [똑똑한케어] CJ올리브영, 크레이버코퍼레이션, 마녀공장, 리필드, 더샘...    | 2026-11-09 11:00 | https://www.ekn.kr/web/view.php?key=20261109020567034                         |
-| 서울대학교 | 소비자가 만드는 신문 | KCC글라스 홈씨씨, 석재 디자인 벽장재 '비센티월' 출시...패널 이음매 ...  | 2026-11-09 11:00 | http://www.consumernews.co.kr/news/articleView.html?idxno=767795              |
-| 서울대학교 | 중앙이코노미뉴스    | [ESG] 한세예스24문화재단 조영수 명예이사장, 꾸준한 기부·나눔 실천에...   | 2026-11-09 11:00 | https://www.joongangenews.com/news/articleView.html?idxno=562182              |
-| 서울대학교 | 뉴스1         | '나눔·헌신' 조영수 한세예스24문화재단 명예이사장, 서울특별시장 표...      | 2026-11-09 11:00 | https://www.news1.kr/life-culture/book/6347192                                |
-| 서울대학교 | 뉴스클레임       | [생보社 인사 전망 종합] 연말 인사 본격화… 책임자 교체에 대표 연임...     | 2026-11-09 11:00 | https://www.newsclaim.co.kr/news/articleView.html?idxno=3081873               |
-| 연세대학교 | 이사이언스       | 효성, 故 조석래 명예회장 한미우호상 수상...한미FTA 초석 다진 공로       | 2026-11-09 11:00 | https://www.e-science.co.kr/news/articleView.html?idxno=139203                |
-| 고려대학교 | 뉴스클레임       | [생보社 인사 전망 종합] 연말 인사 본격화… 책임자 교체에 대표 연임...     | 2026-11-09 11:00 | https://www.newsclaim.co.kr/news/articleView.html?idxno=3081873               |
-| 연세대학교 | 뉴스클레임       | [생보社 인사 전망 종합] 연말 인사 본격화… 책임자 교체에 대표 연임...     | 2026-11-09 11:00 | https://www.newsclaim.co.kr/news/articleView.html?idxno=3081873               |
-| 연세대학교 | 서울경제        | K-바이오 원팀, 美 진출 희망 기업 31개사 지원 총력                | 2026-11-09 11:00 | https://www.sedaily.com/article/20111863?ref=naver                            |
+| 대학    | 언론사     | 기사 제목                                          | 발행시각             | 언론사 링크                                                                                                   |
+|:------|:--------|:-----------------------------------------------|:-----------------|:---------------------------------------------------------------------------------------------------------|
+| 고려대학교 | 전자신문    | 서울바이오허브, 바이오 스타트업·병원 잇는 '공동연구 플랫폼' 구축          | 2026-11-10 13:22 | https://www.etnews.com/20261110000260                                                                    |
+| 고려대학교 | 전기신문    | 美 중간선거 이후 엇갈린 명암… K-배터리는 '웃고' 자동차는 '긴장'        | 2026-11-10 13:22 | https://www.electimes.com/news/articleView.html?idxno=374532                                             |
+| 연세대학교 | 더나은미래   | [AI 시대, 필란트로피를 묻다] AI가 공감까지 대신하는 시대, 인간에게 ...  | 2026-11-10 13:22 | https://futurechosun.com/?p=166205                                                                       |
+| 고려대학교 | 데일리시큐   | 안암145, '싸인트레일'로 CES 2027 사이버보안 부문 최고혁신상 수상     | 2026-11-10 13:18 | https://www.dailysecu.com/news/articleView.html?idxno=209426                                             |
+| 연세대학교 | 스트레이트뉴스 | 삼표그룹, 암 생존자 회복 돕는 연세대 '온코런' 후원                 | 2026-11-10 13:18 | https://www.straightnews.co.kr/news/articleView.html?idxno=315010                                        |
+| 서울대학교 | BEMINOR | 한국장애학회 추계학술대회 '장애인 돌봄정책 전환기, 장애학이 나아갈...       | 2026-11-10 13:16 | https://www.beminor.com/news/articleView.html?idxno=30711                                                |
+| 고려대학교 | BEMINOR | 한국장애학회 추계학술대회 '장애인 돌봄정책 전환기, 장애학이 나아갈...       | 2026-11-10 13:16 | https://www.beminor.com/news/articleView.html?idxno=30711                                                |
+| 연세대학교 | 파이낸셜포스트 | 삼표, 암 생존자 응원 '온코런' 후원…임직원 50명 함께 달려            | 2026-11-10 13:14 | https://www.financialpost.co.kr/news/articleView.html?idxno=285875                                       |
+| 연세대학교 | 이투데이    | 민윤기치료센터 1주년 ‘캠프 온 더 스펙트럼’ 행사 성료                | 2026-11-10 13:12 | https://www.etoday.co.kr/news/view/2646212                                                               |
+| 연세대학교 | 아시아타임즈  | 초등생 생성형 AI 단독 사용 제한 검토…경기교육청, 발달 단계별 활용...     | 2026-11-10 13:12 | https://www.asiatime.co.kr/article/20261110500217                                                        |
+| 서울대학교 | 지디넷코리아  | 플렉스, 경영 데이터 연구 싱크탱크 ‘한국인사기준원’ 출범               | 2026-11-10 13:09 | https://zdnet.co.kr/view/?no=20261110130855                                                              |
+| 서울대학교 | 국제뉴스    | [특별기획 칼럼2탄] 심재국 평창군수, 인구감소 대응 4대 전략 가동하겠...    | 2026-11-10 13:08 | https://www.gukjenews.com/news/articleView.html?idxno=3747425                                            |
+| 연세대학교 | 세계일보    | “서툴더라도 시도해야”…경기도교육청의 ‘AI 시대 생존법’               | 2026-11-10 13:07 | https://www.segye.com/newsView/20261110509490?OutUrl=naver                                               |
+| 고려대학교 | 로이슈     | 공노총, '공무원 정년연장, 더 이상 미룰 수 없다!' 연금 소득공백·정년...   | 2026-11-10 13:06 | https://www.lawissue.co.kr/view.php?ud=2026111012531559679a8c8bf58f_12                                   |
+| 서울대학교 | 뉴스핌     | 이병헌 지방시대위 직무대행 "지역 살릴 주인공은 로컬 기업…5극 3특으...     | 2026-11-10 13:06 | https://www.newspim.com/news/view/20261110000925                                                         |
+| 서울대학교 | 비욘드포스트  | 신장섭 싱가포르국립대 교수 “기업은 주주의 소유물 아닌 독립적 법인...       | 2026-11-10 13:04 | http://www.beyondpost.co.kr/view.php?ud=20261110130245449118ef25b590_30                                  |
+| 연세대학교 | 내일신문    | ‘주가 누르기 방지법’ 놓고 격론…‘적정 가격 과세’는 동의              | 2026-11-10 13:02 | https://www.naeil.com/news/read/608252?ref=naver                                                         |
+| 연세대학교 | 노컷뉴스    | 이동근이 유력? KT는 고민, 또 고민 "당장 뭐가 필요한가를 봐야"         | 2026-11-10 13:02 | https://www.nocutnews.co.kr/news/6604588?utm_source=naver&utm_medium=article&utm_campaign=20261110130145 |
+| 고려대학교 | 노컷뉴스    | 이동근이 유력? KT는 고민, 또 고민 "당장 뭐가 필요한가를 봐야"         | 2026-11-10 13:02 | https://www.nocutnews.co.kr/news/6604588?utm_source=naver&utm_medium=article&utm_campaign=20261110130145 |
+| 서울대학교 | 마이데일리   | "학폭 괴로웠다" 이혜성, 인형 같은 미모 뒤 감춰진 아픔 고백            | 2026-11-10 13:02 | https://www.mydaily.co.kr/page/view/2026111013013162860                                                  |
+| 서울대학교 | 이코노미스트  | 하이퍼리즘 투자사 콘크리트, 바이낸스 지갑 연동 한 달 만에 1억4000만달...  | 2026-11-10 13:00 | https://economist.co.kr/article/view/ecn202611100008                                                     |
+| 고려대학교 | 라온뉴스    | 조용필·사랑과 평화부터 터치드까지...세대 아우르는 밴드 공연             | 2026-11-10 13:00 | https://www.raonnews.com/news/article.html?no=62626                                                      |
+| 서울대학교 | 메디컬투데이  | 서부장애인치과병원, 덴컴 AI 진료기록 시스템 시연회 개최               | 2026-11-10 12:58 | https://www.mdtoday.co.kr/news/articleView.html?idxno=624140                                             |
+| 연세대학교 | 전자신문    | 'BTS 슈가 50억원 기부' 세브란스 민윤기치료센터, 개소 1주년          | 2026-11-10 12:58 | https://www.etnews.com/20261110000245                                                                    |
+| 서울대학교 | 팝콘뉴스    | 고려대 연구팀, "'잘 깨지는' LFP 건식 전극 한계, 섬유형 탄소로 풀었다... | 2026-11-10 12:56 | http://www.popcornnews.net/news/articleView.html?idxno=139380                                            |
+| 서울대학교 | OSEN    | 수능 앞 올해 강의는 끝내 못 마친 이도, 이투스 공식 사과 전날엔 “20...   | 2026-11-10 12:56 | http://www.osen.co.kr/article/G1112907574                                                                |
+| 고려대학교 | 팝콘뉴스    | 고려대 연구팀, "'잘 깨지는' LFP 건식 전극 한계, 섬유형 탄소로 풀었다... | 2026-11-10 12:56 | http://www.popcornnews.net/news/articleView.html?idxno=139380                                            |
+| 연세대학교 | 매일일보    | 인천관광공사, 외국인 대학생과 백령도 관광 활성화 방안 모색              | 2026-11-10 12:52 | https://www.m-i.kr/news/articleView.html?idxno=2016600                                                   |
+| 고려대학교 | 뉴스투데이   | 라온로드, ITS 세계총회서 AI 도시 교통운영 솔루션 공개              | 2026-11-10 12:50 | https://www.news2day.co.kr/article/20261110500159                                                        |
+| 연세대학교 | 문화일보    | 삼표그룹 ‘제2회 온코런’ 후원, 암 생존자의 다시 뛰는 삶 응원           | 2026-11-10 12:47 | https://www.munhwa.com/article/11630257?ref=naver                                                        |
