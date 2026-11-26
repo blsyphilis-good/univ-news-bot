@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-11-25 14:05:02 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-11-26 13:33:18 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사         | 기사 제목                                         | 발행시각             | 언론사 링크                                                                     |
-|:------|:------------|:----------------------------------------------|:-----------------|:---------------------------------------------------------------------------|
-| 서울대학교 | 디일렉         | 삼성전자, 내년 초 CXL 3.2 샘플 공급...하반기 양산             | 2026-11-25 14:04 | https://www.thelec.kr/news/articleView.html?idxno=65894                    |
-| 연세대학교 | 중도일보        | 시아 첫 양자산업전시회 '2026 IQT KOREA' 인천 송도서 개막       | 2026-11-25 14:04 | https://www.joongdo.co.kr/web/view.php?key=20261125010008709               |
-| 서울대학교 | 아주경제        | 특허·상표 정보에 수출·고용 데이터 연결…지식재산 경제적 기여도 분...      | 2026-11-25 14:02 | https://www.ajunews.com/view/20261125134658325                             |
-| 서울대학교 | 아주경제        | [안갯속 전력 청사진] 원전 비중 논의도 전에 '삐걱'…확대 측 불참에 공...  | 2026-11-25 14:02 | https://www.ajunews.com/view/20261125101427609                             |
-| 서울대학교 | 메디컬투데이      | 티아라 효민, 돌로미티 수영장서 블랙 비키니 자태 공개                | 2026-11-25 14:02 | https://www.mdtoday.co.kr/news/articleView.html?idxno=627635               |
-| 연세대학교 | 아시아투데이      | "원주시 아이들을 건강하고 튼튼하게"                          | 2026-11-25 14:02 | https://www.asiatoday.co.kr/kn/view.php?key=20261125010009705              |
-| 서울대학교 | 헤럴드경제       | 지재처, 국가데이터처와 ‘지식재산 데이터 정책포럼’ 개최               | 2026-11-25 14:01 | https://biz.heraldcorp.com/article/10948914?ref=naver                      |
-| 서울대학교 | 데일리안        | 기후부, 동물대체시험 전문인력 양성…8개 기관 협력                  | 2026-11-25 14:01 | https://www.dailian.co.kr/news/view/1719472/?sc=Naver                      |
-| 고려대학교 | 데일리안        | 기후부, 동물대체시험 전문인력 양성…8개 기관 협력                  | 2026-11-25 14:01 | https://www.dailian.co.kr/news/view/1719472/?sc=Naver                      |
-| 고려대학교 | 연합뉴스        | [게시판] 기후부, 대학과 손잡고 동물대체시험 전문인력 양성             | 2026-11-25 14:00 | https://www.yna.co.kr/view/AKR20261125100400530?input=1195m                |
-| 고려대학교 | 뉴스1         | 동물실험 대신 AI·세포 시험…동물대체시험 전문가 키운다               | 2026-11-25 14:00 | https://www.news1.kr/society/general-society/6365456                       |
-| 서울대학교 | 뉴스1         | 정부, 특허·수출·고용 데이터 연계…지식재산 경제기여도 분석 나선다         | 2026-11-25 14:00 | https://www.news1.kr/economy/trend/6365361                                 |
-| 서울대학교 | 독서신문        | 우리 아이가 끝까지 해내는 힘, 어떻게 찾을까                     | 2026-11-25 14:00 | https://www.readersnews.com/news/articleView.html?idxno=200894             |
-| 서울대학교 | 데일리메디       | 국가신약개발 58개 선정…보로노이 3건 '최다'                    | 2026-11-25 14:00 | https://dailymedi.com/news/news_view.php?wr_id=942972                      |
-| 서울대학교 | 뉴스1         | 동물실험 대신 AI·세포 시험…동물대체시험 전문가 키운다               | 2026-11-25 14:00 | https://www.news1.kr/society/general-society/6365456                       |
-| 서울대학교 | 연합뉴스        | [게시판] 기후부, 대학과 손잡고 동물대체시험 전문인력 양성             | 2026-11-25 14:00 | https://www.yna.co.kr/view/AKR20261125100400530?input=1195m                |
-| 서울대학교 | 뉴스핌         | 특허에 수출·고용 데이터 잇는다...데이터처·지재처, 기업 혁신 성과...     | 2026-11-25 14:00 | https://www.newspim.com/news/view/20261125000492                           |
-| 연세대학교 | 데일리메디       | 국가신약개발 58개 선정…보로노이 3건 '최다'                    | 2026-11-25 14:00 | https://dailymedi.com/news/news_view.php?wr_id=942972                      |
-| 연세대학교 | 이코노믹리뷰      | 삼성중공업, 2027년 정기 임원인사…부사장 3명 등 10명 승진          | 2026-11-25 14:00 | https://www.econovill.com/news/articleView.html?idxno=758474               |
-| 서울대학교 | 소비자가 만드는 신문 | 한화호텔앤드리조트, 환아 돌보는 274가정에 휴식 선물한 '쉬어가도 괜...    | 2026-11-25 14:00 | http://www.consumernews.co.kr/news/articleView.html?idxno=769059           |
-| 서울대학교 | 뉴스1         | 지식재산처·국가데이터처 '데이터 연계·활용' 협력 강화                | 2026-11-25 14:00 | https://www.news1.kr/local/daejeon-chungnam/6365041                        |
-| 서울대학교 | 이코노믹리뷰      | 삼성중공업, 2027년 정기 임원인사…부사장 3명 등 10명 승진          | 2026-11-25 14:00 | https://www.econovill.com/news/articleView.html?idxno=758474               |
-| 고려대학교 | 데일리메디       | 국가신약개발 58개 선정…보로노이 3건 '최다'                    | 2026-11-25 14:00 | https://dailymedi.com/news/news_view.php?wr_id=942972                      |
-| 서울대학교 | 코리아헬스로그     | 신경세포 자극, 느려진 위 배출 개선 확인                       | 2026-11-25 13:58 | https://www.koreahealthlog.com/news/articleView.html?idxno=60128           |
-| 연세대학교 | TV조선        | [뉴스트라다무스] 교육위원장 김희정 "감독관도 내가 고르고, 채점도 내...    | 2026-11-25 13:57 | https://news.tvchosun.com/site/data/html_dir/2026/11/25/2026112590161.html |
-| 연세대학교 | 한국대학신문      | 연세대 의류환경학과, 프라다 그룹 '디자인 아카데미' 아시아 최초 협력...    | 2026-11-25 13:56 | https://news.unn.net/news/articleView.html?idxno=601406                    |
-| 서울대학교 | 한국정경신문      | [ESG전략] 사회공헌 프로젝트 인정 한화호텔·최신 ESG 공시 기준 적용 ... | 2026-11-25 13:56 | https://kpenews.com/View.aspx?No=4328948                                   |
-| 서울대학교 | 딜사이트TV      | 삼성重, 내년 임원 인사…기술·제조 전문가 전진                    | 2026-11-25 13:56 | https://news.dealsitetv.com/articles/179135                                |
-| 서울대학교 | 헬로티         | 뉴로메카, 휴머노이드 수술 보조 실증 성공…의료로봇 사업 확대            | 2026-11-25 13:56 | https://www.hellot.net/news/article.html?no=116603                         |
-| 고려대학교 | 파이낸셜포스트     | 삼성패션, 조항석 부사장·김승현·표유경 상무 승진…브랜드 성장 이끈...      | 2026-11-25 13:56 | https://www.financialpost.co.kr/news/articleView.html?idxno=303065         |
+| 대학    | 언론사      | 기사 제목                                           | 발행시각             | 언론사 링크                                                                   |
+|:------|:---------|:------------------------------------------------|:-----------------|:-------------------------------------------------------------------------|
+| 연세대학교 | 비즈니스포스트  | [부음] 심규호 부친, 전승희 부친, 조정호 부친                     | 2026-11-26 13:32 | https://www.businesspost.co.kr/BP?command=article_view&num=452998        |
+| 연세대학교 | 교수신문     | 건국대병원 양승우 교수, 산전 위험인자 분석 연구로 대한산부인과학회...        | 2026-11-26 13:32 | https://www.kyosu.net/news/articleView.html?idxno=212901                 |
+| 서울대학교 | 충청뉴스     | 한국연구재단, 신임 기초연구본부장에 중앙대 성맹제 교수 선임               | 2026-11-26 13:30 | http://www.ccnnews.co.kr/news/articleView.html?idxno=418459              |
+| 연세대학교 | 스포츠서울    | 2026 강원 AX 페스타, 26~27일 원주에서 개최                  | 2026-11-26 13:29 | https://www.sportsseoul.com/news/read/1652465?ref=naver                  |
+| 고려대학교 | 한국경제TV   | 나누리병원, 김영호 원장 영입...관절치료 경쟁력 강화                  | 2026-11-26 13:28 | http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611260087&t=NN |
+| 고려대학교 | TJB대전방송  | '해킹하는 AI vs 방어하는 AI'…사이버보안 경쟁 펼쳐진다              | 2026-11-26 13:28 | https://www.tjb.co.kr/news05/bodo/view/id/106550                         |
+| 연세대학교 | 한국경제TV   | 나누리병원, 김영호 원장 영입...관절치료 경쟁력 강화                  | 2026-11-26 13:28 | http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611260087&t=NN |
+| 연세대학교 | 스마트비즈엔   | [부고] 전승희 신세계 백화점부문 홍보기획팀장 부친상                   | 2026-11-26 13:28 | https://www.smartbizn.com/news/articleView.html?idxno=160709             |
+| 서울대학교 | 한국대학신문   | 교대 2차 서밋 열려… "급변하는 교육 환경… 교원양성대학교 혁신과 정...      | 2026-11-26 13:26 | https://news.unn.net/news/articleView.html?idxno=601492                  |
+| 서울대학교 | 한국경제     | 경찰, '리트 만점자' 주거지·수능시험지 보관장소 압수수색                | 2026-11-26 13:24 | https://www.hankyung.com/article/202611261889i                           |
+| 연세대학교 | 전라일보     | 신문윤리위원회, 신종수 신문방송편집인협회장 이사 선임                   | 2026-11-26 13:24 | http://www.jeollailbo.com/news/articleView.html?idxno=817969             |
+| 연세대학교 | 글로벌경제신문  | [부고] 전승희(신세계 백화점부문 홍보기획팀장)씨 부친상                 | 2026-11-26 13:22 | https://www.getnews.co.kr/news/articleView.html?idxno=888542             |
+| 서울대학교 | 천지일보     | "작은 위성에서 큰 위성으로"… 진주·사천 우주산업 발전 모색              | 2026-11-26 13:22 | https://www.newscj.com/news/articleView.html?idxno=3452272               |
+| 고려대학교 | 주간한국     | 고려대 안암병원, 대한의학회와 전공의 수련교육 개선 사례 공유              | 2026-11-26 13:18 | https://weekly.hankooki.com/news/articleView.html?idxno=7195872          |
+| 서울대학교 | 베리타스알파   | 양정고 '2027 자소서/면접 준비 설명회' 내달 7일.. 신청 없이 참석 가능    | 2026-11-26 13:18 | https://www.veritas-a.com/news/articleView.html?idxno=639470             |
+| 서울대학교 | BBS NEWS | [기자수첩]'AI 수능 참사'가 남긴 교훈…이제는 '방통' 같은 실력가 교육...   | 2026-11-26 13:18 | https://news.bbsi.co.kr/news/articleView.html?idxno=4121113              |
+| 고려대학교 | 보건뉴스     | 고대보건대학원 최고위과정, '제2회 총 원우의 밤' 성료                 | 2026-11-26 13:16 | http://www.bokuennews.com/news/article.html?no=287812                    |
+| 연세대학교 | 한국금융신문   | [프로필] 윤석모 삼성증권 신임 부사장                           | 2026-11-26 13:14 | https://www.fntimes.com/html/view.php?ud=202611261255368048179ad43907_18 |
+| 연세대학교 | 베리타스알파   | [단독][2027수능 가채점배치표] 부산청, 서울대 연세대 의예 296점 '최고... | 2026-11-26 13:12 | https://www.veritas-a.com/news/articleView.html?idxno=639509             |
+| 연세대학교 | 보건뉴스     | 나누리병원, 관절치료 경쟁력 강화 위해 김영호 원장 영입                 | 2026-11-26 13:12 | http://www.bokuennews.com/news/article.html?no=287810                    |
+| 고려대학교 | 보건뉴스     | 나누리병원, 관절치료 경쟁력 강화 위해 김영호 원장 영입                 | 2026-11-26 13:12 | http://www.bokuennews.com/news/article.html?no=287810                    |
+| 고려대학교 | 베리타스알파   | [단독][2027수능 가채점배치표] 부산청, 서울대 연세대 의예 296점 '최고... | 2026-11-26 13:12 | https://www.veritas-a.com/news/articleView.html?idxno=639509             |
+| 서울대학교 | 베리타스알파   | [단독][2027수능 가채점배치표] 부산청, 서울대 연세대 의예 296점 '최고... | 2026-11-26 13:12 | https://www.veritas-a.com/news/articleView.html?idxno=639509             |
+| 연세대학교 | 아주경제     |                                                 | 2026-11-26 13:10 | https://www.ajunews.com/view/20261126130714193                           |
+| 연세대학교 | 스마트타임스   | 현대엔지니어링 새 대표에 나태준…수익성 강화·첨단 산업건축 확대             | 2026-11-26 13:10 | http://www.smarttimes.co.kr/news/articleView.html?idxno=50941            |
+| 서울대학교 | 보건뉴스     | 일산백병원, 신경외과 심포지엄 개최(12/5)                       | 2026-11-26 13:08 | http://www.bokuennews.com/news/article.html?no=287808                    |
+| 연세대학교 | 더퍼블릭     | 완성차는 안정, 부품·건설은 쇄신…현대차그룹, 사장단 인사                | 2026-11-26 13:06 | https://www.thepublic.kr/news/articleView.html?idxno=328587              |
+| 연세대학교 | 더퍼블릭     | 전세 사기 후폭풍에 非아파트 '기피현상' 커졌다…서울 빌라 경매, 4채 ...     | 2026-11-26 13:06 | https://www.thepublic.kr/news/articleView.html?idxno=328582              |
+| 서울대학교 | 더퍼블릭     | 완성차는 안정, 부품·건설은 쇄신…현대차그룹, 사장단 인사                | 2026-11-26 13:06 | https://www.thepublic.kr/news/articleView.html?idxno=328587              |
+| 서울대학교 | 내일신문     | 학생 스스로 배울 과목 선택…달라진 학교                          | 2026-11-26 13:02 | https://www.naeil.com/news/read/610125?ref=naver                         |
