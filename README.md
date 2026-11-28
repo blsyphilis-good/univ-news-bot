@@ -1,36 +1,36 @@
 # 🎓 대학 주요 뉴스 모니터링
-> **최근 업데이트:** 2026-11-27 13:36:53 (매일 오전 07:53 자동 갱신)  
+> **최근 업데이트:** 2026-11-28 13:21:35 (매일 오전 07:53 자동 갱신)  
 > **수집 대상:** 고려대학교, 연세대학교, 서울대학교
 
-| 대학    | 언론사    | 기사 제목                                        | 발행시각             | 언론사 링크                                                                      |
-|:------|:-------|:---------------------------------------------|:-----------------|:----------------------------------------------------------------------------|
-| 연세대학교 | 뉴스웨이   | 거래대금 급감에 추가 긴축까지…증권업계 실적 회복 '산 넘어 산'         | 2026-11-27 13:34 | https://www.newsway.co.kr/news/view?ud=2026112711324111589                  |
-| 연세대학교 | 디지털데일리 | [취재수첩] 보안 스티커 너머의 사각지대                       | 2026-11-27 13:34 | https://www.ddaily.co.kr/page/view/2026112712432706239                      |
-| 연세대학교 | bnt뉴스  | 어깨동무 연예인 봉사단, 포항서 '드림 ON' 콘서트 성료… 수험생들의 ...  | 2026-11-27 13:32 | https://www.bntnews.co.kr/article/view/bnt202611270224                      |
-| 고려대학교 | 주간한국   | 김재우·최혁순 고려대 안암병원 교수팀, 위 운동 분석 연구로 우수구연...    | 2026-11-27 13:30 | https://weekly.hankooki.com/news/articleView.html?idxno=7196109             |
-| 연세대학교 | 뉴스투데이  | SK증권, 차기 각자대표에 박삼규·최창훈 내정…내년 3월 선임           | 2026-11-27 13:30 | https://www.news2day.co.kr/article/20261127500176                           |
-| 연세대학교 | 텐아시아   | [전문] 이동연, 결국 고개 숙였다…팬레터 폐기 논란 사과 "내 불찰이자...  | 2026-11-27 13:30 | https://www.tenasia.co.kr/article/2026112745704                             |
-| 연세대학교 | 농민신문   | “접속 차단만으론 한계”…청소년 SNS 규제, 사회가 풀어야            | 2026-11-27 13:30 | https://www.nongmin.com/article/20261127500121                              |
-| 연세대학교 | 국제뉴스   | 배우 이동연, 팬레터 분리수거장 폐기 논란에 입 열었다               | 2026-11-27 13:26 | https://www.gukjenews.com/news/articleView.html?idxno=3765182               |
-| 연세대학교 | 스포츠경향  | 손연재 부부, 30억 기부 약정…결혼부터 아들 생일까지 꾸준한 나눔        | 2026-11-27 13:26 | https://sports.khan.co.kr/article/202611271324013?pt=nv                     |
-| 서울대학교 | 스포츠경향  | 손연재 부부, 30억 기부 약정…결혼부터 아들 생일까지 꾸준한 나눔        | 2026-11-27 13:26 | https://sports.khan.co.kr/article/202611271324013?pt=nv                     |
-| 연세대학교 | 톱스타뉴스  | 손연재 부부, 연세의료원에 30억 원 기부                      | 2026-11-27 13:20 | https://www.topstarnews.net/news/articleView.html?idxno=16287791            |
-| 고려대학교 | 여성경제신문 | HDC, 구조설계·디지털 전문가 CEO 발탁···창립 50주년 건설 AX 승부수 | 2026-11-27 13:16 | https://www.womaneconomy.co.kr/news/articleView.html?idxno=261671           |
-| 연세대학교 | 미디어스   | "청소년 SNS 규제, 단순 연령 제한만으로는 한계"                | 2026-11-27 13:14 | https://www.mediaus.co.kr/news/articleView.html?idxno=319218                |
-| 고려대학교 | 베리타스알파 | 고려대 최동수/민정희 교우 부부와 자녀 가족 인문관 건립기금 1억원 기...   | 2026-11-27 13:12 | https://www.veritas-a.com/news/articleView.html?idxno=639776                |
-| 서울대학교 | 이투뉴스   | 환경공단, 수질오염총량관리제도 개선방안 모색                     | 2026-11-27 13:12 | http://www.e2news.com/news/articleView.html?idxno=336552                    |
-| 서울대학교 | 더파워    | [더파워 ISSUE] 경동나비엔, 코맥스 품고 캐나다 스마트빌딩 사업까지…... | 2026-11-27 13:10 | https://www.thepowernews.co.kr/view.php?ud=202611271305284476de3f0aa1be_7   |
-| 서울대학교 | 이투뉴스   | 서울에너지공사, 공동주택 에너지믹스 활성화 방안 모색                | 2026-11-27 13:10 | http://www.e2news.com/news/articleView.html?idxno=336551                    |
-| 연세대학교 | 이투데이   | 손연재·이준효 부부, 연세의료원에 30억원 후원 약정                | 2026-11-27 13:10 | https://www.etoday.co.kr/news/view/2653899                                  |
-| 연세대학교 | 한국강사신문 | 고려대학교, 한·중·일 10개 대학 참여 국제창의종합설계 경진대회 개...    | 2026-11-27 13:06 | https://www.lecturernews.com/news/articleView.html?idxno=214587             |
-| 연세대학교 | 내일신문   | 조작기소 특검 후보에 이임성·이정훈 변호사                      | 2026-11-27 13:06 | https://www.naeil.com/news/read/610363?ref=naver                            |
-| 고려대학교 | 한국강사신문 | 고려대학교, 한·중·일 10개 대학 참여 국제창의종합설계 경진대회 개...    | 2026-11-27 13:06 | https://www.lecturernews.com/news/articleView.html?idxno=214587             |
-| 서울대학교 | 한국강사신문 | 고려대학교, 한·중·일 10개 대학 참여 국제창의종합설계 경진대회 개...    | 2026-11-27 13:06 | https://www.lecturernews.com/news/articleView.html?idxno=214587             |
-| 고려대학교 | 내일신문   | [특별기고] 미국의 최대 무역 흑자국 된 베트남의 명암               | 2026-11-27 13:04 | https://www.naeil.com/news/read/610265?ref=naver                            |
-| 연세대학교 | 월요신문   | SK증권 차기 각자대표에 박삼규·최창훈 내정...내년 3월 공식 선임       | 2026-11-27 13:02 | https://www.wolyo.co.kr/news/articleView.html?idxno=321149                  |
-| 연세대학교 | 내일신문   | 배터리의 ‘숨’으로 외장 균열 찾아낸다                        | 2026-11-27 13:02 | https://www.naeil.com/news/read/610346?ref=naver                            |
-| 서울대학교 | 시사캐스트  | 스마일게이트 퓨처랩, 비버롹스 2026 '아하오호' 부스 운영           | 2026-11-27 13:00 | http://www.sisacast.kr/news/articleView.html?idxno=102458                   |
-| 연세대학교 | 한겨레    | ‘국보급 센터’ 서장훈의 농구 인생 조명 전시회 열린다               | 2026-11-27 12:58 | https://www.hani.co.kr/arti/sports/basketball/1289418.html                  |
-| 고려대학교 | 연합인포맥스 | HDC그룹 2027년 정기인사, IPARK현대산업 신임 대표 강민석        | 2026-11-27 12:58 | https://news.einfomax.co.kr/news/articleView.html?idxno=4446964             |
-| 연세대학교 | 서울신문   | “쓰레기장서 팬레터 발견” 팬 기만 논란…배우 이동연 “집 정리 중 ...    | 2026-11-27 12:53 | https://www.seoul.co.kr/news/life/2026/11/27/20261127500135?wlog_tag3=naver |
-| 서울대학교 | 비즈워크   | TS, 패러글라이딩 지도자 안전세미나·아카데미 개최                 | 2026-11-27 12:52 | https://www.bizwork.co.kr/news/articleView.html?idxno=421250                |
+| 대학    | 언론사     | 기사 제목                                          | 발행시각             | 언론사 링크                                                                                                                                           |
+|:------|:--------|:-----------------------------------------------|:-----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 고려대학교 | 약사공론    | 창립 45주년 병원약사회, 필수의료 강화의 중심에 서다                 | 2026-11-28 13:20 | https://www.kpanews.co.kr/news/articleView.html?idxno=550140                                                                                     |
+| 연세대학교 | 약사공론    | 창립 45주년 병원약사회, 필수의료 강화의 중심에 서다                 | 2026-11-28 13:20 | https://www.kpanews.co.kr/news/articleView.html?idxno=550140                                                                                     |
+| 서울대학교 | 약사공론    | 창립 45주년 병원약사회, 필수의료 강화의 중심에 서다                 | 2026-11-28 13:20 | https://www.kpanews.co.kr/news/articleView.html?idxno=550140                                                                                     |
+| 서울대학교 | KBS     | 국중박 서화실 “아는 사람만 아는 문인화가, 이인상”                  | 2026-11-28 13:16 | https://kstar.kbs.co.kr/list_view.html?idx=415747                                                                                                |
+| 연세대학교 | 조선일보    | [부음] 임문택(IBK연금보험 사장)씨 모친상                      | 2026-11-28 13:06 | https://it.chosun.com/news/articleView.html?idxno=3000000002062                                                                                  |
+| 고려대학교 | 조선일보    | 한국회계정보학회, ‘AI 대전환과 한국 경제’ 주제로 학술 대회 열어         | 2026-11-28 13:01 | https://www.chosun.com/economy/stock-finance/2026/11/28/F5BQSJFCG5CSHOMVMIAIPWAFQI/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news |
+| 고려대학교 | 매일신문    | 택시 타고 온 강유정, 선글라스 쓴 강금실… 李 개각 후보자 5人5色 첫 ...   | 2026-11-28 13:00 | https://www.imaeil.com/page/view/2026112809332873240                                                                                             |
+| 연세대학교 | 약업신문    | "병원약사 전문성, 합당한 보상으로"…인력·수가체계 개선 한목소리           | 2026-11-28 12:58 | https://www.yakup.com/news/index.html?mode=view&cat=17&nid=335865                                                                                |
+| 고려대학교 | 약업신문    | "병원약사 전문성, 합당한 보상으로"…인력·수가체계 개선 한목소리           | 2026-11-28 12:58 | https://www.yakup.com/news/index.html?mode=view&cat=17&nid=335865                                                                                |
+| 서울대학교 | 약업신문    | "병원약사 전문성, 합당한 보상으로"…인력·수가체계 개선 한목소리           | 2026-11-28 12:58 | https://www.yakup.com/news/index.html?mode=view&cat=17&nid=335865                                                                                |
+| 연세대학교 | 펜앤드마이크  | [재계핫이슈] 유교 자본주의, 가족경영 진면목 보여주는 GS그룹            | 2026-11-28 12:56 | https://www.pennmike.com/news/articleView.html?idxno=132996                                                                                      |
+| 고려대학교 | 주간경향    | “스토킹 영상보고 PTSD” “교통사고 한두번 해본 솜씨 아냐”, 리트 만...   | 2026-11-28 12:53 | https://weekly.khan.co.kr/article/202611281253001                                                                                                |
+| 고려대학교 | 데일리벳    | 기후부도 NAMs 강조..화학물질 동물대체시험 전문인력 양성 추진           | 2026-11-28 12:52 | https://www.dailyvet.co.kr/news/laboratory-animal/306127                                                                                         |
+| 서울대학교 | 데일리벳    | 기후부도 NAMs 강조..화학물질 동물대체시험 전문인력 양성 추진           | 2026-11-28 12:52 | https://www.dailyvet.co.kr/news/laboratory-animal/306127                                                                                         |
+| 서울대학교 | TV리포트   | '52세' 주진모, ♥민혜연 '7년 만 임신'에 결국 오열…"옛날부터 갖고 싶... | 2026-11-28 12:42 | https://www.tvreport.co.kr/entertainment/article/1094492/                                                                                        |
+| 서울대학교 | 위키트리    | “어머니가 이부진이 아니었어도…” 성까지 바꾼 아들이 직접 밝힌 속...       | 2026-11-28 12:36 | https://www.wikitree.co.kr/articles/1178573                                                                                                      |
+| 서울대학교 | 국제뉴스    | 충북교육청 단재교육연수원, 뇌과학자 장동선 박사 초청 특강               | 2026-11-28 12:22 | https://www.gukjenews.com/news/articleView.html?idxno=3764738                                                                                    |
+| 연세대학교 | 뉴스웨이    | [부음]임문택(IBK연금보험 사장)씨 모친상                       | 2026-11-28 12:16 | https://www.newsway.co.kr/news/view?ud=2026112812135095382                                                                                       |
+| 서울대학교 | MBN     | '공유재산 관리 혁신과 공공가치 창출' 2026 동계학술대회 개최           | 2026-11-28 12:07 | http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5233413                                                                |
+| 고려대학교 | MBN     | '공유재산 관리 혁신과 공공가치 창출' 2026 동계학술대회 개최           | 2026-11-28 12:07 | http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5233413                                                                |
+| 서울대학교 | 뉴시스     | 충북 스마트농업 심포지엄, 12월2일 충북대 개신문화관                 | 2026-11-28 12:07 | https://www.newsis.com/view/NISX20261128_0003887092                                                                                              |
+| 고려대학교 | 글로벌경제신문 | 소아 천식, 감기 다 낫아도 계속되는 기침에 주목해야                  | 2026-11-28 12:06 | https://www.getnews.co.kr/news/articleView.html?idxno=888774                                                                                     |
+| 서울대학교 | 국제뉴스    | 충남도, 대전환 시대...."한중일 공생·번영·평화의 길 찾는다"           | 2026-11-28 12:00 | https://www.gukjenews.com/news/articleView.html?idxno=3765615                                                                                    |
+| 서울대학교 | 뉴시스     | "AI시대, 장애인 일자리도 위기…사회·기업 관심 절실해"[당신 옆 장애...    | 2026-11-28 12:00 | https://www.newsis.com/view/NISX20261127_0003886478                                                                                              |
+| 연세대학교 | 국제뉴스    | 충남도, 대전환 시대...."한중일 공생·번영·평화의 길 찾는다"           | 2026-11-28 12:00 | https://www.gukjenews.com/news/articleView.html?idxno=3765615                                                                                    |
+| 연세대학교 | 뉴데일리    | [단독] 홍익표 "北 수령 체제-3대 세습, 틀렸다고만 할 수 없다" 북한 옹... | 2026-11-28 12:00 | https://www.newdaily.co.kr/site/data/html/2026/11/27/2026112750337.html                                                                          |
+| 서울대학교 | 뉴시스     | "이어플러그도, 후드티도 피했어요"…AI 부정행위 우려에 속끓인 수험생...     | 2026-11-28 11:54 | https://www.newsis.com/view/NISX20261128_0003887077                                                                                              |
+| 서울대학교 | 매일신문    | "엄마는 늘 너의 뒤에 있을 거야"…이부진의 손편지, 아들이 어머니 따...     | 2026-11-28 11:51 | https://www.imaeil.com/page/view/2026112811074055603                                                                                             |
+| 연세대학교 | 오마이뉴스   | '마나베와 봉준호는 안 된다'... 이 여성의 삶 [민병래의 사수만보]        | 2026-11-28 11:51 | https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003287491&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news |
+| 서울대학교 | MBC     | 박민철, ‘이혼 괴인’의 반전 로펌 일상 (전집시)                   | 2026-11-28 11:49 | http://enews.imbc.com/News/RetrieveNewsInfo/526311                                                                                               |
